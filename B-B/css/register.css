@@ -1,0 +1,112 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.tittle{
+	height: 65px;
+	background-color: #1AB394;
+}
+.tittle img{
+	width:34px;
+	height: 34px;
+	margin-top: 15px;
+	margin-left: 20px;
+	float: left;
+}
+.tittle a{
+	
+	font-size: 32px;
+	line-height: 70px;
+	margin-left: 20%;
+}
+
+/*.input-group{
+	width: 70%;
+	margin: auto;
+	margin-top: 50px;
+	height: auto;
+	
+}
+.input-row{
+	width: 100%;
+	border-bottom: 1px solid #C7C7CC;
+	margin-top: 15px;
+}
+.input-row label{
+	width: 36%;
+	float: left;
+	font-family: 'microsoft yahei';
+	font-size: 20px;
+	line-height: 30px;
+	
+}
+.input-row input{
+	width: 64%;
+	font-family: 'microsoft yahei';
+	font-size: 20px;
+	border: none;
+	background-color: #efeff4;
+	margin-bottom: 9px;
+} 
+.yanzhengA{
+	width: 30%;
+}
+.yanzhengB{
+	width: 30%;
+}
+	*/
+
+.mui-input-group {
+	margin-top: 1.25rem;
+	margin-left: 0.925rem;
+	width: 7.731rem;
+	height: auto;
+	position: static;
+	background-color: #EFEFF4;
+}
+
+.mui-input-group:after {
+	position: static;
+	height: 0rem;
+}
+
+.mui-input-row {
+	margin-top: 0.768rem;
+	width: 7.731rem;
+}
+
+.mui-input-row label {
+	padding-left: 17px;
+	font-family: 'microsoft yahei';
+	color: #333333;
+	font-size: 0.444rem;
+}
+.yanzhengma{
+	position: relative;
+}
+.yanzhengma .yanzhengmaB{
+	position: absolute;
+	right: 0px;
+	background: #1AB394;
+	width: 70px;
+	border-radius: 10px;
+}
+.school{
+	position: relative;
+}
+.school img{
+	position: absolute;
+	right: 0px;
+	width: 15px;
+	height: 30px;
+}
+.mui-content-padded{
+	margin-top:50px;
+}
+.mui-content-padded button{
+	font-family: 'microsoft yahei';
+	color: #F2F2F2;
+	background-color: #1AB394;
+	border-radius: 30px;
+}
+

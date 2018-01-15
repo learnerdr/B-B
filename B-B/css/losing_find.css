@@ -1,0 +1,72 @@
+.status_bar{
+	background-color: #1AB394;
+	height: 0.694444rem;
+}
+.header{
+	background-color:#1ab394;
+	position: relative;
+	top: -0.005556rem;
+	height: 1.333333rem;
+	padding: 0;
+	border-top-color: #1AB394;
+}
+.header img{
+	height: 0.527777rem;
+	display: inline-block;
+	margin-left: 0.555555rem;
+	margin-top: 0.398148rem;
+}
+.header span{
+	font-family: "microsoft yahei";
+	font-size: 0.5rem;
+	color: #F2F2F2;
+	display: inline-block;
+	margin-top: 0.425925rem;
+	position: relative;
+	margin-left: 0.555555rem;
+}
+#content{
+	height: 3.796296rem;
+	width: 100%;
+	background-color: #FFFFFF;
+	margin-top: 0.277777rem;
+}
+#content-left{
+	height: 100%;
+	width: 4.074074rem;
+	float: left;
+}
+#content-left img{
+	height: 2.685185rem;
+	width: 3.24074rem;
+	display: inline-block;
+	margin: 0.555555rem 0 0 0.555555rem;
+}
+#content-right{
+	height: 100%;
+	float: right;
+	width: 59.265%;
+}
+#address{
+	margin-top: 0.555555rem;
+}
+#address_description{
+	font-family: "microsoft yahei";
+	font-size: 0.388888rem;
+	color: #333333;
+}
+#content-right img{
+	width: 0.379629rem;
+	height: 0.407407rem;
+	display: inline-block;
+	margin-right: 0.138888rem;
+	float: left;
+}
+#stealage{
+	margin-top: 0.324074rem;
+}
+#stealage_description{
+	font-family: "microsoft yahei";
+	font-size: 0.388888rem;
+	color: #33333;
+}

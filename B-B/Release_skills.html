@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/Release_skills.css" rel="stylesheet" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<header id="header" class="mui-bar mui-bar-nav header_Release_skills">
+			<!--图标-->
+			<a href="#">
+				<img src="img/return.png" class="return mui-action-back" />
+			</a>
+			<!--字-->
+			<div class="return_text">
+				<p>发布技能</p>
+			</div>
+		</header>
+
+		<div class="mui-content"id="content">
+			<form>
+				<div class="Task_content">
+					<div class="Triangulation_icons"></div>
+					<p>发布内容</p>
+				</div>
+				<div class="Fill_in_the_content">
+					<textarea placeholder="请填写你的技能">
+</textarea>
+				</div>
+				<div class="Contact_number">
+					<div class="Triangulation_icons"></div>
+					<p>联系电话</p>
+					<input type="number" placeholder="请填写" />
+				</div>
+			</form>
+				<div class="btn_go_to_pay" id="pay_skill">
+					<button>去支付</button>
+				</div>
+		</div>
+		<script src="js/immersed.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+			
+	var pay_skill=document.getElementById('pay_skill');
+	       pay_skill.addEventListener('tap', function() {
+		      
+			 openView.usuView('skills_paid.html','skills_paid.html');
+	});
+		</script>
+	</body>
+
+</html>

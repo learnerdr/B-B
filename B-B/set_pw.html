@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+		
+		<link href="css/set_pw.css" rel="stylesheet"  />
+	</head>
+	<body>
+
+		<div class="tittle" id="header">
+			<img src="img/my-skills/back.png"class="mui-action-back">
+			<a>密码设置</a>
+		</div>
+		<div id="Modify_login_password">
+			<div class="div1" id="content">
+			<a>修改登录密码</a>
+		</div>
+		</div>
+		
+		<div class="div1" id="Modifying_payment_password">
+			<a>修改支付密码</a>
+		</div>
+		
+		
+		<script src="js/immersed.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script>
+			
+	var Modify_login_password=document.getElementById('Modify_login_password');
+	       Modify_login_password.addEventListener('tap', function() {
+		  
+			openView.usuView('Password_Reset.html','Password_Reset.html');
+	});
+	var Modifying_payment_password=document.getElementById('Modifying_payment_password');
+	       Modifying_payment_password.addEventListener('tap', function() {
+		
+			openView.usuView('cg_paid_pw.html','cg_paid_pw.html');
+	});
+		</script>
+	</body>
+</html>

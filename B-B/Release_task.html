@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+		<link href="css/Release_task.css" rel="stylesheet" />
+		<title></title>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header" class=" header_Release_task">
+			<!--图标-->
+			<div id=""class="back mui-action-back">
+				<img src="img/return.png" class="return" />
+			</div>
+			<!--字-->
+			<div class="return_text">
+				<p>发布任务</p>
+			</div>
+			
+		</header>
+
+		<!--内容区-->
+		<div class="mui-content" id="content">
+			<form>
+				<a href="#" id='showUserPicker'>
+					<div class="Task_type">
+						<div class="Task_type_left">
+							<div class="Triangulation_icons"></div>
+							<p>任务类型</p>
+						</div>
+
+						<img src="img/chos_way.png" id="chos_way" />
+						<div id='userResult' class="ui-alert"></div>
+					</div>
+				</a>
+
+				<div class="Task_content">
+					<div class="Triangulation_icons"></div>
+					<p>任务内容</p>
+				</div>
+				<div class="Fill_in_the_content">
+					<textarea placeholder="请填写你的需求">
+</textarea>
+				</div>
+
+				<div class="Task_address">
+					<div class="Triangulation_icons"></div>
+					<p>任务地址</p>
+					<input type="text" placeholder="请填写" />
+				</div>
+
+				<div class="Task_amount">
+					<div class="Triangulation_icons"></div>
+					<p>任务金额</p>
+					<input type="number" placeholder="请填写" />
+				</div>
+
+				<div class="Contact_number">
+					<div class="Triangulation_icons"></div>
+					<p>联系电话</p>
+					<input type="number" placeholder="请填写" />
+				</div>
+
+				<a href="#" id="showtask_time">
+					<div class="Task_release_length">
+						<div class="Task_release_length_left">
+							<div class="Triangulation_icons"></div>
+							<p>发布任务时长</p>
+						</div>
+						
+						<img src="img/chos_way.png" id="chos_way_2"/>
+						<div id='timetext' ></div>
+					</div>
+				</a>
+			</form>
+			<div class="btn_go_to_pay" >
+					<button id="pay">去支付</button>
+				</div>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.js"></script>
+		<script src="js/immersed.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+		<script src="js/time_data.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script type="text/javascript">
+			
+				mui.init();		
+			mui.plusReady(function(){
+				console.log(1);
+    var pay=document.getElementById('pay');
+	       pay.addEventListener('tap', function() {
+		  
+			openView.usuView('task_paid.html','task_paid.html');
+			});
+			
+				});
+			//				选择器
+					var userPicker = new mui.PopPicker();
+					userPicker.setData([{
+						value: 'Run_errands',
+						text: '跑腿类'
+					}, {
+						value: 'Lease',
+						text: '租借类'
+					}, {
+						value: 'Learning_guidance',
+						text: '学习辅导'
+					}, {
+						value: 'Maintenance',
+						text: '维修服务'
+					}, {
+						value: 'Other',
+						text: '其他服务'
+					}])
+					var showUserPickerButton = document.getElementById('showUserPicker');
+					var img_top = document.getElementById("chos_way");
+					var userResult = document.getElementById('userResult');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						console.log(1);
+						userPicker.show(
+							
+						function(items) {
+							img_top.remove();
+							var itemCallback = userPicker.getSelectedItems();
+							userResult.textContent = itemCallback[0].text;
+							userResult.style.fontFamily = "microsoft yahei";
+							userResult.style.fontSize = "0.46rem";
+							userResult.style.color = "#888888";
+							userResult.style.marginRight = "3%";
+						});
+					}, false);
+					var task_time = new mui.PopPicker({
+						layer: 3
+					});
+					task_time.setData(time_Data);
+					var showtask_time = document.getElementById('showtask_time');
+					var img_footer = document.getElementById("chos_way_2");
+					var timetext = document.getElementById('timetext');
+					showtask_time.addEventListener('tap', function(event) {
+						task_time.show(function(items) {
+							img_footer.remove();
+							var itemCallback = userPicker.getSelectedItems();
+							timetext.textContent = (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+							timetext.style.fontFamily = "microsoft yahei";
+							timetext.style.fontSize = "0.46rem";
+							timetext.style.color = "#888888";
+							timetext.style.marginRight = "4%";
+						});
+					}, false);
+		</script>
+	</body>
+
+</html>

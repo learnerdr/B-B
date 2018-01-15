@@ -1,0 +1,219 @@
+
+*{
+	padding: 0rem;
+	margin: 0rem;
+}
+html{
+	width: 10rem;
+}
+p{
+	margin: 0;
+}
+.tittle{
+	width: 10rem;
+	height: 1.333rem;
+	background-color: #1AB394;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.tittle p{
+	font-size: 0.5rem;
+	color: #FFFFFF;
+	font-family: "microsoft yahei";
+	margin-left: 45%;
+}
+.tittle img{
+	width: 0.527rem;
+	height: 0.527rem;
+	overflow: hidden;
+	margin-left: 35%;
+}
+
+
+/*===============================================================*/
+.skill{
+	width: 10rem;
+	height: 1.111rem;
+	background-color: #FFFFFF;
+}
+.skill-{
+	width: 5rem;
+	background-color: #FFFFFF;
+	height: 1.111rem;
+	float: left;
+}
+.skill- a{
+	display: block;
+	width: 3.888rem;
+	color: #555555;
+	font-size: 0.388rem;
+	margin-top: 0.296rem;
+	margin-left:0.555rem ;
+	text-align: center;
+	padding-bottom: 0.18rem;
+}
+
+.skill-a{
+	float: left;
+}
+.skill-a a{
+	border-bottom: 0.07rem solid #FFFFFF;
+}
+.skill-b a{
+	border-bottom: 0.07rem solid #1AB394;
+}
+/*===============================================================*/
+.Askill{
+	width: 10rem;
+	height: 4.629rem;
+	display:none;
+	
+}
+.Mskill{
+	width: 10rem;
+	height: 4.629rem;
+	display:block;
+
+}
+
+
+/*===============================================================*/
+.xinxi{
+	width: 9.444rem;
+	background-color: #FFFFFF;
+	margin: 0.277rem auto;
+	border-radius: 0.185rem;
+	margin-bottom: 0.277rem;
+}
+.xinxi_p{
+	width: 1.944rem;
+	float: left;
+}
+.xinxi_p img{
+	width: 1.388rem;
+	height: 1.388rem;
+	border-radius: 0.833rem;
+	margin-top: 0.24rem;
+	margin-left: 0.277rem;
+}
+.xinxi_right{
+	width: 7.5rem;
+	margin-left: 1.944rem;
+}
+.xinxi_right_a{
+	height: 1.296rem;
+	width: 7.5rem;
+}
+.xinxi_right_a a{
+	font-size: 0.388rem;
+	color: #333333;
+	line-height: 1.296rem;
+	font-family: "microsoft yahei";
+}
+.xinxi_right_a img{
+	width: 0.388rem;
+	height: 0.388rem;
+	margin-left: 0.08rem;
+}
+.time{
+	font-size: 0.333rem;
+	color: #888888;
+	float: right;
+	margin-right: 0.555rem;
+}
+.xinxi_right_b p{
+	font-size: 0.388rem;
+	line-height: 0.725rem;
+	font-family: "microsoft yahei";
+	margin-right: 0.5rem;
+}
+.xinxi_right_c img{
+	width: 2.222rem;
+	height: 0.833rem;
+	margin-left: 5.378rem;
+}
+
+
+
+/*===============================================================*/
+/*.buttom{
+	width: 10rem;
+	height: 2.25rem;
+	background-color: #FFFFFF;
+	position: absolute;
+	bottom: 0rem;
+	
+}
+.buttom-{
+	float: left;
+	width: 2.5rem;
+	height: 2.25rem;
+}
+.buttom- img{
+	width: 0.833rem;
+	height: 0.833rem;
+	margin-top: 0.361rem;
+	margin-left: 0.833rem;
+}
+.buttom- p{
+	color: #555555;
+	font-size: 0.5rem;
+	margin-left: 0.73rem;
+}*/
+#bottom{
+height: 1.481481rem;
+font-family: "microsoft yahei";
+font-size: 0.333333rem;
+color: #555555;
+background-color: #FFF;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+#bottom_left{
+	width: 50%;
+	float: left;
+	height: 100%;
+	display: inline-block;
+}
+#bottom_right{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+}
+#bottom_part1{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+#bottom_part2{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	float: right;
+}
+#bottom_part3{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+#bottom_part4{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+}
+#bottom img{
+	width: 0.574074rem;
+	height: 0.583333rem;
+	display: block;
+	margin: 0.185185rem auto;
+}
+#bottom label{
+	display:block;
+	margin: 0 auto;
+	text-align: center;
+}

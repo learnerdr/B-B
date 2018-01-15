@@ -1,0 +1,139 @@
+body {
+				margin: 0px;
+				padding: 0px;
+				background-color: #f2f2f2;
+			}
+			p{
+				margin-bottom: 0rem;
+			}
+			
+			/*取消导航栏content的影响*/
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			.mui-bar-nav~.mui-content {
+				padding-top: 13%;
+				margin-bottom: 1.481rem;
+			}
+			
+			
+			.header_set {
+				height: 1.333rem;
+				background-color: #1AB394;
+				padding: 0px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			
+			.return{
+				width: 0.305rem;
+				height: 0.527rem;
+				overflow: hidden;
+				margin-left: 0.555rem;
+				margin-top: 21%;
+			}
+			.return_text{
+				margin-left: 3.648rem;
+			}
+			.return_text p{
+				font-size: 0.5rem;
+				font-family: "microsoft yahei";
+				color: #f2f2f2;
+			}
+			
+			
+			
+			/*选项*/
+			.personal_data{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				align-items: center;
+			}
+			.personal_data p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.password_set{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				align-items: center;
+				margin-top: 0.018rem;
+			}
+			.password_set p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.Bound_Alipay{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				align-items: center;
+				margin-top: 0.018rem;
+			}
+			.Bound_Alipay p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.about_us{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				align-items: center;
+				margin-top: 0.018rem;
+			}
+			.about_us p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.Check_the_new_version{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				align-items: center;
+				margin-top: 0.018rem;
+			}
+			.Check_the_new_version p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			
+			/*按钮*/
+			.btn_Log_out{
+				display: flex;
+				justify-content: center;
+				margin-top: 0.833rem;
+			}
+			.btn_Log_out button{
+				width: 7.731rem;
+				height: 1.111rem;
+				border-radius: 0.277rem;
+				background-color: #1ab394;
+				font-family: 'microsoft yahei';
+				font-size: 0.5rem;
+				color: #FFFFFF;
+			}

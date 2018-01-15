@@ -1,0 +1,443 @@
+body {
+				margin: 0px;
+				padding: 0px;
+				background-color: #f2f2f2;
+			}
+			p{
+				margin-bottom: 0rem;
+			}
+			
+			/*取消导航栏content的影响*/
+			
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			
+			.mui-bar-nav~.mui-content {
+				padding-top: 12%;
+				margin-bottom: 1.481rem;
+			}
+			/*导航栏*/
+			
+			.header_main_pages {
+				height: 1.333rem;
+				background-color: #1AB394;
+				padding: 0px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.head_position{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.position {
+				width: 0.481rem;
+				height: 0.592rem;
+				border-radius: 45px;
+				overflow: hidden;
+				margin-left: 0.555rem;
+			}
+			
+			.head_position p{
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #FFFFFF;
+				margin-left: 0.277rem;
+			}
+			.contact_others{
+				width: 0.518rem;
+				height: 0.546rem;
+				overflow: hidden;
+				margin-right: 0.555rem;
+			}
+			
+			/*<!--轮播图-->*/
+			
+			#slider {
+				width: 100%;
+				overflow: hidden;
+			}
+			
+			#slider img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.mui-slider-indicator .mui-indicator {
+				display: inline-block;
+				width: 0.138rem;
+				height: 0.138rem;
+				margin: 1px 6px;
+				cursor: pointer;
+				border-radius: 50%;
+				background: #888888;
+				-webkit-box-shadow: 0 0 1px 1px rgba(130, 130, 130, .7);
+				box-shadow: 0 0 1px 1px rgba(130, 130, 130, .7);
+			}
+			
+			.mui-slider-indicator .mui-active.mui-indicator {
+				background: #1AB394;
+			}
+			/*<!--任务发布与接收-->*/
+			
+			.mission_send_receive ul {
+				margin: 0px;
+				padding: 0px;
+				display: flex;
+				flex-direction: row;
+			}
+			
+			.mission_send_receive ul li {
+				background-color: #FFFFFF;
+				list-style: none;
+				width: 49%;
+				height: 3.333rem;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			
+			.mission_send_receive ul li>a {
+				text-decoration: none;
+				display: block;
+			}
+			
+			.mission_receive {
+				margin-left: 0.092rem;
+			}
+			
+			.send_text_one p {
+				display: inline-block;
+				margin: 0rem;
+				margin-top: 1.416rem;
+				margin-left: 0.824rem;
+				font-family: "microsoft yahei";
+				font-size: 0.555rem;
+				color: #1cb4c6;
+			}
+			
+			.send_text_two {
+				margin-left: 0.824rem;
+			}
+			
+			.send_text_two p {
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #888888;
+			}
+			
+			.receive_text_one {
+				margin: 0rem;
+				margin-left: 2.462rem;
+				margin-top: 0.833rem;
+			}
+			
+			.receive_text_one p {
+				margin: 0;
+				font-family: "microsoft yahei";
+				font-size: 0.555rem;
+				color: #f5a643;
+			}
+			
+			.receive_text_two {
+				margin: 0;
+				float: right;
+				margin-top: 0.148rem;
+				margin-right: 0.833rem;
+			}
+			
+			.receive_text_two p {
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #888888;
+			}
+			
+			.mission_send {
+				background-image: url(../img/gave_u_task.png);
+				background-repeat: no-repeat;
+				background-size: 1.527rem, 2.222rem;
+				background-position: 2.87rem 0rem;
+			}
+			
+			.mission_receive {
+				background-image: url(../img/gave_u_money.png);
+				background-repeat: no-repeat;
+				background-size: 1.907rem, 1.944rem;
+				background-position: 0.555rem 1.527rem;
+			}
+			/*<!--任务列表-->*/
+			
+			.mission_list_top {
+				width: 100%;
+				height: 0.888rem;
+				background-color: #FFFFFF;
+				margin-top: 0.138rem;
+			}
+			
+			.mission_list_top ul {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.mission_list_top ul li {
+				list-style: none;
+				display: inline-block;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			
+			.mission_list_top ul li>a {
+				text-decoration: none;
+				display: block;
+			}
+			
+			.point {
+				width: 0.148rem;
+				height: 0.148rem;
+				background-color: #2AC845;
+				border-radius: 45px;
+				overflow: hidden;
+				display: inline-block;
+				margin-left: 0.555rem;
+				margin-top: 0.277rem;
+				margin-bottom: 2%;
+			}
+			
+			.mission_new p {
+				margin: 0;
+				margin-left: 0.277rem;
+				margin-top: 6%;
+				display: inline-block;
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #1AB394;
+			}
+			
+			.mission_more {
+				float: right;
+			}
+			
+			.mission_more p {
+				margin: 0;
+				margin-top: 8%;
+				margin-right: 0.462rem;
+				display: inline-block;
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #1AB394;
+			}
+			
+			.mission_list_contant {
+				width: 100%;
+				height: 2.981rem;
+				background-color: #FFFFFF;
+				margin-top: 0.018rem;
+				display: flex;
+				flex-direction: row;
+			}
+			
+			.mission_list_contant_other {
+				width: 100%;
+				height: 2.981rem;
+				background-color: #FFFFFF;
+				margin-top: 0.092rem;
+				display: flex;
+				flex-direction: row;
+			}
+			/*左边头像*/
+			
+			.left_head {
+				flex: 1.666rem;
+				height: 100%;
+			}
+			
+			.left_head_img {
+				width: 1.111rem;
+				height: 1.111rem;
+				border-radius: 45px;
+				overflow: hidden;
+				margin-top: 0.277rem;
+				margin-left: 0.277rem;
+				margin-right: 0.277rem;
+			}
+			
+			.left_head_img img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.right_contant {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
+			/*右边第一行*/
+			
+			.right_contant_top {
+				height: 40%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+			
+			.right_contant_top_left {
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+			}
+			
+			.right_contant_top_left p {
+				margin: 0;
+				padding: 0;
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #333333;
+				margin-top: 0.555rem;
+			}
+			
+			.top_left_img {
+				width: 0.462rem;
+				height: 0.462rem;
+				border-radius: 45px;
+				overflow: hidden;
+				margin-left: 0.083rem;
+				margin-top: 0.555rem;
+			}
+			
+			.right_contant_top_right {
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+			}
+			
+			.right_contant_top_right p {
+				margin: 0;
+				padding: 0;
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #F5A643;
+				margin-top: 0.555rem;
+				margin-left: 0.083rem;
+				margin-right: 0.277rem;
+			}
+			
+			.top_right_img {
+				width: 0.462rem;
+				height: 0.462rem;
+				overflow: hidden;
+				margin-top: 0.555rem;
+			}
+			/*右边第二行*/
+			
+			.right_contant_middle {
+				height: 40%;
+				width: 7.5rem;
+				min-width: 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			
+			.right_contant_middle p {
+				flex: 1;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				min-width: 0;
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #555555;
+			}
+			/*右边第三行*/
+			
+			.right_contant_bottom {
+				height: 20%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+			
+			.right_contant_bottom p {
+				margin: 0;
+				padding: 0;
+				font-family: "microsoft yahei";
+				font-size: 0.333rem;
+				color: #888888;
+				margin-right: 0.277rem;
+				margin-bottom: 0.277rem;
+			}
+			
+			.more {
+				width: 100%;
+				height: 1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.more p {
+				margin-top: 0.277rem;
+				font-family: "microsoft yahei";
+				font-size: 0.277rem;
+				color: #888888;
+
+			}
+#bottom{
+height: 1.481481rem;
+font-family: "microsoft yahei";
+font-size: 0.333333rem;
+color: #555555;
+background-color: #FFF;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+#bottom_left{
+	width: 50%;
+	float: left;
+	height: 100%;
+	display: inline-block;
+}
+#bottom_right{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+}
+#bottom_part1{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+#bottom_part2{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	float: right;
+}
+#bottom_part3{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+#bottom_part4{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+}
+#bottom img{
+	width: 0.574074rem;
+	height: 0.583333rem;
+	display: block;
+	margin: 0.185185rem auto;
+}
+#bottom label{
+	display:block;
+	margin: 0 auto;
+	text-align: center;
+}

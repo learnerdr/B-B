@@ -1,0 +1,82 @@
+.status_bar{
+	background-color: #1AB394;
+	height: 0.694444rem;
+}
+.header{
+	background-color:#1ab394;
+	position: relative;
+	top: -0.005556rem;
+	height: 1.333333rem;
+	padding: 0;
+	border-top-color: #1AB394;
+}
+.header img{
+	height: 0.527777rem;
+	display: inline-block;
+	margin-left: 0.555555rem;
+	margin-top: 0.398148rem;
+}
+.header span{
+	font-family: "microsoft yahei";
+	font-size: 0.5rem;
+	color: #F2F2F2;
+	display: inline-block;
+	margin-top: 0.425925rem;
+	position: relative;
+	margin-left: 0.555555rem;
+}
+.content{
+	background-color: #FFFFFF;
+	margin-top: 0.314814rem;
+	width: 100%;
+}
+.title{
+	width: 100%;
+}
+.title img{
+	height: 0.546296rem;
+	width: 0.638888rem;
+	display: inline-block;
+	margin: 0.648148rem 0.324074rem 0 0.648148rem;
+	float: left;
+}
+.title span{
+	font-family: "microsoft yahei";
+	font-size: 0.509259rem;
+	color: #333333;
+	display: inline-block;
+	margin-top: 0.694444rem;
+	width: 76.5%;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+.text{
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	color: #555555;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	margin: 0.648148rem 0.601851rem 0 0.648148rem;
+}
+.picture{
+	margin-top: 0.629629rem;
+}
+.picture img{
+	margin: 0 0 0 0.638888rem;
+	height: 5.361111rem;
+	width: 8.518518rem;
+}
+.bottom{
+	margin: 0.694444rem 0.864814rem 0.277777rem 0.555555rem;
+}
+.bottom img{
+	height: 0.351851rem;
+	width: 0.472222rem;
+	margin-right: 0.148148rem;
+}
+.bottom span{
+	font-family: "microsoft yahei";
+	color: #888888;
+}

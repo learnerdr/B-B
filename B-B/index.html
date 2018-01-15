@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/index.css" rel="stylesheet" />
+		<title></title>
+	</head>
+
+	<body>
+		<div class="mui-content" id="content">
+			<div class="head_pic">
+				<div class="head_box"><img src="img/QQ(1).png" /></div>
+			</div>
+
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>账号</label>
+					<input type="text" class="mui-input-clear" placeholder="请输入手机号">
+				</div>
+				<div class="mui-input-row">
+					<label>密码</label>
+					<input type="password" placeholder="请输入密码">
+				</div>
+
+			</form>
+			<div class="mui-content-padded">
+					<button class="mui-btn mui-btn-block " id="login">登录</button>
+
+			</div>
+			<div class="login-forget">
+				<a class="forget" id="forget_pw">忘记密码</a>
+				<a class="login" id="register">新用户注册</a>
+			</div>
+			<div class="mui-content-padded oauth-area">
+				<div class="notice">
+					<div class="line"></div>
+					<div class="login-notice">
+						<p class="login-p">第三方登录</p>
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="login-place">
+					<div class="qq_pic">
+						<div class="qq_box"><img src="img/QQ(1).png" /></div>
+						<p>QQ</p>
+					</div>
+					<div class="weixin_pic">
+						<div class="weixin_box"><img src="img/weixin(1).png" /></div>
+						<p>微信</p>
+					</div>
+					<div class="weibo_pic">
+						<div class="weibo_box"><img src="img/weibo.png" /></div>
+						<p>微博</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/immersed.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+
+			var o_login=document.getElementById('login');
+			var o_forget_pw=document.getElementById('forget_pw');
+			var o_register=document.getElementById('register');
+			
+			
+			
+			o_login.addEventListener('tap', function() {
+			
+				 openView.usuView('main_page.html','main_page.html');
+			});
+			o_forget_pw.addEventListener('tap', function() {
+			
+				openView.usuView('find_pw.html','find_pw.html');
+			});
+			o_register.addEventListener('tap', function() {
+		
+			openView.usuView('register1.html','register1.html');
+			});
+
+	
+	
+
+			
+			
+			
+			
+			
+			
+			
+
+		</script>
+	</body>
+
+</html>

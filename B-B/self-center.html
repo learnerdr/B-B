@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/self-center.css" rel="stylesheet" />
+		
+		<title></title>
+	</head>
+
+	<body>
+		
+	<!--头部-->
+			<div class="head ">
+				<div class="head_box">
+					<img src="img/my_head.png" />
+				</div>
+				<div class="head_text">
+					<p>18236789609</p>
+					<img src="img/sex.png" />
+			    </div>
+			    <div class="head_text_school">
+			    	<p>成都东软学院</p>
+			    </div>
+		    </div>
+		<div class="mui-content">
+			
+		    <!--四个按钮-->
+		    <div class="four-sides">
+		    	<a href="#" id="history_send">
+		    		<div class="side">
+		    		<img src="img/history_post.png" />
+					<p>历史发布</p>
+			    </div>
+		    	</a>
+		    	
+		    	
+		    	<a href="#" id="history_receipt">
+		    		<div class="side">
+		    		<img src=" img/history_get.png" />
+					<p>历史接单</p>
+			    </div>
+		    	</a>
+			    
+			    
+			    <a href="#" id="my_sk">
+		    		<div class="side">
+		    		<img src="img/my_skill.png" />
+					<p>我的技能</p>
+			    </div>
+		    	</a>
+			    
+			    
+			    <a href="#">
+		    		<div class="side">
+		    		<img src="img/review.png" />
+					<p>等待评价</p>
+			    </div>
+		    	</a>
+			    
+		    </div>
+		    
+		    <!--五列选项-->
+		    <div class="five-lists">
+		    	<div class="list" id="Credit_score">
+		    		<div class="list_first">
+		    			<img src="img/reputation.png" />
+					<p>信誉积分</p>
+		    		</div>
+		    	</div>
+		    	<div class="list" id="recommend">
+		    		<div class="list_first">
+		    			<img src="img/recommend_classify.png" />
+					<p>推送类型</p>
+		    		</div>
+		    	</div>
+		    	<div class="list">
+		    		<div class="list_first">
+		    			<img src="img/get_money.png" />
+					<p>已赚金额</p>
+		    		</div>
+		    	</div>
+		    	<div class="list">
+		    		<div class="list_first">
+		    			<img src="img/my_mode.png" />
+					<p>勿扰模式</p>
+		    		</div>
+					<div class="mui-switch mui-switch-blue btn">
+						<div class="mui-switch-handle"></div>
+					</div>
+		    	</div>
+		    	<div class="list" id="set_up">
+		    		<div class="list_first">
+		    		<img src="img/set.png" />
+					<p>设置</p>
+		    		</div>
+		    	</div>
+		    </div>
+
+
+
+		    
+		    <div id="bottom">
+				<div id="bottom_left">
+					<div id="bottom_part1">
+						<img src="img/message_interface/main.png"/>
+						<label>首页</label>
+					</div>
+					<div id="bottom_part2" >
+						<img src="img/my-skills/news.png" />
+						<label >消息</label>
+					</div>
+				</div>
+				<div id="bottom_right">
+					<div id="bottom_part3" >
+						<img src="img/message_interface/yuan.png"/>
+						<label>技能</label>
+					</div>
+					<div id="bottom_part4" >
+						<img src="img/message_interface/user.png"/>
+						<label style="color:#1AB394;">我的</label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/immersed.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			var bottom_part2=document.getElementById('bottom_part2');
+	       bottom_part2.addEventListener('tap', function() {
+		      
+			openView.usuView('message_interface.html','message_interface.html');
+	});
+	var bottom_part3=document.getElementById('bottom_part3');
+	       bottom_part3.addEventListener('tap', function() {
+		      
+			openView.usuView('my-skills.html','my-skills.html');
+	});
+	var bottom_part1=document.getElementById('bottom_part1');
+	       bottom_part1.addEventListener('tap', function() {
+		     
+			openView.usuView('main_page.html','main_page.html');
+	});
+	var set_up=document.getElementById('set_up');
+	       set_up.addEventListener('tap', function() {
+		     
+			openView.usuView('Set_up.html','Set_up.html');
+	});
+	var recommend=document.getElementById('recommend');
+	       recommend.addEventListener('tap', function() {
+		    
+			openView.usuView('propelling_classify.html','propelling_classify.html');
+	});
+	var o_history_send=document.getElementById('history_send');
+	       o_history_send.addEventListener('tap', function() {
+		    
+			openView.usuView('send_finished_orders.html','send_finished_orders.html');
+	});
+	var o_history_receipt=document.getElementById('history_receipt');
+	       o_history_receipt.addEventListener('tap', function() {
+		   
+			openView.usuView('reception_all_oreders.html','reception_all_oreders.html');
+	});
+	var o_my_sk=document.getElementById('my_sk');
+	       o_my_sk.addEventListener('tap', function() {
+		    
+			openView.usuView('my_skills2.html','my_skills2.html');
+	});
+		</script>
+	</body>
+
+</html>

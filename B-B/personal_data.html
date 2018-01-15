@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>personal_data</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/personal_data.css" />
+	</head>
+
+	<body>
+		<div class="header" id="header">
+			<img src="img/personal_data/back.png" class="mui-action-back"/>
+			<span>个人信息</span>
+		</div>
+		<div id="profile_picture" id="content">
+			<table>
+				<tbody>
+					<tr>
+						<td><span>头像</span></td>
+						<td><img src="img/personal_data/user_head2.png" align="center" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="nickname">
+			<table>
+				<tbody>
+					<tr>
+						<td style="width: 15%"><span id="nickname_span1">昵称</span></td>
+						<td style="width: 74%"><span id="nickname_span2">咸鱼子</span></td>
+						<td><img src="img/personal_data/chos_way.png" align="center" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="sex">
+			<table>
+				<tbody>
+					<tr>
+						<td style="width: 15%"><span id="sex_span1">性别</span></td>
+						<td style="width: 74%"><span id="sex_span2">女</span></td>
+						<td><img src="img/personal_data/chos_way.png" align="center" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="address">
+			<table>
+				<tbody>
+					<tr>
+						<td><span>默认联系地址</span></td>
+						<td><img src="img/personal_data/chos_way.png" align="center" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="TEL">
+			<table>
+				<tbody>
+					<tr>
+						<td style="width: 35%"><span id="TEL_span1">默认联系电话</span></td>
+						<td style="width: 54%"><span id="TEL_span2">17760475951</span></td>
+						<td><img src="img/personal_data/chos_way.png" align="center" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<button id="Exit_logon">
+			退出登录
+		</button>
+		<script src="js/immersed.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+			
+	var Exit_logon=document.getElementById('Exit_logon');
+	       Exit_logon.addEventListener('tap', function() {
+		   
+			 openView.usuView('index.html','index.html');
+	});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+		
+		<link href="css/register_data.css" rel="stylesheet"  />
+	</head>
+	<body>
+		<div class="tittle" id="header">
+			<img src="img/my-skills/back.png" class="mui-action-back">
+			<a>资料填写</a>
+		</div>
+		<form class="register" id="content">
+			<div class="register-">
+				<label>新密码</label>
+				<input type="text" class="" placeholder="请输入手机号">
+			</div>
+			<div class="register-">
+				<label>确认密码</label>
+				<input type="text" class="" placeholder="请输入验证码">
+			</div>
+			<div class="register-">
+				<label>填写呢称</label>
+				<input type="text" class="" placeholder="请输入验证码">
+			</div>
+			<div class="register- data_sex">
+				<label>选择性别</label>
+				<input type="radio" name="sex" value="男">男
+				<input type="radio" name="sex" value="女">女
+			</div>
+			<div class="register-">
+				<label>所在大学</label>
+				<div class="local_college">
+					<img src="img/register_data/chos_way.png"/>
+					<a>为选择</a>
+				</div>
+			</div>
+		</form>
+		<button type="button" class="register_ok" id="register_ok">确认注册</button>
+		
+		<script src="js/immersed.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			var register_ok =document.getElementById('register_ok');
+	       register_ok.addEventListener('tap', function() {
+		      
+			 openView.usuView('index.html','index.html');
+	});
+	
+	
+
+		</script>
+		
+		
+		
+	</body>
+</html>

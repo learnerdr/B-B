@@ -1,0 +1,69 @@
+{
+	"index.html": {
+		"resources": [
+			"img/�Z.png",
+			"img/��(1).png"
+		],
+		"refer": [
+			"main_page.html",
+			"register1.html",
+			"find_pw.html"
+		]
+	},
+	"register.html": {
+		"resources": [
+			"img/register/��.png",
+			"img/register/��.�\u001d.png",
+			"img/register/��.png",
+			"img/register/��.�\u001d.png",
+			"img/register/��.png",
+			"img/register/��.�\u001d.png"
+		],
+		"refer": [
+			"register.html"
+		]
+	},
+	"my-skills.html": {
+		"resources": [
+			"img/my-skills/��..png",
+			"img/my-skills/\bP(1).png",
+			"img/my-skills/;u.png",
+			"img/my-skills/�o(1).png",
+			"img/my-skills/��..png",
+			"img/my-skills/\u0011�.png"
+		],
+		"refer": []
+	},
+	"main_page.html": {
+		"refer": [
+			"Release_task.html",
+			"self-center.html",
+			"message_interface.html",
+			"search_college.html"
+		],
+		"resources": []
+	},
+	"message_interface.html": {
+		"refer": [
+			"communication.html",
+			"self-center.html",
+			"my-skills.html",
+			"sys_infor.html"
+		],
+		"resources": []
+	},
+	"self-center.html": {
+		"refer": [
+			"send_finished_orders.html",
+			"my-skills.html",
+			"reception_all_oreders.html"
+		],
+		"resources": []
+	},
+	"register1.html": {
+		"refer": [
+			"register_data.html"
+		],
+		"resources": []
+	}
+}

@@ -1,0 +1,81 @@
+.status_bar{
+	background-color: #565656;
+	height: 0.694444rem;
+}
+.search{
+	height: 1.333333rem;
+	background-color: #1AB394;
+}
+input{
+	font-family: "microsoft yahei";
+	font-size: 0.333333rem;
+}
+.search img{
+	height: 0.527777rem;
+	width: 0.305555rem;
+	margin: 0 0.555555rem;
+}
+#mySearch{
+	height: 0.833333rem;
+	width: 7.657407rem;
+	background-color: #FFFFFF;
+	padding: 0.24074rem 0 0.24074rem 1.018518rem;
+	text-align: left;
+	margin-top: 0.231481rem;
+}
+.search_icon{
+	color: #a1a1a1 !important;
+	position: absolute;
+	top:2%;
+	left: 16%;
+}
+#A{
+	height: 0.787037rem;
+	background-color: #e0e0e0;
+}
+#content_col{
+	width: 1.12037rem;
+	position: fixed;
+	background: rgba(33,33,33,0.2);
+	top: 2.035481rem;
+	right: 0;
+	text-align: center;
+}
+.content_col_letter{
+	color: #1AB394;
+	font-family: "microsoft yahei";
+	font-size: 0.388888rem;
+}
+.content_row{
+	background-color: #E0E0E0;
+	height: 0.787037rem;
+}
+.content_row_letter{
+	font-family: "microsoft yahei";
+	font-size: 0.5rem;
+	color: #646464;
+	padding: 0.175925rem 0 0 0.361111rem;
+}
+.content_row_city{
+	padding: 0.361111rem 0 0 0.379629rem;
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	color: #646464;
+}
+#content span{
+	display: block;
+}
+#content_center{
+	height: 1.851851rem;
+	width: 1.851851rem;
+	background-color:#1AB394;
+	color: #FFFFFF;
+	font-family: "microsoft yahei";
+	font-size: 0.833333rem;
+	border-radius: 0.235185rem;
+	text-align: center;
+	line-height: 1.851851rem;
+	position: fixed;
+	left: 4.074074rem;
+	top: 7.453703rem;
+}

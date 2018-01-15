@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/Set_up.css" rel="stylesheet" />
+		<title></title>
+	</head>
+
+	<body>
+		<!--导航栏-->
+		<header id="header" class="mui-bar mui-bar-nav header_set">
+				<!--图标-->
+					<a href="#" >
+						<img src="img/return.png" class="return mui-action-back" />
+					</a>
+				<!--字-->
+				<div class="return_text">
+					<p>设置</p>
+				</div>
+		</header>
+		<div class="mui-content" id="content">
+			<div class=" personal_data" id="data">
+				<a href="#">
+					<p>个人资料</p>
+				</a>
+			</div>
+			<div class=" password_set" id="password_set">
+				<a href="#">
+					<p>密码设置</p>
+				</a>
+			</div>
+			<div class="Bound_Alipay">
+				<a href="#">
+					<p>绑定支付宝</p>
+				</a>
+			</div>
+			<div class=" about_us">
+				<a href="#">
+					<p>关于我们</p>
+				</a>
+			</div>
+			<div class=" Check_the_new_version">
+				<a href="#">
+					<p>检查新版本</p>
+				</a>
+			</div>
+			
+			
+			<div class="btn_Log_out" id="Exit_logon">
+				<button>退出登录</button>
+			</div>
+			
+		</div>
+		
+		
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/immersed.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+	var data=document.getElementById('data');
+	       data.addEventListener('tap', function() {
+		
+			openView.usuView('personal_data.html','personal_data.html');
+	});
+	var password_set=document.getElementById('password_set');
+	       password_set.addEventListener('tap', function() {
+		  
+			openView.usuView('set_pw.html','set_pw.html');
+	});
+	var Exit_logon=document.getElementById('Exit_logon');
+	       Exit_logon.addEventListener('tap', function() {
+		  
+			openView.usuView('index.html','index.html');
+	});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,62 @@
+.status_bar{
+	background-color: #565656;
+	height: 0.694444rem;
+}
+.header{
+	background-color:#1ab394;
+	position: relative;
+	top: -0.005556rem;
+	height: 1.333333rem;
+	padding: 0;
+	text-align: center;
+}
+.header span{
+	font-family: "microsoft yahei";
+	font-size: 0.5rem;
+	color: #F2F2F2;
+	display: inline-block;
+	margin-top: 0.425925rem;
+	position: relative;
+}
+.header img{
+	height: 0.527777rem;
+	display: inline-block;
+	margin-left: 0.555555rem;
+	margin-top: 0.398148rem;
+	float: left;
+}
+.task{
+	height: 2.842592rem;
+	margin-top: 0.277777rem;
+	background-color: #FFFFFF;
+}
+.task_date{
+	height: 0.49074rem;
+	font-family: "microsoft yahei";
+	font-size: 0.388888rem;
+	color: #888888;
+	text-align: center;
+	padding-top: 0.277777rem;
+}
+.task_status{
+	height: 0.444444rem;
+	margin-top: 0.138888rem;
+}
+.task_status div{
+	height: 0.444444rem;
+	width: 0.138888rem;
+	background-color: #1AB394;
+	display: inline-block;
+}
+.task_status span{
+	color: #333333;
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	padding-left: 0.277777rem;
+}
+.task_description{
+	margin: 0.277777rem 0.583333rem 0 0.444444rem;
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	color: #555555;
+}

@@ -1,0 +1,155 @@
+.status_bar{
+	background-color: #565656;
+	height: 0.694444rem;
+}
+.header{
+	background-color:#1ab394;
+	position: relative;
+	top: -0.005556rem;
+	height: 1.333333rem;
+	padding: 0;
+	text-align: center;
+}
+.header span{
+	font-family: "microsoft yahei";
+	font-size: 0.5rem;
+	color: #F2F2F2;
+	display: inline-block;
+	margin-top: 0.425925rem;
+}
+.header img{
+	height: 0.527777rem;
+	display: inline-block;
+	margin-left: 0.555555rem;
+	margin-top: 0.398148rem;
+	float: left;
+}
+#profile_picture{
+	height: 1.388888rem;
+	background-color: #FFFFFF;
+}
+table,tbody,tr{
+	height: 100%;
+	width: 100%;
+}
+#profile_picture span{
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	color: #333333;
+	margin-left: 0.555555rem;
+}
+#profile_picture img{
+	height: 0.925925rem;
+	width: 0.925925rem;
+	display: inline-block;
+	margin-right: 0.546296rem;
+	float: right;
+}
+#nickname{
+	height: 1.388888rem;
+	background-color: #FFFFFF;
+	margin-top: 0.018518rem;
+}
+#nickname_span1{
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	margin-left: 0.555555rem;
+	color: #333333;
+}
+#nickname_span2{
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	color: #888;
+	text-align: right;
+	width: 100%;
+	display: inline-block;
+}
+#nickname img{
+	height: 0.435185rem;
+	width: 0.24074rem;
+	display: inline-block;
+	margin-right: 0.555555rem;
+	float: right;
+}
+#sex{
+	height: 1.388888rem;
+	background-color: #FFFFFF;
+	margin-top: 0.018518rem;
+}
+#sex_span1{
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	margin-left: 0.555555rem;
+	color: #333333;
+}
+#sex_span2{
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	color: #888;
+	text-align: right;
+	width: 100%;
+	display: inline-block;
+}
+#sex img{
+	height: 0.435185rem;
+	width: 0.24074rem;
+	display: inline-block;
+	margin-right: 0.555555rem;
+	float: right;
+}
+#address{
+	height: 1.388888rem;
+	background-color: #FFFFFF;
+	margin-top: 0.018518rem;
+}
+#address span{
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	margin-left: 0.555555rem;
+	color: #333333;
+}
+#address img{
+	height: 0.435185rem;
+	width: 0.24074rem;
+	display: inline-block;
+	margin-right: 0.555555rem;
+	float: right;
+}
+#TEL{
+	height: 1.388888rem;
+	background-color: #FFFFFF;
+	margin-top: 0.018518rem;
+}
+#TEL_span1{
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	margin-left: 0.555555rem;
+	color: #333333;
+}
+#TEL_span2{
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	color: #888;
+	text-align: right;
+	width: 100%;
+	display: inline-block;
+}
+#TEL img{
+	height: 0.435185rem;
+	width: 0.24074rem;
+	display: inline-block;
+	margin-right: 0.555555rem;
+	float: right;
+}
+button{
+	height: 1.111111rem;
+	width: 7.731481rem;
+	display: block;
+	margin: 0.833333rem auto 0 auto;
+	background-color: #1AB394;
+	color: #F2F2F2;
+	font-family: "microsoft yahei";
+	font-size: 0.444444rem;
+	text-align: center;
+	border-radius: 0.277777rem;
+}

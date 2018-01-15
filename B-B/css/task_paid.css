@@ -1,0 +1,313 @@
+*{
+	padding: 0rem;
+	margin: 0rem;
+	font-family: "microsoft yahei";
+}
+html{
+	width: 10rem;
+}
+.tittle{
+	width: 10rem;
+	height: 1.333rem;
+	background-color: #1AB394;
+}
+.tittle img{
+	margin-left: 0.555rem;
+	width: 0.305rem;
+	height: 0.527rem;
+	margin-top: 0.398rem;
+	
+}
+.tittle a{
+	margin-left:3.046rem;
+	margin-top: 0.425rem;
+	font-size: 0.5rem;
+	color: #FFFFFF;
+	font-family: "microsoft yahei";
+}
+/*====================================================================*/
+.task_detail{
+	width:10rem ;
+	margin-top: 0rem;
+}
+.task_detail_1{
+	background-color: #FFFFFF;
+}
+.task_detail_2{
+	padding-top: 0.277rem;
+	padding-bottom: 0.277rem;
+}
+.point1{
+	width: 0.138rem;
+	height: 0.138rem;
+	background-color: #F5A643;
+	border-radius: 0.833rem;
+	margin-top: 0.425rem;
+	margin-left: 0.555rem;
+	float: left;
+}
+.task_detail_a1{
+	width: 3.3rem;
+	float: left;
+}
+.task_detail_a1 a{
+	line-height:0.972rem;
+	margin-left: 0.277rem;
+	font-size: 0.444rem;
+	color: #555555;
+	float: left;
+}
+
+.point2{
+	width: 0.138rem;
+	height: 0.138rem;
+	background-color: #ed5a64;
+	border-radius: 0.833rem;
+	margin-top: 0.425rem;
+	margin-left: 0.555rem;
+	float: left;
+}
+.task_detail_a2{
+	width: 3.3rem;
+	float: left;
+}
+.task_detail_a2 a{
+	line-height:0.972rem;
+	margin-left: 0.277rem;
+	font-size: 0.444rem;
+	color: #555555;
+}
+
+.point3{
+	width: 0.138rem;
+	height: 0.138rem;
+	background-color: #1AB394;
+	border-radius: 0.833rem;
+	margin-top: 0.425rem;
+	margin-left: 0.555rem;
+	float: left;
+}
+.task_detail_a3{
+	width: 3.3rem;
+	float: left;
+}
+.task_detail_a3 a{
+	line-height:0.972rem;
+	margin-left: 0.277rem;
+	font-size: 0.444rem;
+	color: #555555;
+}
+
+.point4{
+	width: 0.138rem;
+	height: 0.138rem;
+	background-color: #f9711f;
+	border-radius: 0.833rem;
+	margin-top: 0.425rem;
+	margin-left: 0.555rem;
+	float: left;
+}
+.task_detail_a4{
+	width: 3.3rem;
+	float: left;
+}
+.task_detail_a4 a{
+	line-height:0.972rem;
+	margin-left: 0.277rem;
+	font-size: 0.444rem;
+	color: #555555;
+}
+
+.point5{
+	width: 0.138rem;
+	height: 0.138rem;
+	background-color: #1ab4c6;
+	border-radius: 0.833rem;
+	margin-top: 0.425rem;
+	margin-left: 0.555rem;
+	float: left;
+}
+.task_detail_a5{
+	width: 3.3rem;
+	float: left;
+}
+.task_detail_a5 a{
+	line-height:0.972rem;
+	margin-left: 0.277rem;
+	font-size: 0.444rem;
+	color: #555555;
+}
+
+.point6{
+	width: 0.138rem;
+	height: 0.138rem;
+	background-color: #1ff9d8;
+	border-radius: 0.833rem;
+	margin-top: 0.425rem;
+	margin-left: 0.555rem;
+	float: left;
+}
+.task_detail_a6{
+	width: 3.3rem;
+	float: left;
+}
+.task_detail_a6 a{
+	line-height:0.972rem;
+	margin-left: 0.277rem;
+	font-size: 0.444rem;
+	color: #555555;
+}
+.task_word{
+	width: 6rem;
+	float: left;
+	line-height:0.972rem;
+	font-size: 0.444rem;
+	color: #555555;
+}
+.line{
+	clear: both;
+	height: 0.001rem;
+	background-color: #FFFFFF;
+	
+}
+/*====================================================================*/
+/*====================================================================*/
+.show_money{
+	width: 10rem;
+	height: 1.666rem;
+	margin-top: 0.277rem;
+	background-color: #FFFFFF;
+}
+.show_money1{
+	width: 10rem;
+	height: 0.64rem;
+}
+.show_money1 a{
+	font-size: 0.444rem;
+	color: #333333;
+	display: block;
+	margin-left: 3.388rem;
+	line-height: 0.94rem;
+	font-family: "microsoft yahei";
+}
+.show_time{
+	width: 10rem;
+	height: 0.37rem;
+}
+.show_time p{
+	margin-left: 4.333rem;
+	color: #888888;
+	font-size: 0.296rem;
+	font-family: "microsoft yahei";
+}
+.paid_time{
+	width: 10rem;
+	height: 0.655rem;
+}
+.paid_time a{
+	display: block;
+	width: 0.311rem;
+	height: 0.496rem;
+	float: left;
+	margin-left: 0.18rem;
+	background-color: #555555;
+	color: #FFFFFF;
+	padding-left: 0.062rem;
+	padding-bottom: 0.092rem;
+	margin-top: 0.092rem;
+}
+.paid_time .paid_time_1{
+	margin-left: 4.18rem;
+}
+.paid_time .paid_time_3{
+	background-color: #FFFFFF;
+	color: #888888;
+	padding-left: 0.03rem;
+	width: 0.11rem;
+}
+/*====================================================================*/
+.paid_way{
+	width: 10rem;
+	height: 2.796rem;
+	margin-top:0.092rem;
+}
+.my_money{
+	width: 10rem;
+	height: 1.388rem;
+	background-color: #FFFFFF;
+}
+.ch{
+	width: 1.111rem;
+	height: 1.388rem;
+	float: left;
+}
+.my_money .choose{
+	margin-top: 0.509rem;
+	width: 0.37rem;
+	height: 0.37rem;
+	margin-left: 0.555rem;
+}
+.P_rmb{
+	width: 0.685rem;
+	height: 0.685rem;
+	margin-top: 0.351rem ;
+	margin-left: 0.2rem;
+	float: left;
+}
+.my_balence{
+	width: 7.72rem;
+	height: 1.388rem;
+	float: right;
+}
+.my_balence_word{
+	width: 7.72rem;
+	margin-top: 0.242rem;
+	font-size: 0.444rem;
+	color: #333333;
+}
+.my_money a{
+	font-size: 0.252rem;
+	color: #888888;	
+	margin-left: 0.4rem;
+	
+}
+/*====================================================================*/
+.zhifubao{
+	margin-top: 0.018rem;
+	width: 10rem;
+	height: 1.388rem;
+	background-color: #FFFFFF;
+}
+.zhifubao .choose{
+	margin-top: 0.509rem;
+	width: 0.37rem;
+	height: 0.37rem;
+	margin-left: 0.555rem;
+}
+.P_zhifubao{
+	width: 0.685rem;
+	height: 0.685rem;
+	margin-top: 0.351rem ;
+	margin-left: 0.2rem;
+	float: left;
+}
+.zhifubao_word{
+	font-size: 0.444rem;
+	color: #333333;
+	width: 7.76rem;
+	height: 1.388rem;
+	float: right;
+	line-height: 1.388rem;
+}
+/*====================================================================*/
+.paid{
+	background-color: #1AB394;
+	width: 7.731rem;
+	height: 1.111rem;
+	margin-top:0.555rem;
+	margin-left: 1.138rem;
+	color: #FFFFFF;
+	font-size: 0.444rem;
+	font-family: "microsoft yahei";
+	border-radius: 0.277rem;
+}

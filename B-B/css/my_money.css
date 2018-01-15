@@ -1,0 +1,146 @@
+*{
+	padding: 0rem;
+	margin: 0rem;
+	font-family: "microsoft yahei";
+}
+html{
+	width: 10rem;
+}
+.tittle{
+	width: 10rem;
+	height: 1.333rem;
+	background-color: #1AB394;
+}
+.tittle img{
+	margin-left: 0.555rem;
+	width: 0.305rem;
+	height: 0.527rem;
+	margin-top: 0.398rem;
+	
+}
+.tittle a{
+	margin-left:0.277rem;
+	font-size: 0.5rem;
+	color: #FFFFFF;
+}
+/*====================================================================*/
+.io_money{
+	width: 10rem;
+	height: 5.555rem;
+	background-color: #1AB394;
+}
+.io_money1{
+	height: 3.888rem;
+}
+.yu_e_word{
+	height: 1.564rem;
+	text-align: center;
+}
+.yu_e_word a{
+	font-size: 0.444rem;
+	color: white;
+	line-height: 1.564rem;
+}
+.yu_e_money{
+	text-align: center;
+}
+.yu_e_money a{
+	font-size: 1.111rem;
+	color: #FFFFFF;
+}
+.io_paid{
+	width: 10rem;
+	height: 1.666rem;
+	
+}
+.io_paid-a1{
+	width: 4.99rem;
+	height: 1.666rem;
+	float: left;
+	text-align: center;
+	background-color: #158f76;
+}
+.io_paid-a1 a{
+	color: #FFFFFF;
+}
+.io_paid-a2{
+	width: 4.99rem;
+	height: 1.666rem;
+	float: right;
+	text-align: center;
+	background-color: #158f76;
+}
+.io_paid-a2 a{
+	color: #FFFFFF;
+}
+.io_paid-all1{
+	font-size: 0.333rem;
+	line-height: 0.89rem;
+}
+.io_paid-all2{
+	font-size: 0.5rem;
+}
+/*====================================================================*/
+.paid_recently{
+	width: 10rem;
+	height: 1.157rem;
+	background-color: #f6f6f6;
+}
+.paid_recently a{
+	font-size: 0.333rem;
+	margin-left: 0.555rem;
+	line-height: 1.157rem;
+	color: #888888;
+}
+/*====================================================================*/
+.paid_r{
+	width: 10rem;
+	height: 6.944rem;
+	background-color: #FFFFFF;
+}
+.paid_record{
+	height: 1.388rem;
+	width: 10rem;
+}
+.paid_record1{
+	width: 7.796rem;
+	height: 1.388rem;
+	float: left;
+}
+.paid_record1 a{
+	line-height: 1.388rem;
+	font-size: 0.444rem;
+}
+.paid_record1_word{ 
+	color: #333333;
+	margin-left: 0.555rem;
+}
+.paid_record1_money{
+	color: #F5A643;
+	margin-left: 0.305rem;
+}
+
+
+.paid_record_time{
+	width: 2.203rem;
+	height: 1.388rem;
+	float: right;
+	text-align: center;
+}
+.paid_record_time a{
+	font-size: 0.388rem;
+	color: #888888;
+}
+/*====================================================================*/
+
+.tixian{
+	background-color: #1AB394;
+	width: 7.731rem;
+	height:1.111rem;
+	margin-top: 0.555rem;
+	margin-left: 1.138rem;
+	color: #FFFFFF;
+	font-size: 0.444rem;
+	font-family: "microsoft yahei";
+	border-radius: 0.277rem;
+}

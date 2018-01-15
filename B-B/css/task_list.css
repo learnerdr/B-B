@@ -1,0 +1,228 @@
+body {
+				margin: 0px;
+				padding: 0px;
+				background-color: #f2f2f2;
+			}
+			p{
+				margin-bottom: 0rem;
+			}
+			/*取消导航栏content的影响*/
+			
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			
+			.mui-bar-nav~.mui-content {
+				padding-top: 14%;
+				margin-bottom: 1.481rem;
+			}
+			/*导航栏*/
+			
+			.header_task_list {
+				height: 1.333rem;
+				background-color: #1AB394;
+				padding: 0px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+			
+			.return {
+				width: 0.305rem;
+				height: 0.527rem;
+				overflow: hidden;
+				margin-left: 0.555rem;
+				margin-top: 21%;
+			}
+			
+			.return_text p {
+				font-size: 0.5rem;
+				font-family: "microsoft yahei";
+				color: #f2f2f2;
+			}
+			.add{
+				width: 0.527rem;
+				height: 0.527rem;
+				overflow: hidden;
+				margin-right: 0.555rem;
+				margin-top: 12%;
+			}
+			
+			
+			/*排序栏*/
+			.Sort_bar{
+				width: 100%;
+				height: 1.111rem;
+				background-color: #FFFFFF;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+;''			}
+			.Inverted_triangle{
+				height: 0;
+				width: 0;
+				border-top: 0.111rem solid #000000;
+				border-left: 0.1rem solid #FFFFFF;
+				border-right: 0.1rem solid #FFFFFF;
+				margin-left: 0.092rem;
+			}
+			.Inverted_triangle2{
+				height: 0;
+				width: 0;
+				border-bottom: 0.111rem solid #1AB394;
+				border-left: 0.1rem solid #FFFFFF;
+				border-right: 0.1rem solid #FFFFFF;
+				margin-left: 0.092rem;
+			}
+			.Reputation_ranking{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				cursor: pointer;
+			}
+			.Reputation_ranking p{
+				font-family: "微软雅黑";
+				font-size: 0.444rem;
+				color: #555555;
+				
+			}
+			.Learning_guidance{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				cursor: pointer;
+			}
+			.Learning_guidance p{
+				font-family: "微软雅黑";
+				font-size: 0.444rem;
+				color: #1AB394;
+				
+			}
+			
+			/*任务列表*/
+			.mission_list_contant {
+				width: 100%;
+				height: 2.981rem;
+				background-color: #FFFFFF;
+				margin-top: 0.092rem;
+				display: flex;
+				flex-direction: row;
+			}
+			
+			.mission_list_contant_other {
+				width: 100%;
+				height: 2.981rem;
+				background-color: #FFFFFF;
+				margin-top: 0.092rem;
+				display: flex;
+				flex-direction: row;
+			}
+			/*左边头像*/
+			
+			.left_head {
+				flex: 1.666rem;
+				height: 100%;
+			}
+			
+			.left_head_img {
+				width: 1.111rem;
+				height: 1.111rem;
+				border-radius: 45px;
+				overflow: hidden;
+				margin-top: 0.277rem;
+				margin-left: 0.277rem;
+				margin-right: 0.277rem;
+			}
+			
+			.left_head_img img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.right_contant {
+				flex: 8.333rem;
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
+			/*右边第一行*/
+			
+			.right_contant_top {
+				height: 40%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+			
+			.right_contant_top_left {
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+			}
+			
+			.right_contant_top_left p {
+				margin: 0;
+				padding: 0;
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #333333;
+				margin-top: 0.555rem;
+			}
+			
+			.top_left_img {
+				width: 0.462rem;
+				height: 0.462rem;
+				border-radius: 45px;
+				overflow: hidden;
+				margin-left: 0.083rem;
+				margin-top: 0.555rem;
+			}
+			
+			.right_contant_top_right {
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+			}
+			
+			.right_contant_top_right p {
+				margin: 0;
+				padding: 0;
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #F5A643;
+				margin-top: 0.555rem;
+				margin-left: 0.083rem;
+				margin-right: 0.277rem;
+			}
+			
+			.top_right_img {
+				width: 0.462rem;
+				height: 0.462rem;
+				overflow: hidden;
+				margin-top: 0.555rem;
+			}
+			/*右边第二行*/
+			
+			.right_contant_middle {
+				height: 40%;
+				width: 7.5rem;
+				min-width: 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			
+			.right_contant_middle p {
+				flex: 1;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				min-width: 0;
+				font-family: "microsoft yahei";
+				font-size: 0.388rem;
+				color: #555555;
+			}

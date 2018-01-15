@@ -1,0 +1,128 @@
+*{
+	padding: 0rem;
+	margin: 0rem;
+}
+html{
+	width: 10rem;
+}
+.tittle{
+	width: 10rem;
+	height: 1.333rem;
+	background-color: #1AB394;
+}
+.tittle img{
+	margin-left: 0.555rem;
+	width: 0.305rem;
+	height: 0.527rem;
+	margin-top: 0.398rem;
+	
+}
+.tittle a{
+	margin-left:0.277rem;
+	margin-top: 0.425rem;
+	font-size: 0.5rem;
+	color: #FFFFFF;
+	font-family: "microsoft yahei";
+}
+/*====================================================================*/
+.icon{
+	width: 10rem;
+	height: 1.388rem;
+	background-color: #FFFFFF;
+}
+.icon img{
+	width: 0.685rem;
+	height: 0.685rem;
+	margin-top: 0.351rem;
+	margin-left: 0.555rem;
+	float: left;
+}
+.icon1{
+	width: 8.472rem;
+	height: 1.388rem;
+	float: right;
+}
+.icon1_a{
+	font-size: 0.388rem;
+	color: #333333;
+	margin-top: 0.23rem;
+	font-family: "microsoft yahei";
+}
+.icon1_b{
+	font-size: 0.333rem;
+	color: #888888;
+	margin-top: -0.12rem;
+	font-family: "microsoft yahei";
+}
+.line{
+	height: 0.009rem;
+	background-color: #FFFFFF;
+}
+/*====================================================================*/
+.icon2{
+	clear: both;
+	margin-top:1.666rem;
+	clear: both;
+	width: 10rem;
+	height:4.527rem;
+	background-color: #FFFFFF;
+	
+}
+.icon2_word{
+	height: 2.101rem;
+	width: 10rem;
+}
+.icon2_word a{
+	font-size: 0.444rem;
+	color: #555555;
+	font-family: "microsoft yahei";
+	line-height: 1.481rem;
+	margin-left: 0.555rem;
+	
+}
+.icon2_money img{
+	width: 0.435rem;
+	height: 0.592rem;
+	margin-left: 0.555rem;
+	margin-top: 0rem;
+	
+}
+.icon2_money input{
+	width: 7.62rem;
+	font-size:0.833rem;
+	margin-left: 0.277rem;
+	margin-top: -0.192rem;
+	border: none;
+	border-bottom: 0.03rem solid #BEBEBE;
+}
+.icon2_ye{
+	height: 1.481rem;
+	width: 10rem;
+}
+.icon2_ye a{
+	 font-size: 0.444rem;
+	 color: #BEBEBE;
+	 font-family: "microsoft yahei";
+	 margin-left: 0.555rem;
+	 line-height: 0.8rem;
+}
+/*====================================================================*/
+.ok{
+	background-color: #1AB394;
+	width: 7.731rem;
+	height: 1.111rem;
+	margin-top: 5.361rem;
+	margin-left: 1.138rem;
+	color: #FFFFFF;
+	font-size: 0.444rem;
+	font-family: "microsoft yahei";
+	border-radius:0.277rem ;
+}
+
+
+
+
+
+
+
+

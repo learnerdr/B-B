@@ -1,0 +1,292 @@
+body {
+				margin: 0px;
+				padding: 0px;
+				background-color: #f2f2f2;
+			}
+			p{
+				margin-bottom: 0rem;
+			}
+			/*取消导航栏content的影响*/
+		
+			/*导航栏*/
+			
+			.header_Release_task {
+				height: 44px;
+				background-color: #1AB394;
+				padding: 0px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.back{
+				height: 44px;
+				width: 20%;
+				display: flex;
+				align-items: center;
+			}
+			.return {
+				width: 0.305rem;
+				height: 0.527rem;
+				overflow: hidden;
+				margin-left: 0.555rem;
+			}
+			
+			.return_text {
+				margin-left: 20%;
+			}
+			
+			.return_text p {
+				font-size: 0.5rem;
+				font-family: "microsoft yahei";
+				color: #f2f2f2;
+			}
+			/*任务种类*/
+			
+			.Task_type {
+				width: 100%;
+				height: 1.388rem;
+				background-color: #FFFFFF;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+			
+			.Task_type_left {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			
+			.Task_type p {
+				margin-bottom: 0;
+				margin-left: 0.092rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			.Task_type img {
+				width: 0.24rem;
+				height: 0.416rem;
+				overflow: hidden;
+				margin-left: 6.601rem;
+			}
+			/*任务内容*/
+			
+			.Task_content {
+				width: 100%;
+				height: 1.388rem;
+				background-color: #FFFFFF;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-top: 0.185rem;
+			}
+			
+			.Task_content p {
+				margin-bottom: 0;
+				margin-left: 0.092rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			/*三角图标*/
+			
+			.Triangulation_icons {
+				height: 0;
+				width: 0;
+				border-left: 0.212rem solid #1ab394;
+				border-top: 0.212rem solid #FFFFFF;
+				border-bottom: 0.212rem solid #FFFFFF;
+				margin-left: 0.555rem;
+			}
+			/*文本域*/
+			
+			.Fill_in_the_content textarea {
+				width: 100%;
+				height: 2.777rem;
+				border: 0;
+				margin: 0;
+				padding: 0;
+				margin-top: 0.018rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #888888;
+				line-height: 0.74rem;
+				text-indent: 0.7rem;
+			}
+			/*任务地址*/
+			
+			.Task_address {
+				width: 100%;
+				height: 1.388rem;
+				background-color: #FFFFFF;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-top: 0.138rem;
+			}
+			
+			.Task_address p {
+				margin-bottom: 0;
+				margin-left: 0.092rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+				flex: 1;
+			}
+			
+			.Task_address input {
+				margin: 0;
+				flex: 3;
+				text-align: right;
+				border: none;
+			}
+			/*任务金额*/
+			
+			.Task_amount {
+				width: 100%;
+				height: 1.388rem;
+				background-color: #FFFFFF;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-top: 0.185rem;
+			}
+			
+			.Task_amount p {
+				margin-bottom: 0;
+				margin-left: 0.092rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+				flex: 1;
+			}
+			
+			.Task_amount input {
+				margin: 0;
+				flex: 3;
+				text-align: right;
+				border: none;
+			}
+			/*联系电话*/
+			
+			.Contact_number {
+				width: 100%;
+				height: 1.388rem;
+				background-color: #FFFFFF;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-top: 0.185rem;
+			}
+			
+			.Contact_number p {
+				margin-bottom: 0;
+				margin-left: 0.092rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+				flex: 1;
+			}
+			
+			.Contact_number input {
+				margin: 0;
+				flex: 3;
+				text-align: right;
+				border: none;
+			}
+			/*发布任务时长*/
+			
+			.Task_release_length {
+				width: 100%;
+				height: 1.388rem;
+				background-color: #FFFFFF;
+				margin-top: 0.185rem;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+			
+			.Task_release_length p {
+				margin-bottom: 0;
+				margin-left: 0.092rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.Task_release_length_left{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.Task_release_length img {
+				width: 0.24rem;
+				height: 0.416rem;
+				overflow: hidden;
+				margin-left: 5.703rem;
+			}
+			
+			input::-webkit-input-placeholder,
+			textarea::-webkit-input-placeholder {
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #888888;
+				text-indent: 0.8rem;
+			}
+			/*按钮*/
+			
+			.btn_go_to_pay {
+				display: flex;
+				justify-content: center;
+				margin-top: 0.833rem;
+			}
+			
+			.btn_go_to_pay button {
+				width: 7.731rem;
+				height: 1.111rem;
+				border-radius: 0.277rem;
+				background-color: #1ab394;
+				font-family: 'microsoft yahei';
+				font-size: 0.5rem;
+				color: #FFFFFF;
+			}
+			
+			/*	任务类型选择*/
+			
+			.mui-poppicker-btn-cancel {
+				width: 82px;
+				height: 40px;
+				color: #555555;
+				background-color: #FFFFFF;
+				border: none;
+			}
+			
+			.mui-poppicker-btn-ok {
+				width: 82px;
+				height: 40px;
+				color: #1AB394;
+				background-color: #FFFFFF;
+				border: none;
+			}
+			
+			.mui-poppicker-header {
+				background-color: #FFFFFF;
+				display: flex;
+				align-items: center;
+			}
+			
+			.mui-poppicker-header p {
+				color: #333333;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				display: inline-block;
+				margin: 0 auto;
+			}
+			
+			.mui-picker-inner {
+				background-color: #FFFFFF;
+				    -webkit-mask-box-image:none;
+			}

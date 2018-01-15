@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/propelling_classify.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header" class="mui-bar mui-bar-nav header_propelling_classify">
+			<!--图标-->
+			<a href="#" id="return_last">
+				<img src="img/return.png" class="return mui-action-back" />
+			</a>
+			<!--字-->
+			<div class="return_text">
+				<p>推送类型</p>
+			</div>
+		</header>
+		<!--内容区-->
+		<div class="mui-content" id="content">
+			<div class="Current_push_type">
+				<img src="img/propelling_classify.png" />
+				<p>当前推送类型</p>
+			</div>
+			
+			<div class="Label_area" id="label_text">
+				
+				
+				
+			</div>
+			
+			<div class="Framed_area">
+				<div class="Framed_area_first">
+					<div class="option_first" data-name = "全部" id="all">
+						<img src="img/no_tick.png"id="all_img"/>
+					<p >全部</p>
+					</div>
+					<div class="option_first" data-name = "跑腿类"id="Running_leg">
+						<img src="img/no_tick.png" id="Running_leg_img"/>
+					<p>跑腿类</p>
+					</div>
+					<div class="option_first Lease"data-name = "租借类" id="Leased_class"> 
+						<img src="img/no_tick.png"  id="Leased_class_img"/>
+					<p>租借类</p>
+					</div>
+					
+				</div>
+				<div class="Framed_area_second">
+					<div class="option_second" data-name = "学习辅导"id="Learning_guidance">
+						<img src="img/no_tick.png" id="Learning_guidance_img" />
+					<p>学习辅导</p>
+					</div>
+					<div class="option_second " data-name = "维修服务"id="Maintenance_service">
+						<img src="img/no_tick.png" id="Maintenance_service_img" />
+					<p>维修服务</p>
+					</div>
+					<div class="option_second " data-name = "其他服务"id="other_service">
+						<img src="img/no_tick.png" id="other_service_img" />
+					<p>其他服务</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/immersed.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+				var return_last=document.getElementById('return_last');
+	       return_last.addEventListener('tap', function() {
+		      
+		  openView.usuView('self-center.html','self-center.html');
+	});
+			var arr = [];
+			var label = document.getElementById("label_text");
+			mui('.Framed_area_first').on("tap",".option_first",function(event)
+			{
+				var name = this.getAttribute("data-name");
+				
+				if(this.classList.contains("active"))
+				{
+					for(var i=0;i<arr.length;i++)
+					{
+						if(arr[i].name == name)
+						{
+							arr.splice(i,1);
+							this.classList.remove("active");
+							Rendering();
+						}
+					}
+				}
+				else{
+					arr.push({name:name});
+				   Rendering();
+				   this.classList.add("active");
+				}
+				
+			})
+			mui('.Framed_area_second').on("tap",".option_second",function(event)
+			{
+				var name = this.getAttribute("data-name");
+				
+				if(this.classList.contains("active"))
+				{
+					for(var i=0;i<arr.length;i++)
+					{
+						if(arr[i].name == name)
+						{
+							arr.splice(i,1);
+							this.classList.remove("active");
+							this.getElementsByTagName("img").src ='img/no_tick.png';
+							Rendering();
+						}
+					}
+				}
+				else{
+					arr.push({name:name});
+				   Rendering();
+				   this.classList.add("active");
+				}
+				
+			})
+			function Rendering(){
+				console.log()
+				label.innerHTML = '';
+				var mystring =document.createDocumentFragment();
+				for(var i =0;i<arr.length;i++)
+				{
+					 var  m = arr[i].name;
+					 console.log(m)
+					 var odiv = document.createElement('div');
+					odiv.className ="label_type";
+					odiv.innerHTML =m;
+					console.log(odiv)
+				  mystring.appendChild(odiv);
+				  
+				}
+				console.log(mystring)
+				label.appendChild(mystring);
+			}	
+			
+			
+			
+				var a=0,b=0,c=0,d=0,e=0,f=0;
+			var Tick1= document.getElementById("all");
+			var img1=  document.getElementById("all_img");
+		
+		
+				Tick1.addEventListener('tap', function(event) {
+					if(a==0){
+						img1.src='img/tick.png';
+						a=1;
+					}
+					else if(a==1){
+						img1.src='img/no_tick.png';
+						a=0;
+					}
+				}, false);
+			
+			
+			
+	
+					  
+				var Tick2= document.getElementById("Running_leg");
+				var img2= document.getElementById("Running_leg_img");
+				Tick2.addEventListener('tap', function(event) {
+							if(b==0){
+								img2.src='img/tick.png';
+								b=1;
+							}
+							else if(b==1){
+								img2.src='img/no_tick.png';
+								b=0;
+							}
+						}, false);
+					
+					
+					var Tick3= document.getElementById("Leased_class");
+					var img3= document.getElementById("Leased_class_img");
+				Tick3.addEventListener('tap', function(event) {
+							if(c==0){
+								img3.src='img/tick.png';
+								c=1;
+							}
+							else if(c==1){
+								img3.src='img/no_tick.png';
+								c=0;
+							}
+						}, false);
+					var Tick4= document.getElementById("Learning_guidance");
+					var img4= document.getElementById("Learning_guidance_img");
+					Tick4.addEventListener('tap', function(event) {
+							if(d==0){
+								img4.src='img/tick.png';
+								d=1;
+							}
+							else if(d==1){
+								img4.src='img/no_tick.png';
+								d=0;
+							}
+						}, false);
+					
+					var Tick5= document.getElementById("Maintenance_service");
+					var img5= document.getElementById("Maintenance_service_img");
+					Tick5.addEventListener('tap', function(event) {
+							if(e==0){
+								img5.src='img/tick.png';
+								e=1;
+							}
+							else if(e==1){
+								img5.src='img/no_tick.png';
+								e=0;
+							}
+						}, false);
+					
+					var Tick6= document.getElementById("other_service");
+					var img6= document.getElementById("other_service_img");
+					Tick6.addEventListener('tap', function(event) {
+							if(f==0){
+								img6.src='img/tick.png';
+								f=1;
+							}
+							else if(f==1){
+								img6.src='img/no_tick.png';
+								f=0;
+							}
+						}, false);
+					
+		</script>
+	</body>
+
+</html>

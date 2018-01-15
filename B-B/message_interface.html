@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/message_interface.css" />
+	</head>
+
+	<body>
+		
+		
+			<header class="mui-bar mui-bar-nav header_new" id="header">
+			<div class="return_text">
+				<p>消息</p>
+			</div>
+		</header>
+		
+		<div class="mui-content" id="content">
+			<div class="news" id="sys_news">
+				<div class="new_left">
+					<img src="img/message_interface/sys_infor.png" />
+					<p>系统消息</p>
+				</div>
+				<span class="mui-badge mui-badge-red">45</span>
+			</div>
+
+			<div class="news_list" id="content_part1">
+				<div class="new_list_text_pic">
+				<img src="img/communication/user_head2.png" />
+				<div class="new_list_text">
+					<p>1777**5951</p>
+					<p>你的快递到了</p>
+				</div>
+				</div>
+				<div class="time_num">
+					<p class="time_text">10:30</p>
+					
+				<span class="mui-badge mui-badge-blue">17</span>
+				</div>
+				
+			</div>
+
+			<div class="news_list">
+				<div class="new_list_text_pic">
+					<img src="img/message_interface/head.png"/>
+					<div class="new_list_text ">
+						<p>1777**5951</p>
+							<p>你的快递到了</p>
+					</div>
+					</div>
+				<div class="time_num">
+					<p class="time_text">10:30</p>
+				   <span class="mui-badge mui-badge-blue">9</span>
+				</div>
+				</div>
+
+
+			<div id="bottom">
+			<div id="bottom_left">
+				<div id="bottom_part1">
+					<img src="img/message_interface/main.png"/>
+					<label >首页</label>
+				</div>
+				<div id="bottom_part2" >
+					<img src="img/my-skills/news.png" />
+					<label style="color:#1AB394;">消息</label>
+				</div>
+			</div>
+			<div id="bottom_right">
+				<div id="bottom_part3" >
+					<img src="img/message_interface/yuan.png"/>
+					<label>技能</label>
+				</div>
+				<div id="bottom_part4" >
+					<img src="img/message_interface/user.png"/>
+					<label>我的</label>
+				</div>
+			</div>
+
+		</div>
+
+		</div>
+		
+		
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/immersed.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			var bottom_part1=document.getElementById('bottom_part1');
+	       bottom_part1.addEventListener('tap', function() {
+		   
+		openView.usuView('main_page.html','main_page.html');
+	});
+	var bottom_part3=document.getElementById('bottom_part3');
+	       bottom_part3.addEventListener('tap', function() {
+		   
+		openView.usuView('my-skills.html','my-skills.html');
+	});
+	var bottom_part4=document.getElementById('bottom_part4');
+	       bottom_part4.addEventListener('tap', function() {
+		      
+			 openView.usuView('self-center.html','self-center.html');
+	});
+
+	var o_sys_news=document.getElementById('sys_news');
+    o_sys_news.addEventListener('tap', function() {
+  
+	openView.usuView('sys_infor.html','sys_infor.html');
+	});
+	var o_new1=document.getElementById('content_part1');
+    o_new1.addEventListener('tap', function() {
+ 
+	openView.usuView('communication.html','communication.html');
+	});
+		</script>
+	</body>
+
+</html>
