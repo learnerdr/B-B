@@ -250,7 +250,7 @@ body {
 			/*左边头像*/
 			
 			.left_head {
-				flex: 1.666rem;
+				width: 22%;
 				height: 100%;
 			}
 			
