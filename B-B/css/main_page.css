@@ -21,7 +21,7 @@ body {
 			/*导航栏*/
 			
 			.header_main_pages {
-				height: 1.333rem;
+				height: 44px;
 				background-color: #1AB394;
 				padding: 0px;
 				display: flex;

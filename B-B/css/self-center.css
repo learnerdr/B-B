@@ -108,7 +108,7 @@ p{
 	margin-top: 0.277rem;
 }
 .five-lists{
-	margin-top: 0.16rem;
+	margin-top: 3.5%;
 }
 .list{
 	width: 100%;
@@ -118,8 +118,7 @@ p{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 0.018rem;
-	margin-bottom: 0.018rem;
+	margin-top: 0.3%;
 }
 .list_first{
 	display: flex;
@@ -142,59 +141,4 @@ p{
 }
 .btn{
 	margin-right: 2%;
-}
-#bottom{
-height: 1.481481rem;
-font-family: "microsoft yahei";
-font-size: 0.333333rem;
-color: #555555;
-background-color: #FFF;
-position: fixed;
-bottom: 0;
-width: 100%;
-}
-#bottom_left{
-	width: 50%;
-	float: left;
-	height: 100%;
-	display: inline-block;
-}
-#bottom_right{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-}
-#bottom_part1{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-	float: left;
-}
-#bottom_part2{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-	float: right;
-}
-#bottom_part3{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-	float: left;
-}
-#bottom_part4{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-}
-#bottom img{
-	width: 0.574074rem;
-	height: 0.583333rem;
-	display: block;
-	margin: 0.185185rem auto;
-}
-#bottom label{
-	display:block;
-	margin: 0 auto;
-	text-align: center;
 }

@@ -11,11 +11,11 @@
 
 	<body>
 		<!--头部-->
-		<header id="header" class="mui-bar mui-bar-nav header_propelling_classify">
+		<header id="header" class="mui-bar mui-bar-nav  header_propelling_classify">
 			<!--图标-->
-			<a href="#" id="return_last">
-				<img src="img/return.png" class="return mui-action-back" />
-			</a>
+			<div id=""class="back mui-action-back">
+				<img src="img/return.png" class="return" />
+			</div>
 			<!--字-->
 			<div class="return_text">
 				<p>推送类型</p>
@@ -73,11 +73,6 @@
 		<script type="text/javascript" src="js/config.js" ></script>
 		<script type="text/javascript">
 			mui.init()
-				var return_last=document.getElementById('return_last');
-	       return_last.addEventListener('tap', function() {
-		      
-		  openView.usuView('self-center.html','self-center.html');
-	});
 			var arr = [];
 			var label = document.getElementById("label_text");
 			mui('.Framed_area_first').on("tap",".option_first",function(event)

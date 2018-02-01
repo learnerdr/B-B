@@ -203,7 +203,8 @@
 				"refer": [
 					"main_page.html",
 					"register1.html",
-					"find_pw.html"
+					"find_pw.html",
+					"tab-webview-main.html"
 				],
 				"priority": 0
 			},
@@ -234,7 +235,8 @@
 					"Release_task.html",
 					"self-center.html",
 					"message_interface.html",
-					"search_college.html"
+					"search_college.html",
+					"task_list.html"
 				],
 				"priority": 0
 			},
@@ -253,7 +255,9 @@
 				"refer": [
 					"send_finished_orders.html",
 					"my-skills.html",
-					"reception_all_oreders.html"
+					"reception_all_oreders.html",
+					"Set_up.html",
+					"propelling_classify.html"
 				],
 				"priority": 0
 			},
@@ -261,6 +265,33 @@
 				"resources": [],
 				"refer": [
 					"register_data.html"
+				],
+				"priority": 0
+			},
+			"tab-webview-main.html": {
+				"resources": [
+					"main_page.html"
+				],
+				"refer": [
+					"message_interface.html",
+					"self-center.html",
+					"my-skills.html"
+				],
+				"priority": 0
+			},
+			"Set_up.html": {
+				"resources": [],
+				"refer": [
+					"set_pw.html",
+					"personal_data.html",
+					"index.html"
+				],
+				"priority": 0
+			},
+			"find_pw.html": {
+				"resources": [],
+				"refer": [
+					"new_pw.html"
 				],
 				"priority": 0
 			}
