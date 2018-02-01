@@ -140,5 +140,6 @@ p{
 	margin-left: 0.287rem;
 }
 .btn{
-	margin-right: 2%;
+	    position: relative;
+    right: 2%;
 }
