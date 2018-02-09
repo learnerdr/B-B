@@ -6,7 +6,6 @@ body {
 			p{
 				margin-bottom: 0rem;
 			}
-			
 			/*取消导航栏content的影响*/
 			
 			.mui-bar {
@@ -16,7 +15,6 @@ body {
 			
 			.mui-bar-nav~.mui-content {
 				padding-top: 10.7%;
-				margin-bottom: 1.481rem;
 			}
 			/*导航栏*/
 			
@@ -234,19 +232,13 @@ body {
 				width: 100%;
 				height: 2.981rem;
 				background-color: #FFFFFF;
-				margin-top: 0.018rem;
+				margin-top: 0.5%;
+				margin-bottom: 1%;
 				display: flex;
 				flex-direction: row;
+				
 			}
 			
-			.mission_list_contant_other {
-				width: 100%;
-				height: 2.981rem;
-				background-color: #FFFFFF;
-				margin-top: 0.092rem;
-				display: flex;
-				flex-direction: row;
-			}
 			/*左边头像*/
 			
 			.left_head {

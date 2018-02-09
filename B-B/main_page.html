@@ -100,8 +100,8 @@
 			</div>
 
 			<!--任务列表-->
-			<div class="mission_list">
-
+			<div class="mission_list"  id="pullrefresh">
+				<!--列表顶部-->
 				<div class="mission_list_top">
 					<ul>
 						<li class="mission_new">
@@ -117,109 +117,78 @@
 						</li>
 					</ul>
 				</div>
-<div id='210'>
-	
-</div>
-			<div class="mission_list_contant">
-					<div class="left_head">
-						<div class="left_head_img">
-							<img src=" img/communication/user_head1.png"/>
-						</div>
-					</div>
-					<div class="right_contant">
-						<div class="right_contant_top">
-							<div class="right_contant_top_left">
-								<p>羞羞的铁拳</p>
-								<img class="top_left_img" src="img/sex.png" align="center" />
-							</div>
-							<div class="right_contant_top_right">
-								<img class="top_right_img" src="img/task_money.png" />
-								<p>5.00元</p>
-							</div>
-
-						</div>
-						<div class="right_contant_middle">
-							<p>需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！
-							</p>
-						</div>
-						<div class="right_contant_bottom">
-							<p></p>
-							<p>10:30</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="mission_list_contant_other">
-					<div class="left_head">
-						<div class="left_head_img">
-							<img src="img/user_head1.png" />
-						</div>
-					</div>
-					<div class="right_contant">
-						<div class="right_contant_top">
-							<div class="right_contant_top_left">
-								<p>羞羞的铁拳</p>
-								<img class="top_left_img" src="img/sex.png" align="center" />
-							</div>
-							<div class="right_contant_top_right">
-								<img class="top_right_img" src="img/task_money.png" />
-								<p>25.00元</p>
-							</div>
-
-						</div>
-						<div class="right_contant_middle">
-							<p>需要买一笼包子和豆浆，送到D5-2019，谢谢啦！</p>
-						</div>
-						<div class="right_contant_bottom">
-							<p></p>
-							<p>10:30</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="mission_list_contant_other">
-					<div class="left_head">
-						<div class="left_head_img">
-							<img src="img/user_head2.png" />
-						</div>
-					</div>
-					<div class="right_contant">
-						<div class="right_contant_top">
-							<div class="right_contant_top_left">
-								<p>猫腻强子</p>
-								<img class="top_left_img" src="img/sex.png" align="center" />
-							</div>
-							<div class="right_contant_top_right">
-								<img class="top_right_img" src="img/task_money.png" />
-								<p>300.00元</p>
-							</div>
-
-						</div>
-						<div class="right_contant_middle">
-							<p>需要买一笼包子和豆浆，送到D5-2019，谢谢啦！</p>
-						</div>
-						<div class="right_contant_bottom">
-							<p></p>
-							<p>10:30</p>
-						</div>
-					</div>
+				<!--列表刷新-->
+				<div class="mission_list_contant_add">
+					
 				</div>
 			</div>
-			<div class="more">
-				<a href="#">
-					<p>戳我查看更多哦</p>
-				</a>
-			</div>
-
-		</div>
 
 		<script src="js/immersed.js"></script>
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" src="js/config.js" ></script>
 		<script type="text/javascript">
-			mui.init();
+			mui.init({
+				pullRefresh: {
+//					容器
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+						var table = document.body.querySelector('.mission_list_contant_add');
+					var cells = document.body.querySelectorAll('.mission_list_contant');
+					for (var i = cells.length, len = i + 3; i < len; i++) {
+						var div = document.createElement('div');
+						div.className = 'mission_list_contant';
+						div.innerHTML = '<div class="mission_list_contant"><div class="left_head"><div class="left_head_img"><img src=" img/communication/user_head1.png"/></div></div><div class="right_contant"><div class="right_contant_top"><div class="right_contant_top_left"><p>羞羞的铁拳</p><img class="top_left_img" src="img/sex.png" align="center" /></div><div class="right_contant_top_right"><img class="top_right_img" src="img/task_money.png" /><p>5.00元</p></div></div><div class="right_contant_middle"><p>需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！</p></div><div class="right_contant_bottom"><p></p><p>10:30</p></div></div></div>';
+						//下拉刷新，新纪录插到最前面；
+						table.insertBefore(div, table.firstChild);
+					}
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1000);
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 3)); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.mission_list_contant_add');
+					var cells = document.body.querySelectorAll('.mission_list_contant');
+					for (var i = cells.length, len = i + 3; i < len; i++) {
+						var div = document.createElement('div');
+						div.className = 'mission_list_contant';
+						div.innerHTML  = '<div class="mission_list_contant"><div class="left_head"><div class="left_head_img"><img src=" img/communication/user_head1.png"/></div></div><div class="right_contant"><div class="right_contant_top"><div class="right_contant_top_left"><p>羞羞的铁拳</p><img class="top_left_img" src="img/sex.png" align="center" /></div><div class="right_contant_top_right"><img class="top_right_img" src="img/task_money.png" /><p>5.00元</p></div></div><div class="right_contant_middle"><p>需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！</p></div><div class="right_contant_bottom"><p></p><p>10:30</p></div></div></div>';
+						table.appendChild(div);
+					}
+				}, 1500);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}
 			
+//			轮播
 			var gallery = mui('.mui-slider');
 			gallery.slider({
 				interval: 2000 //自动轮播周期，若为0则不自动播放，默认为0；
@@ -243,6 +212,7 @@
 	});
 	
 	})		
+	
 			
 		</script>
 	</body>

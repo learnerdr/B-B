@@ -198,7 +198,11 @@
 			"index.html": {
 				"resources": [
 					"img/微博.png",
-					"img/微信(1).png"
+					"img/微信(1).png",
+					"css/index.css",
+					"img/weibo.png",
+					"img/weixin(1).png",
+					"css/mui.min.css"
 				],
 				"refer": [
 					"main_page.html",
@@ -230,7 +234,9 @@
 				"priority": 0
 			},
 			"main_page.html": {
-				"resources": [],
+				"resources": [
+					"pullrefresh_sub.html"
+				],
 				"refer": [
 					"Release_task.html",
 					"self-center.html",
@@ -301,7 +307,6 @@
 				"img/QQ(1).png",
 				"js/mui.min.js",
 				"fonts/mui.ttf",
-				"css/mui.min.css",
 				"css/register.css",
 				"js/mui.js",
 				"js/flexible.js",

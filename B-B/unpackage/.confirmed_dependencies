@@ -2,7 +2,11 @@
 	"index.html": {
 		"resources": [
 			"img/�Z.png",
-			"img/��(1).png"
+			"img/��(1).png",
+			"css/index.css",
+			"img/weibo.png",
+			"img/weixin(1).png",
+			"css/mui.min.css"
 		],
 		"refer": [
 			"main_page.html",
@@ -41,9 +45,12 @@
 			"self-center.html",
 			"message_interface.html",
 			"search_college.html",
-			"task_list.html"
+			"task_list.html",
+			"pullrefresh_sub.html"
 		],
-		"resources": []
+		"resources": [
+			"pullrefresh_sub.html"
+		]
 	},
 	"message_interface.html": {
 		"refer": [
