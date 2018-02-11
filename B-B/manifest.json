@@ -300,6 +300,14 @@
 					"new_pw.html"
 				],
 				"priority": 0
+			},
+			"pullrefresh_sub.html": {
+				"resources": [],
+				"refer": [
+					"Release_task.html",
+					"task_list.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {

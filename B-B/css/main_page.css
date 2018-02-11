@@ -1,4 +1,7 @@
-body {
+
+
+
+		body {
 				margin: 0px;
 				padding: 0px;
 				background-color: #f2f2f2;
@@ -12,7 +15,9 @@ body {
 				-webkit-box-shadow: none;
 				box-shadow: none;
 			}
-			
+			.mui-pull-top-pocket {
+    			top: 1.7.5rem!important;
+			}
 			.mui-bar-nav~.mui-content {
 				padding-top: 10.7%;
 			}
@@ -52,7 +57,6 @@ body {
 				overflow: hidden;
 				margin-right: 0.555rem;
 			}
-			
 			/*<!--轮播图-->*/
 			
 			#slider {
