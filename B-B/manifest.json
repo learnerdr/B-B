@@ -263,7 +263,9 @@
 					"my-skills.html",
 					"reception_all_oreders.html",
 					"Set_up.html",
-					"propelling_classify.html"
+					"propelling_classify.html",
+					"send_all_orders.html",
+					"my_skills2.html"
 				],
 				"priority": 0
 			},
@@ -306,6 +308,13 @@
 				"refer": [
 					"Release_task.html",
 					"task_list.html"
+				],
+				"priority": 0
+			},
+			"Release_task.html": {
+				"resources": [],
+				"refer": [
+					"task_paid.html"
 				],
 				"priority": 0
 			}

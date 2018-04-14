@@ -4,13 +4,13 @@
 	margin: 0rem;
 }
 html{
-	width: 10rem;
+	width: 100%;
 }
 p{
 	margin: 0;
 }
 .tittle{
-	width: 10rem;
+	width: 100%;
 	height: 1.333rem;
 	background-color: #1AB394;
 	display: flex;
@@ -34,7 +34,7 @@ p{
 
 /*===============================================================*/
 .skill{
-	width: 10rem;
+	width: 100%;
 	height: 1.111rem;
 	background-color: #FFFFFF;
 }
@@ -66,13 +66,13 @@ p{
 }
 /*===============================================================*/
 .Askill{
-	width: 10rem;
+	width: 100%;
 	height: 4.629rem;
 	display:block;
 	
 }
 .Mskill{
-	width: 10rem;
+	width: 100%;
 	height: 4.629rem;
 	display:none;
 
@@ -139,7 +139,7 @@ p{
 
 /*===============================================================*/
 /*.buttom{
-	width: 10rem;
+	width: 100%;
 	height: 2.25rem;
 	background-color: #FFFFFF;
 	position: absolute;

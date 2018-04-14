@@ -83,14 +83,14 @@
 			<p>支付剩余时间</p>
 			</div>
 			<div class="paid_time">
-			<a class="paid_time_1">0</a><a>9</a><a class="paid_time_3">:</a><a>5</a><a>9</a>				
+			<a class="paid_time_1" id="minute_a">0</a><a id="minute_b">9</a><a class="paid_time_3">:</a><a id="second_a">5</a><a id="second_b">9</a>				
 			</div>
 
 		</div>
 		<div class="paid_way">
-			<div class="my_money">
+			<div class="my_money" id="my_money" onclick="my_money()">
 				<div class="ch">
-					<img class="choose" src="img/skills_paid/tick.png" />	
+					<img class="choose" src="img/skills_paid/tick.png" id="picture1"/>	
 				</div>
 				<img class="P_rmb" src="img/skills_paid/my_money.png" />
 				<div class="my_balence">
@@ -98,22 +98,82 @@
 					<a>余额￥5：00</a>
 				</div>
 			</div>
-			<div class="zhifubao">
+			<div class="zhifubao" id="zhifubao" onclick="zhifubao()">
 				<div class="ch">
-					<img class="choose" src="img/skills_paid/no_tick.png" />	
+					<img class="choose" src="img/skills_paid/no_tick.png" id="picture2"/>	
 				</div>
 				<img class="P_zhifubao" src="img/skills_paid/Alipay.png" />
-				<div class="zhifubao_word" >
+				<div class="zhifubao_word">
 					支付宝支付
 				</div>
 			</div>
 		</div>
-		<button type="submit" class="paid" value="立即支付">立即支付￥3：00</button>
+		<button type="submit" class="paid" value="立即支付" onclick="leftTimer()">立即支付￥3：00</button>
 		<script src="js/immersed.js"></script>
 		<script type="text/javascript" src="js/config.js" ></script>
 		<script >
 			mui.init();
-			
+		var zhifu1 = document.getElementById('my_money');
+		var zhifu2 = document.getElementById('zhifubao');
+		var p1 = document.getElementById('picture1');
+		var p2 = document.getElementById('picture2');
+		function my_money(){
+			p2.src='img/skills_paid/no_tick.png';
+			p1.src='img/skills_paid/tick.png';
+		}
+		function zhifubao(){
+			p1.src='img/skills_paid/no_tick.png';
+			p2.src='img/skills_paid/tick.png';
+		}
 		</script>
+		
+		<script language="javascript" type="text/javascript">  
+		var minute_a = document.getElementById('minute_a'); 
+		var minute_b = document.getElementById('minute_b'); 
+		var second_a = document.getElementById('second_a'); 
+		var second_b = document.getElementById('second_b');
+
+		var m_a = 0, m_b = 0;
+		var s_a = 0, s_b = 0;
+		var intDiff = parseInt(600); //倒计时总秒数量
+		//function timer(intDiff) {
+			window.setInterval(function() {
+			var day = 0, hour = 0;
+			var minute = 0,second = 0; //时间默认值
+			if(intDiff > 0) {
+			//计算相关的天，小时，还有分钟，以及秒
+			//day = Math.floor(intDiff / (60 * 60 * 24));
+		//	hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+			minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+			second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+			
+			m_a = parseInt(minute/10); m_b = minute%10;
+			s_a = parseInt(second/10); s_b = second%10;
+			console.log(m_a);
+		}
+		
+			minute_a.innerHTML = m_a;
+			minute_b.innerHTML = m_b;
+		
+			second_a.innerHTML = s_a;
+			second_b.innerHTML = s_b;
+		
+		intDiff--;
+	}, 1000);
+	//循环函数，是时钟运动起来
+	setInterval(function() {
+		if(m_a == 0 && m_b == 0 && s_a == 0 && s_b == 0){
+			clearInterval();
+		}
+	}, 1000)
+//}
+	
+	//执行上面的函数
+	mui.plusReady(function() {
+		timer(intDiff);
+	});
+
+		</script>
+
 	</body>
 </html>

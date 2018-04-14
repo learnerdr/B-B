@@ -36,7 +36,8 @@
 	height: 100%;
 	text-align: center;
 	margin-left: 5%;
-	color: #555555;
+	color: #1AB394;
+	border-bottom: 0.062555rem solid #1AB394;
 }
 .header_bottom_part2{
 	display: inline-block;
@@ -44,6 +45,7 @@
 	height: 100%;
 	text-align: center;
 	color: #555555;
+	border-bottom: 0.062555rem solid #FFFFFF;
 }
 .header_bottom_part3{
 	display: inline-block;
@@ -51,16 +53,13 @@
 	height: 100%;
 	text-align: center;
 	color: #555555;
+	border-bottom: 0.062555rem solid #FFFFFF;
 }
 .header_bottom span{
 	font-family: "microsoft yahei";
 	font-size: 0.388888rem;
 	display: inline-block;
 	margin-top: 0.37037rem;
-}
-.selected{
-	color: #1AB394;
-	border-bottom: 0.062555rem solid #1AB394;
 }
 #content_part2{
 	display: inline-block;
@@ -219,4 +218,10 @@
 	font-size: 0.333333rem;
 	border-radius: 1.046296rem;
 	padding: 0.048148rem 0.166666rem;
+}
+#content2{
+	display: none;
+}
+#content3{
+	display: none;
 }

@@ -3,10 +3,10 @@
 	margin: 0rem;
 }
 html{
-	width: 10rem;
+	width: 100%;
 }
 .tittle{
-	width: 10rem;
+	width: 100%;
 	height: 1.333rem;
 	background-color: #1AB394;
 }
@@ -26,7 +26,7 @@ html{
 }
 /*====================================================================*/
 .div1{
-	width: 10rem;
+	width: 100%;
 	height: 1.388rem;
 	background-color: #FFFFFF;
 	margin-bottom: 0.018rem;

@@ -4,10 +4,10 @@
 	font-family: "microsoft yahei";
 }
 html{
-	width: 10rem;
+	width: 100%;
 }
 .tittle{
-	width: 10rem;
+	width: 100%;
 	height: 1.333rem;
 	background-color: #1AB394;
 }
@@ -27,12 +27,12 @@ html{
 }
 /*====================================================================*/
 .skill_declare{
-	width: 10rem;
+	width: 100%;
 	height: 3.148rem;
 	background-color: #FFFFFF;
 }
 .skill_declare_tittle{
-	width: 10rem;
+	width: 100%;
 	height: 1.203rem;
 }
 .skill_declare_tittle img{
@@ -59,13 +59,13 @@ html{
 }
 /*====================================================================*/
 .show_money{
-	width: 10rem;
+	width: 100%;
 	height: 1.666rem;
 	margin-top: 0.277rem;
 	background-color: #FFFFFF;
 }
 .show_money1{
-	width: 10rem;
+	width: 100%;
 	height: 0.64rem;
 }
 .show_money1 a{
@@ -77,7 +77,7 @@ html{
 	font-family: "microsoft yahei";
 }
 .show_time{
-	width: 10rem;
+	width: 100%;
 	height: 0.37rem;
 }
 .show_time p{
@@ -87,7 +87,7 @@ html{
 	font-family: "microsoft yahei";
 }
 .paid_time{
-	width: 10rem;
+	width: 100%;
 	height: 0.655rem;
 }
 .paid_time a{
@@ -113,12 +113,12 @@ html{
 }
 /*====================================================================*/
 .paid_way{
-	width: 10rem;
+	width: 100%;
 	height: 2.796rem;
 	margin-top:0.092rem;
 }
 .my_money{
-	width: 10rem;
+	width: 100%;
 	height: 1.388rem;
 	background-color: #FFFFFF;
 }
@@ -160,7 +160,7 @@ html{
 /*====================================================================*/
 .zhifubao{
 	margin-top: 0.018rem;
-	width: 10rem;
+	width: 100%;
 	height: 1.388rem;
 	background-color: #FFFFFF;
 }

@@ -3,10 +3,10 @@
 	margin: 0rem;
 }
 html{
-	width: 10rem;
+	width: 100%;
 }
 .tittle{
-	width: 10rem;
+	width: 100%;
 	height: 1.333rem;
 	background-color: #1AB394;
 }
@@ -26,7 +26,7 @@ html{
 }
 /*====================================================================*/
 .icon{
-	width: 10rem;
+	width: 100%;
 	height: 1.388rem;
 	background-color: #FFFFFF;
 }
@@ -63,14 +63,14 @@ html{
 	clear: both;
 	margin-top:1.666rem;
 	clear: both;
-	width: 10rem;
+	width: 100%;
 	height:4.527rem;
 	background-color: #FFFFFF;
 	
 }
 .icon2_word{
 	height: 2.101rem;
-	width: 10rem;
+	width: 100%;
 }
 .icon2_word a{
 	font-size: 0.444rem;
@@ -97,7 +97,7 @@ html{
 }
 .icon2_ye{
 	height: 1.481rem;
-	width: 10rem;
+	width: 100%;
 }
 .icon2_ye a{
 	 font-size: 0.444rem;

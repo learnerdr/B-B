@@ -67,7 +67,9 @@
 			"my-skills.html",
 			"reception_all_oreders.html",
 			"Set_up.html",
-			"propelling_classify.html"
+			"propelling_classify.html",
+			"send_all_orders.html",
+			"my_skills2.html"
 		],
 		"resources": []
 	},
@@ -104,6 +106,11 @@
 		"refer": [
 			"Release_task.html",
 			"task_list.html"
+		]
+	},
+	"Release_task.html": {
+		"refer": [
+			"task_paid.html"
 		]
 	}
 }

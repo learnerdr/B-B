@@ -18,22 +18,63 @@
 			<span>历史接单</span>
 		</div>
 		<div class="header_bottom" id="content">
-			<div class="header_bottom_part1 selected">
+			<div class="header_bottom_part1" id="header_bottom_part1" onclick="history_all()">
 				<span class="header_span">全部</span>
 			</div>
-			<div class="header_bottom_part2">
+			<div class="header_bottom_part2" id="header_bottom_part2" onclick="history_ing()">
 				<span class="header_span">进行中</span>
 			</div>
-			<div class="header_bottom_part3">
+			<div class="header_bottom_part3" id="header_bottom_part3" onclick="history_finish()">
 				<span class="header_span">已完成</span>
 			</div>
 		</div>
-		<div id="content_part2">
-			<img src="img/reception_all_orders/user_head1.png" class="content_left" align="left" />
+		<div id="content1">
+			<div id="content_part2">
+				<img src="img/reception_all_orders/user_head1.png" class="content_left" align="left" />
+				<div class="content_middle">
+					<div class="content_middle_nickname">
+						<span>咸鱼子</span>
+						<img src="img/reception_all_orders/sex.png" />
+					</div>
+					<div class="content_middle_time">2017-11-20 21:50:32</div>
+				</div>
+				<div id="content_part2_exception2">进行中</div>
+				<div class="content_task">
+					<div class="content_task_words">帮我到菜鸟驿站拿一下快递，中午13点送到寝室。</div>
+					<div class="content_task_reward">¥3.00</div>
+				</div>
+				<div class="content_bottom">
+					<div class="content_bottom_description">任务类型：跑腿类</div>
+					<div id="content_bottom_button2">取消订单</div>
+				</div>
+			</div>
+			<div id="content_part3">
+					<img src="img/reception_all_orders/user_head.png" class="content_left" align="left"/>
+					<div class="content_middle">
+						<div class="content_middle_nickname">
+							<span>猫腻强子</span>
+						    <img src="img/reception_all_orders/sex1.png"/>
+						</div>
+						<div class="content_middle_time">2017-11-20 21:50:32</div>
+					</div>
+					<div id="content_part3_exception3">已完成</div>
+					<div class="content_task">
+						<div class="content_task_words">帮我到菜鸟驿站拿一下快递，中午13点送到寝室。</div>
+						<div class="content_task_reward">¥3.00</div>
+					</div>
+					<div class="content_bottom">
+						<div class="content_bottom_description">任务类型：跑腿类</div>
+						<div id="content_bottom_button3">删除订单</div>
+					</div>
+			</div>
+		</div>
+		<div id="content2">
+			<div id="content_part2">
+			<img src="img/reception_underway_orders/user_head1.png" class="content_left" align="left" />
 			<div class="content_middle">
 				<div class="content_middle_nickname">
 					<span>咸鱼子</span>
-					<img src="img/reception_all_orders/sex.png" />
+					<img src="img/reception_underway_orders/sex.png" />
 				</div>
 				<div class="content_middle_time">2017-11-20 21:50:32</div>
 			</div>
@@ -46,13 +87,15 @@
 				<div class="content_bottom_description">任务类型：跑腿类</div>
 				<div id="content_bottom_button2">取消订单</div>
 			</div>
+			</div>
 		</div>
-		<div id="content_part3">
-				<img src="img/reception_all_orders/user_head.png" class="content_left" align="left"/>
+		<div id="content3">
+			<div id="content_part3">
+				<img src="img/reception_finished_orders/user_head.png" class="content_left" align="left"/>
 				<div class="content_middle">
 					<div class="content_middle_nickname">
 						<span>猫腻强子</span>
-					    <img src="img/reception_all_orders/sex1.png"/>
+					    <img src="img/reception_finished_orders/sex1.png"/>
 					</div>
 					<div class="content_middle_time">2017-11-20 21:50:32</div>
 				</div>
@@ -66,11 +109,52 @@
 					<div id="content_bottom_button3">删除订单</div>
 				</div>
 		</div>
+		</div>
 		<script src="js/mui.min.js"></script>
 		<script src="js/immersed.js"></script>
 		<script type="text/javascript" src="js/config.js" ></script>
 		<script type="text/javascript">
 			mui.init()
+		var p1 = document.getElementById('header_bottom_part1');
+		var p2 = document.getElementById('header_bottom_part2');
+		var p3 = document.getElementById('header_bottom_part3');
+		var c1 = document.getElementById('content1');
+		var c2 = document.getElementById('content2');
+		var c3 = document.getElementById('content3');
+		function history_all(){
+			p2.style.borderBottomColor='#FFFFFF';
+			p3.style.borderBottomColor='#FFFFFF';
+			p2.style.color='#000000';
+			p3.style.color='#000000';
+			c2.style.display='none';
+			c3.style.display='none';
+			p1.style.borderBottomColor='#1ab394';
+			p1.style.color='#1ab394';
+			c1.style.display='block';
+		}
+		function history_ing(){
+			p1.style.borderBottomColor='#FFFFFF';
+			p3.style.borderBottomColor='#FFFFFF';
+			p1.style.color='#000000';
+			p3.style.color='#000000';
+			c1.style.display='none';
+			c3.style.display='none'; 
+			p2.style.color='#1ab394';
+			c2.style.display='block';
+			p2.style.borderBottomColor='#1ab394';
+		}
+		function history_finish(){
+			p1.style.borderBottomColor='#FFFFFF';
+			p2.style.borderBottomColor='#FFFFFF';
+			p1.style.color='#000000';
+			p2.style.color='#000000';
+			c1.style.display='none';
+			c2.style.display='none'; 
+			p3.style.color='#1ab394';
+			c3.style.display='block';
+			p3.style.borderBottomColor='#1ab394';
+		}
+		
 			
 		</script>
 	</body>

@@ -4,10 +4,10 @@
 	font-family: "microsoft yahei";
 }
 html{
-	width: 10rem;
+	width: 100%;
 }
 .tittle{
-	width: 10rem;
+	width: 100%;
 	height: 1.333rem;
 	background-color: #1AB394;
 }
@@ -27,7 +27,7 @@ html{
 }
 /*====================================================================*/
 .send_man{
-	width: 10rem;
+	width: 100%;
 	height: 1.388rem;
 	background-color: #FFFFFF;
 }
@@ -49,7 +49,7 @@ html{
 
 /*====================================================================*/
 .task_detail{
-	width:10rem ;
+	width:100% ;
 	margin-top: 0.277rem;
 }
 .task_detail_1{
@@ -154,7 +154,7 @@ html{
 }
 /*====================================================================*/
 .buttom{
-	width: 10rem;
+	width: 100%;
 	height: 1.666rem;
 	position: absolute;
 	bottom: 0rem;
