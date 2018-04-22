@@ -1,155 +1,205 @@
-.status_bar{
-	background-color: #565656;
-	height: 0.694444rem;
-}
-.header{
-	background-color:#1ab394;
-	position: relative;
-	top: -0.005556rem;
-	height: 1.333333rem;
-	padding: 0;
-	text-align: center;
-}
-.header span{
-	font-family: "microsoft yahei";
-	font-size: 0.5rem;
-	color: #F2F2F2;
-	display: inline-block;
-	margin-top: 0.425925rem;
-}
-.header img{
-	height: 0.527777rem;
-	display: inline-block;
-	margin-left: 0.555555rem;
-	margin-top: 0.398148rem;
-	float: left;
-}
-#profile_picture{
-	height: 1.388888rem;
-	background-color: #FFFFFF;
-}
-table,tbody,tr{
-	height: 100%;
-	width: 100%;
-}
-#profile_picture span{
-	font-family: "microsoft yahei";
-	font-size: 0.444444rem;
-	color: #333333;
-	margin-left: 0.555555rem;
-}
-#profile_picture img{
-	height: 0.925925rem;
-	width: 0.925925rem;
-	display: inline-block;
-	margin-right: 0.546296rem;
-	float: right;
-}
-#nickname{
-	height: 1.388888rem;
-	background-color: #FFFFFF;
-	margin-top: 0.018518rem;
-}
-#nickname_span1{
-	font-family: "microsoft yahei";
-	font-size: 0.444444rem;
-	margin-left: 0.555555rem;
-	color: #333333;
-}
-#nickname_span2{
-	font-family: "microsoft yahei";
-	font-size: 0.444444rem;
-	color: #888;
-	text-align: right;
-	width: 100%;
-	display: inline-block;
-}
-#nickname img{
-	height: 0.435185rem;
-	width: 0.24074rem;
-	display: inline-block;
-	margin-right: 0.555555rem;
-	float: right;
-}
-#sex{
-	height: 1.388888rem;
-	background-color: #FFFFFF;
-	margin-top: 0.018518rem;
-}
-#sex_span1{
-	font-family: "microsoft yahei";
-	font-size: 0.444444rem;
-	margin-left: 0.555555rem;
-	color: #333333;
-}
-#sex_span2{
-	font-family: "microsoft yahei";
-	font-size: 0.444444rem;
-	color: #888;
-	text-align: right;
-	width: 100%;
-	display: inline-block;
-}
-#sex img{
-	height: 0.435185rem;
-	width: 0.24074rem;
-	display: inline-block;
-	margin-right: 0.555555rem;
-	float: right;
-}
-#address{
-	height: 1.388888rem;
-	background-color: #FFFFFF;
-	margin-top: 0.018518rem;
-}
-#address span{
-	font-family: "microsoft yahei";
-	font-size: 0.444444rem;
-	margin-left: 0.555555rem;
-	color: #333333;
-}
-#address img{
-	height: 0.435185rem;
-	width: 0.24074rem;
-	display: inline-block;
-	margin-right: 0.555555rem;
-	float: right;
-}
-#TEL{
-	height: 1.388888rem;
-	background-color: #FFFFFF;
-	margin-top: 0.018518rem;
-}
-#TEL_span1{
-	font-family: "microsoft yahei";
-	font-size: 0.444444rem;
-	margin-left: 0.555555rem;
-	color: #333333;
-}
-#TEL_span2{
-	font-family: "microsoft yahei";
-	font-size: 0.444444rem;
-	color: #888;
-	text-align: right;
-	width: 100%;
-	display: inline-block;
-}
-#TEL img{
-	height: 0.435185rem;
-	width: 0.24074rem;
-	display: inline-block;
-	margin-right: 0.555555rem;
-	float: right;
-}
-button{
-	height: 1.111111rem;
-	width: 7.731481rem;
-	display: block;
-	margin: 0.833333rem auto 0 auto;
-	background-color: #1AB394;
-	color: #F2F2F2;
-	font-family: "microsoft yahei";
-	font-size: 0.444444rem;
-	text-align: center;
-	border-radius: 0.277777rem;
-}
+body {
+				margin: 0px;
+				padding: 0px;
+				background-color: #f2f2f2;
+			}
+			p{
+				margin-bottom: 0rem;
+			}
+			
+			/*取消导航栏content的影响*/
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			/*.mui-bar-nav~.mui-content {
+				padding-top: 13%;
+				margin-bottom: 1.481rem;
+			}
+			*/
+			
+			/*导航栏*/
+			
+			.header_set{
+				height: 44px;
+				background-color: #1AB394;
+				padding: 0px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.back{
+				height: 44px;
+				width: 20%;
+				display: flex;
+				align-items: center;
+			}
+			.return {
+				width: 0.305rem;
+				height: 0.527rem;
+				overflow: hidden;
+				margin-left: 0.555rem;
+			}
+			
+			.return_text {
+				margin-left: 24.5%;
+			}
+			
+			.return_text p {
+				font-size: 0.5rem;
+				font-family: "microsoft yahei";
+				color: #f2f2f2;
+			}
+			
+			
+			
+			/*选项*/
+			.head{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.head_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.head_img{
+				margin: 0;
+				margin-right: 0.546rem;
+				width: 1.111rem;
+				height: 1.111rem;
+				border-radius: 45px;
+				overflow: hidden;
+			}
+			.head_img img{
+				width: 100%;
+				height: 100%;
+			}
+			
+			
+			
+			.nickname{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 0.3%;
+			}
+			.nick_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.mynickname p{
+				margin: 0;
+				margin-right: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			
+			.sex{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 0.3%;
+			}
+			.sex_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.mysex p{
+				margin: 0;
+				margin-right: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			
+			
+			.dress{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 0.3%;
+			}
+			.dress_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.mydress p{
+				margin: 0;
+				margin-right: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			.phonenumber{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 0.3%;
+			}
+			.phonenumber_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.myphonenumber p{
+				margin: 0;
+				margin-right: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			/*按钮*/
+			.btn_Log_out{
+				display: flex;
+				justify-content: center;
+				margin-top: 0.833rem;
+			}
+			.btn_Log_out button{
+				width: 7.731rem;
+				height: 1.111rem;
+				border-radius: 0.277rem;
+				background-color: #1ab394;
+				font-family: 'microsoft yahei';
+				font-size: 0.5rem;
+				color: #FFFFFF;
+			}

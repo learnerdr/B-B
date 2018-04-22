@@ -29,12 +29,17 @@
 		<div class="mui-content" id="content">
 			<div class="Sort_bar">
 				<div class="Reputation_ranking" id="reputation_rank" onclick="r_rank()">
-					<p id="Reputation">信誉排序</p>
+					<div class="sorting_title">
+						<p id="Reputation">信誉排序</p>
 					<div class="Inverted_triangle2" id="triangle"></div>
+					</div>
 				</div>
 				<div class="Learning_guidance" id="learn_rank" onclick="l_rank()">
-					<p id="Learning">学习辅导</p>
+					<div class="type_title">
+						<p id="Learning">学习辅导</p>
 					<div class="Inverted_triangle" id="triangle2"></div>
+					</div>
+					<div></div>
 				</div>
 				
 			</div>
@@ -146,21 +151,23 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
+			var h=1;
 			var p1 = document.getElementById('Reputation');
 			var p2 = document.getElementById('Learning');
 			var c1 = document.getElementById('content1');
 			var c2 = document.getElementById('content2');
 			var t1 = document.getElementById('triangle');
 			var t2 = document.getElementById('triangle2');
-			function r_rank(){
+			function r_rank(obj){
 				p2.style.color='#555555';
 				t2.className='Inverted_triangle';
 				c2.style.display='none';
 				p1.style.color='#1AB394'; 
 				t1.className='Inverted_triangle2';
 				c1.style.display='block';
+				
 			}
-			function l_rank(){
+			function l_rank(obj){
 				p1.style.color='#555555';
 				t1.className='Inverted_triangle';
 				c1.style.display='none';

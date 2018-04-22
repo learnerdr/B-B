@@ -37,7 +37,9 @@
 			"img/my-skills/��..png",
 			"img/my-skills/\u0011�.png"
 		],
-		"refer": []
+		"refer": [
+			"Release_skills.html"
+		]
 	},
 	"main_page.html": {
 		"refer": [
@@ -75,7 +77,8 @@
 	},
 	"register1.html": {
 		"refer": [
-			"register_data.html"
+			"register_data.html",
+			"register1.html"
 		],
 		"resources": []
 	},
@@ -111,6 +114,16 @@
 	"Release_task.html": {
 		"refer": [
 			"task_paid.html"
+		]
+	},
+	"personal_data.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"register_data.html": {
+		"refer": [
+			"index.html"
 		]
 	}
 }
