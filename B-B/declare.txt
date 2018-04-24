@@ -1,0 +1,47 @@
+Using Page：
+cg_paid_pw.html				根据支付宝原密码，修改支付密码，原密码，新密码，， 我的->设置->密码设置->修改支付密码
+index.html					用户登录界面
+main_page.html 				登录进入的主界面
+message_interface.html		曾经是消息通知界面，现在只考虑做系统消息
+my_skills2.html				用户在我的信息界面点击，我的技能时，跳转的到页面
+my-skills.html				底部栏技能链接页面
+new_pw.html					密码重置页面，输入新密码
+Password_Reset.html			根据登录原密码，修改登录密码，不同于new_pw页面的是，要输入旧密码
+								我的->设置->密码设置->修改登录密码
+personal_data.html			个人信息页面						？？？需要扩展按钮吗，需要更改个人信息吗
+propelling_classify.html	选择当前推送类型页面
+pullrefresh_sub.html		主界面的子页面，包含刷新功能
+reception_all_oreders.html	历史接单页面，以“全部”子框架为主
+register_data.html			注册时，资料填写页面			说明:所选大学时跳转到，学校选择页面
+register1.html				注册时，验证码页面
+Release_skills.html			发布技能页面，输入技能内容
+Release_task.html			发布任务页面，输入任务内容
+search_college.html			学校查询页面，共有两个地方链接
+self-center.html			个人中心页面，
+send_all_orders.html		历史发布页面，以“全部”子框架为主
+set_pw.html					密码设置页面，我的->设置->密码设置
+Set_up.html					个人中心设置页面
+sys_infor.html				系统消息页面
+tab-webview-main.html		底部导航栏页面
+task_paid.html				任务支付页面
+
+
+No use Page:
+00.html						空白页面
+cat_others_data.html		疑是个人积分说明页面
+communication.html			用户聊天界面，考虑暂且不做
+losing_find.html			失物招领页面，一个失误招领消息列表
+my_money.html				用户钱包余额，总支出，总收入，最近交易记录显示，体现
+reception_finished_orders.html	历史接单“已完成”页面
+reception_underway_orders.html	历史接单“进行中”页面
+school_announce.html		校园公告页面，校园信息展示
+send_finished_orders.html	历史发布“已完成”页面
+send_pending_orders.html	历史发布“待接单”页面
+send_underway_orders.html	历史发布“进行中”页面
+task_detail.html			任务详情页面			没有链接
+skills_paid.html			技能支付页面			没有链接
+withdraw_cash.html			体现页面
+
+Tentative Page：	
+find_pw.html				打算修改成手机号验证，去掉密码输入
+task_list.html				接任务清单列表页面			要重新做

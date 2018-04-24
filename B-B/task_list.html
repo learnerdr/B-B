@@ -36,10 +36,21 @@
 					<p id="Learning">学习辅导</p>
 					<div class="Inverted_triangle" id="triangle2"></div>
 				</div>
-				
 			</div>
-			
-			
+			<div class="xiala_bar" id="xiala_bar_a">
+				<li onclick="show_img1()"><a>时间排序</a><img src="img/task_list/tick.png" id="check_img1"></li>
+				<li onclick="show_img2()"><a>价格排序</a><img src="img/task_list/tick.png" id="check_img2"></li>
+				<li onclick="show_img3()"><a>荣誉排序</a><img src="img/task_list/tick.png" id="check_img3"></li>
+			</div>
+			<div class="xiala_bar" id="xiala_bar_b"> 
+				<li onclick="show_img4()"><a>全部</a><img src="img/task_list/tick.png" id="check_img4"></li>
+				<li onclick="show_img5()"><a>跑腿类</a><img src="img/task_list/tick.png" id="check_img5"></li>
+				<li onclick="show_img6()"><a>租借类</a><img src="img/task_list/tick.png" id="check_img6"></li>
+				<li onclick="show_img7()"><a>学习辅导</a><img src="img/task_list/tick.png" id="check_img7"></li>
+				<li onclick="show_img8()"><a>维修服务</a><img src="img/task_list/tick.png" id="check_img8"></li>
+				<li onclick="show_img9()"><a>其他服务</a><img src="img/task_list/tick.png" id="check_img9"></li>
+			</div>
+			<div id="mark" onclick="mark()"></div>
 			<div id="content1">
 				<div class="mission_list_contant">
 					<div class="left_head">
@@ -70,40 +81,6 @@
 						
 					</div>
 				</div>
-			</div>
-			
-			<div class="tasks" id="content2">
-				
-				<div class="mission_list_contant">
-					<div class="left_head">
-						<div class="left_head_img">
-							<img src="img/user_head.png" />
-						</div>
-					</div>
-					<div class="right_contant">
-						<div class="right_contant_top">
-							<div class="right_contant_top_left">
-								<p>咸鱼子</p>
-								<img class="top_left_img" src="img/sex.png" align="center" />
-							</div>
-							<div class="right_contant_top_right">
-								<img class="top_right_img" src="img/task_money.png" />
-								<p>5.00元</p>
-							</div>
-
-						</div>
-						<div class="right_contant_middle">
-							<p>需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！
-							</p>
-						</div>
-						<div>
-							<div id="button1">接受此单</div>
-							<div id="button2">马上联系</div>
-						</div>
-						
-					</div>
-				</div>
-				
 				<div class="mission_list_contant">
 					<div class="left_head">
 						<div class="left_head_img">
@@ -134,11 +111,8 @@
 					</div>
 				</div>
 			</div>
-			
 			
 		</div>
-		
-		
 		
 		<script src="js/immersed.js"></script>
 		<script type="text/javascript" src="js/flexible.js"></script>
@@ -148,25 +122,116 @@
 			mui.init()
 			var p1 = document.getElementById('Reputation');
 			var p2 = document.getElementById('Learning');
-			var c1 = document.getElementById('content1');
-			var c2 = document.getElementById('content2');
+			//var c1 = document.getElementById('content1');
+			//var c2 = document.getElementById('content2');
 			var t1 = document.getElementById('triangle');
 			var t2 = document.getElementById('triangle2');
+			var oXiala_bar_a = document.getElementById('xiala_bar_a');
+			var oXiala_bar_b = document.getElementById('xiala_bar_b');
+			var oMark = document.getElementById('mark');
+			//var img = document.getElementById('oXiala_bar_a').childNodes.childNodes;
 			function r_rank(){
 				p2.style.color='#555555';
 				t2.className='Inverted_triangle';
-				c2.style.display='none';
+				//c2.style.display='none';
 				p1.style.color='#1AB394'; 
 				t1.className='Inverted_triangle2';
-				c1.style.display='block';
+				oXiala_bar_b.style.display="none";
+				oXiala_bar_a.style.display="block";
+				oMark.style.display="block"; 
+				oMark.style.opacity="0.3";
+				
 			}
 			function l_rank(){
 				p1.style.color='#555555';
 				t1.className='Inverted_triangle';
-				c1.style.display='none';
+				//c1.style.display='none';
 				p2.style.color='#1AB394'; 
 				t2.className='Inverted_triangle2';
-				c2.style.display='block';
+				//c2.style.display='block';
+				oXiala_bar_a.style.display="none";
+				oXiala_bar_b.style.display="block"; 
+				oMark.style.display="block"; 
+				oMark.style.opacity="0.3";
+			}
+			function mark(){
+				oXiala_bar_a.style.display="none";
+				oXiala_bar_b.style.display="none";  
+				oMark.style.display="none"; 
+			}
+		
+		</script>
+		<script type="text/javascript">
+			var ocheck_img1 = document.getElementById('check_img1');
+			var ocheck_img2 = document.getElementById('check_img2');
+			var ocheck_img3 = document.getElementById('check_img3');
+			var ocheck_img4 = document.getElementById('check_img4');
+			var ocheck_img5 = document.getElementById('check_img5');
+			var ocheck_img6 = document.getElementById('check_img6');
+			var ocheck_img7 = document.getElementById('check_img7');
+			var ocheck_img8 = document.getElementById('check_img8');
+			var ocheck_img9 = document.getElementById('check_img9');
+			function show_img1(){
+				if(ocheck_img1.style.display=="none"){
+					ocheck_img1.style.display="inline-block";
+				}else{
+					ocheck_img1.style.display="none";
+				}
+			}
+			function show_img2(){
+				if(ocheck_img2.style.display=="none"){
+					ocheck_img2.style.display="inline-block";
+				}else{
+					ocheck_img2.style.display="none";
+				}
+			}
+			function show_img3(){
+				if(ocheck_img3.style.display=="none"){
+					ocheck_img3.style.display="inline-block";
+				}else{
+					ocheck_img3.style.display="none";
+				}
+			}
+			function show_img4(){
+				if(ocheck_img4.style.display=="none"){
+					ocheck_img4.style.display="inline-block";
+				}else{
+					ocheck_img4.style.display="none";
+				}
+			}
+			function show_img5(){
+				if(ocheck_img5.style.display=="none"){
+					ocheck_img5.style.display="inline-block";
+				}else{
+					ocheck_img5.style.display="none";
+				}
+			}
+			function show_img6(){
+				if(ocheck_img6.style.display=="none"){
+					ocheck_img6.style.display="inline-block";
+				}else{
+					ocheck_img6.style.display="none";
+				}
+			}
+			function show_img7(){
+				if(ocheck_img7.style.display=="none"){
+					ocheck_img7.style.display="inline-block";
+				}else{
+					ocheck_img7.style.display="none";
+				}
+			}function show_img8(){
+				if(ocheck_img8.style.display=="none"){
+					ocheck_img8.style.display="inline-block";
+				}else{
+					ocheck_img8.style.display="none";
+				}
+			}
+			function show_img9(){
+				if(ocheck_img9.style.display=="none"){
+					ocheck_img9.style.display="inline-block";
+				}else{
+					ocheck_img9.style.display="none";
+				}
 			}
 		</script>
 	</body>

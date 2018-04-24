@@ -58,6 +58,8 @@ html{
 	font-size: 0.342rem;
 	background-color: #1AB394;
 	border-radius: 0.138rem;
+	border: 0rem;
+	color: white;
 }
 /*====================================================================*/
 .next{
@@ -70,4 +72,5 @@ html{
 	font-size: 0.444rem;
 	font-family: "microsoft yahei";
 	border-radius: 0.277rem;
+	border: 0rem;
 }

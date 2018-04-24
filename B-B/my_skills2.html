@@ -16,12 +16,12 @@
 			<p>技能</p>
 			<img src="img/add.png"  id="add_skill"/>
 		</div>
-		<div class="skill" id="content">
+		<!--<div class="skill" id="content">
 			<div class="skill- skill-a"><a id="askill" onclick="CAskill()">全部技能</a></div>
 			<div class="skill- skill-b"><a id="mskill" onclick="CMskill()">我的技能</a></div>
-		</div>
+		</div>-->
 		
-		<div class="Askill" id="all-skill">
+		<!--<div class="Askill" id="all-skill">
 			<div class="xinxi">
 				<div class="xinxi_p">
 					<img src="img/my-skills/touxiang.png" />
@@ -79,10 +79,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		
-		
+		</div>-->
 		
 		<div class="Mskill" id="my-skill">
 			<div class="xinxi">
@@ -94,7 +91,7 @@
 						<a>咸鱼子</a>
 						<img src="img/my-skills/skills_icon.png">
 						<img src="img/my-skills/sex.png">
-						<a class="time">10:30</a>
+						<a class="xinxi_time">10:30</a>
 					</div>
 					<div class="xinxi_right_b">
 						<p>因为这个月一直都在家养病，所以把CC忍痛租出，有意的朋友请联系我！</p>
@@ -113,7 +110,7 @@
 						<a>咸鱼子</a>
 						<img src="img/my-skills/skills_icon.png">
 						<img src="img/my-skills/sex.png">
-						<a class="time">10:30</a>
+						<a class="xinxi_time">10:30</a>
 					</div>
 					<div class="xinxi_right_b">
 						<p>红大门前拿一下快递，有意的同学联系我！</p>
@@ -132,7 +129,7 @@
 						<a>咸鱼子</a>
 						<img src="img/my-skills/skills_icon.png">
 						<img src="img/my-skills/sex.png">
-						<a class="time">10:30</a>
+						<a class="xinxi_time">10:30</a>
 					</div>
 					<div class="xinxi_right_b">
 						<p>我在成都玩耍，这周星期天回学校，需要要我带东西的同学可以联系我，温馨提示，带的东向不能太多太大哦</p>
@@ -144,98 +141,14 @@
 			</div>
 			
 		</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<!--<div class="buttom">
-			<div class="main-page buttom-">
-				<div class="main-page-p"><img src="img/my-skills/主页.png" /></div>
-				<p>首页</p>
-			</div>
-			<div class="news-page buttom-">
-				<div class="news-page-p"><img src="img/my-skills/消息(1).png" /></div>
-				<p>消息</p>
-			</div>
-			<div class="skills-page buttom-">
-				<div class="skills-page-p"><img src="img/my-skills/圈子(1).png" /></div>
-				<p>技能</p>
-			</div>
-			<div class="my-page buttom-">
-				<div class="my-page-p"><img src="img/my-skills/我的.png" /></div>
-				<p>我的</p>
-			</div>
-		</div>-->
-		<div id="bottom">
-			<div id="bottom_left">
-				<div id="bottom_part1">
-					<img src="img/message_interface/main.png"/>
-					<label>首页</label>
-				</div>
-				<div id="bottom_part2" >
-					<img src="img/my-skills/news.png" />
-					<label >消息</label>
-				</div>
-			</div>
-			<div id="bottom_right">
-				<div id="bottom_part3" >
-					<img src="img/message_interface/yuan.png"/>
-					<label style="color:#1AB394;">技能</label>
-				</div>
-				<div id="bottom_part4" >
-					<img src="img/message_interface/user.png"/>
-					<label>我的</label>
-				</div>
-			</div>
-		</div>
+
 	</body>
 	<script src="js/immersed.js"></script>
 	<script type="text/javascript" src="js/config.js" ></script>
 	<script>
-		function CAskill(){
-			var AllSkill = document.getElementById('all-skill');
-			var MySkill = document.getElementById('my-skill');
-			var aSkill = document.getElementById('askill');
-			var mSkill = document.getElementById('mskill');
-			mSkill.style.borderBottomColor='#FFFFFF';
-			aSkill.style.borderBottomColor='#1ab394';
-			MySkill.style.display='none';
-			AllSkill.style.display='block';
-			
-		}
-		function CMskill(){
-			var AllSkill = document.getElementById('all-skill');
-			var MySkill = document.getElementById('my-skill');
-			var aSkill = document.getElementById('askill');
-			var mSkill = document.getElementById('mskill');
-			aSkill.style.borderBottomColor='#FFFFFF';
-			mSkill.style.borderBottomColor='#1ab394';
-			AllSkill.style.display='none';
-			MySkill.style.display='block';
-		}
-		var o_bottom1=document.getElementById('bottom_part1');
-		var o_bottom2=document.getElementById('bottom_part2');
-		var o_bottom4=document.getElementById('bottom_part4');
+
 		var add_skill=document.getElementById('add_skill');
-		o_bottom1.addEventListener('tap', function() {
-			
-			openView.usuView('main_page.html','main_page.html');
-			});
-		o_bottom2.addEventListener('tap', function() {
-		
-			openView.usuView('message_interface.html','message_interface.html');
-		});
-		o_bottom4.addEventListener('tap', function() {
-	
-		openView.usuView('self-center.html','self-center.html');
-		});
 		add_skill.addEventListener('tap', function() {
-		
 			openView.usuView('Release_skills.html','Release_skills.html');
 			});
 	</script>

@@ -40,6 +40,7 @@ html{
 	margin-top: 0.472rem;
 	font-size: 0.444rem;
 }
+
 .register-m input{
 	width: 6.944rem;
 	height: 1.388rem;
@@ -74,6 +75,8 @@ html{
 	font-size: 0.342rem;
 	background-color: #1AB394;
 	border-radius: 0.138rem;
+	color: #FFFFFF;
+	border: 0rem;
 }
 /*====================================================================*/
 .next{
@@ -86,4 +89,5 @@ html{
 	font-size: 0.444rem;
 	font-family: "microsoft yahei";
 	border-radius:0.277rem ;
+	border: 0rem;
 }
