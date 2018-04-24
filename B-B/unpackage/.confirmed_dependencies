@@ -12,7 +12,8 @@
 			"main_page.html",
 			"register1.html",
 			"find_pw.html",
-			"tab-webview-main.html"
+			"tab-webview-main.html",
+			"check.html"
 		]
 	},
 	"register.html": {
@@ -90,7 +91,8 @@
 			"main_page.html",
 			"message_interface.html",
 			"self-center.html",
-			"my-skills.html"
+			"my-skills.html",
+			"sys_infor.html"
 		]
 	},
 	"Set_up.html": {
@@ -124,6 +126,21 @@
 	"register_data.html": {
 		"refer": [
 			"index.html"
+		]
+	},
+	"check.html": {
+		"refer": [
+			"new_pw.html"
+		]
+	},
+	"new_pw.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"my_skills2.html": {
+		"refer": [
+			"message_interface.html"
 		]
 	}
 }

@@ -208,7 +208,8 @@
 					"main_page.html",
 					"register1.html",
 					"find_pw.html",
-					"tab-webview-main.html"
+					"tab-webview-main.html",
+					"check.html"
 				],
 				"priority": 0
 			},
@@ -286,7 +287,8 @@
 				"refer": [
 					"message_interface.html",
 					"self-center.html",
-					"my-skills.html"
+					"my-skills.html",
+					"sys_infor.html"
 				],
 				"priority": 0
 			},
@@ -332,6 +334,27 @@
 				"resources": [],
 				"refer": [
 					"index.html"
+				],
+				"priority": 0
+			},
+			"check.html": {
+				"resources": [],
+				"refer": [
+					"new_pw.html"
+				],
+				"priority": 0
+			},
+			"new_pw.html": {
+				"resources": [],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			},
+			"my_skills2.html": {
+				"resources": [],
+				"refer": [
+					"message_interface.html"
 				],
 				"priority": 0
 			}
