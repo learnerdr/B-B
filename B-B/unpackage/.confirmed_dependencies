@@ -142,5 +142,11 @@
 		"refer": [
 			"message_interface.html"
 		]
+	},
+	"login.html": {
+		"refer": [
+			"check.html",
+			"register1.html"
+		]
 	}
 }

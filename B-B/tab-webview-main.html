@@ -11,26 +11,38 @@
 
 	<body>
 		<nav class="mui-bar mui-bar-tab">
-			<a id="defaultTab" class="mui-tab-item mui-active" href="main_page.html">
-				<span class="mui-icon mui-icon-home"></span>
+			<a id="defaultTab"data-name = "首页" class="mui-tab-item mui-active" href="main_page.html">
+				<div class="box">
+				<img class="main" src="img/tab-webview-main/main_page_hover.png" id="main_img" />
 				<span class="mui-tab-label">首页</span>
+				</div>
+				
 			</a>
-			<a class="mui-tab-item" href="sys_infor.html">
-				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+			<a class="mui-tab-item"data-name = "消息" href="sys_infor.html">
+				<div class="box">
+				<img class="news" src="img/tab-webview-main/infor.png" id="news_img"/>
 				<span class="mui-tab-label">消息</span>
+				</div>
 			</a>
-			<a class="mui-tab-item" href="my-skills.html">
-				<span class="mui-icon mui-icon-contact"></span>
+			<a class="mui-tab-item"data-name = "技能" href="my-skills.html">
+				<div class="box">
+				<img class="skills" src="img/tab-webview-main/skills.png"id="skills_img" />
 				<span class="mui-tab-label">技能</span>
+				</div>
 			</a>
-			<a class="mui-tab-item" href="self-center.html">
-				<span class="mui-icon mui-icon-gear"></span>
+			<a class="mui-tab-item"data-name = "我的" href="self-center.html">
+				<div class="box">
+				<img class="my" src="img/tab-webview-main/my.png" id="my_img"/>
 				<span class="mui-tab-label">我的</span>
+				</div>
 			</a>
 		</nav>
 		
 		
 		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script src="js/immersed.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
 		<script type="text/javascript">
 			 //mui初始化
 			mui.init();
@@ -57,11 +69,46 @@
 					self.append(sub);
 				}
 			});
+			
+
+				var img1=  document.getElementById("main_img");
+				var img2=  document.getElementById("news_img");
+				var img3=  document.getElementById("skills_img");
+				var img4=  document.getElementById("my_img");
 			 //当前激活选项
 			var activeTab = subpages[0];
 			var title = document.getElementById("title");
 			 //选项卡点击事件
 			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				var name = this.getAttribute("data-name");
+				if(name == "首页")
+				{
+					img1.src ='img/tab-webview-main/main_page_hover.png';
+					img2.src ='img/tab-webview-main/infor.png';
+					img3.src ='img/tab-webview-main/skills.png';
+					img4.src ='img/tab-webview-main/my.png';
+				}
+				if(name == "消息")
+				{
+					img1.src ='img/tab-webview-main/main.png';
+					img2.src ='img/tab-webview-main/infor_hover.png';
+					img3.src ='img/tab-webview-main/skills.png';
+					img4.src ='img/tab-webview-main/my.png';
+				}
+				if(name == "技能")
+				{
+					img1.src ='img/tab-webview-main/main.png';
+					img2.src ='img/tab-webview-main/infor.png';
+					img3.src ='img/tab-webview-main/skills_hover.png';
+					img4.src ='img/tab-webview-main/my.png';
+				}
+				if(name == "我的")
+				{
+					img1.src ='img/tab-webview-main/main.png';
+					img2.src ='img/tab-webview-main/infor.png';
+					img3.src ='img/tab-webview-main/skills.png';
+					img4.src ='img/tab-webview-main/my_hover.png';
+				}
 				var targetTab = this.getAttribute('href');
 				if (targetTab == activeTab) {
 					return;
