@@ -18,10 +18,7 @@ p{
 	box-shadow: none;
 }
 
-.mui-bar-nav~.mui-content {
-	padding-top: 12.5%;
-	margin-bottom: 1.481rem;
-}
+
 /*导航栏*/
 
 .header_task_list{
@@ -90,25 +87,36 @@ p{
 	border-right: 0.1rem solid #FFFFFF;
 	margin-left: 0.092rem;
 }
+
 .Reputation_ranking{
+	text-align: center;
+	line-height: 1.111rem;
+	height: 1.111rem;
+}
+.Learning_guidance{
+	text-align: center;
+	line-height: 1.111rem;
+	height: 1.111rem;
+	
+}
+.sorting_title{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	cursor: pointer;
 }
-.Reputation_ranking p{
+.sorting_title p{
 	font-family: "微软雅黑";
 	font-size: 0.444rem;
 	color: #1AB394;
-	
 }
-.Learning_guidance{
+.type_title{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	cursor: pointer;
 }
-.Learning_guidance p{
+.type_title p{
 	font-family: "微软雅黑";
 	font-size: 0.444rem;
 	color: #555555;

@@ -11,12 +11,12 @@
 	</head>
 
 	<body>
-		
-	<!--头部-->
-			<div class="head ">
+		<!--头部-->
+			<div class="head " >
 				<div class="head_box">
 					<img src="img/my_head.png" />
 				</div>
+
 				<div class="head_text">
 					<p>18236789609</p>
 					<img src="img/sex.png" />
@@ -25,6 +25,8 @@
 			    	<p>成都东软学院</p>
 			    </div>
 		    </div>
+		    
+		    
 		<div class="mui-content">
 			
 		    <!--四个按钮-->
@@ -59,27 +61,21 @@
 					<p>等待评价</p>
 			    </div>
 		    	</a>
-			    
 		    </div>
-		    
-		    <!--五列选项-->
+			      <!--五列选项-->
 		    <div class="five-lists">
-		    	<div class="list" id="Credit_score">
-		    		<div class="list_first">
-		    			<img src="img/reputation.png" />
-					<p>信誉积分</p>
-		    		</div>
-		    	</div>
-		    	<div class="list" id="recommend">
-		    		<div class="list_first">
-		    			<img src="img/recommend_classify.png" />
-					<p>推送类型</p>
-		    		</div>
-		    	</div>
-		    	<div class="list">
+		    	
+		    	
+		    	<div class="list" id="my_wallet">
 		    		<div class="list_first">
 		    			<img src="img/get_money.png" />
-					<p>已赚金额</p>
+					<p>我的钱包</p>
+		    		</div>
+		    		<div class="mymoney">
+		    			<p>0.00元</p>
+		    			<div class="mymoney_join">
+		    			<img  src="img/chos_way.png" />
+		    		</div>
 		    		</div>
 		    	</div>
 		    	<div class="list">
@@ -91,20 +87,43 @@
 						<div class="mui-switch-handle"></div>
 					</div>
 		    	</div>
+		    	<div class="list" id="Credit_score">
+		    		<div class="list_first">
+		    			<img src="img/reputation.png" />
+					<p>信誉积分</p>
+		    		</div>
+		    		<div class="join">
+		    			<img  src="img/chos_way.png" />
+		    		</div>
+		    	</div>
+		    	<div class="list" id="recommend">
+		    		<div class="list_first">
+		    			<img src="img/recommend_classify.png" />
+					<p>推送类型</p>
+		    		</div>
+		    		<div class="join">
+		    			<img  src="img/chos_way.png" />
+		    		</div>
+		    			
+		    	</div>
 		    	<div class="list" id="set_up">
 		    		<div class="list_first">
 		    		<img src="img/set.png" />
 					<p>设置</p>
 		    		</div>
+		    		<div class="join">
+		    			<img  src="img/chos_way.png" />
+		    		</div>
 		    	</div>
-		    </div>
 
+		    </div>
+	
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<script src="js/immersed.js"></script>
 		<script type="text/javascript" src="js/config.js" ></script>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init;
 	var set_up=document.getElementById('set_up');
 	       set_up.addEventListener('tap', function() {
 		     
@@ -129,6 +148,11 @@
 	       o_my_sk.addEventListener('tap', function() {
 		    
 			openView.usuView('my_skills2.html','my_skills2.html');
+	});
+	var o_my_sk=document.getElementById('my_wallet');
+	       o_my_sk.addEventListener('tap', function() {
+		    
+			openView.usuView('my_money.html','my_money.html'); 
 	});
 		</script>
 	</body>

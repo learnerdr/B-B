@@ -40,7 +40,7 @@
 				}
 			}]
 		});
-	
+	//下拉刷新
 		var contentWebview = null;
 		document.querySelector('header').addEventListener('doubletap',function () {
 			if(contentWebview==null){
@@ -48,6 +48,8 @@
 			}
 			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
 		});
+		
+		//页面跳转
 			mui.plusReady(function () {
 	var position=document.getElementById('position');
 	       position.addEventListener('tap', function() {

@@ -10,7 +10,7 @@
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "task_list.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "sys_infor.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -191,7 +191,7 @@
 					"xxhdpi": ""
 				}
 			}
-		}
+		},"ads":{"rp":false,"splash":false,"push":false},"adid":""
 	},
 	"dependencies": {
 		"pages": {
@@ -208,7 +208,8 @@
 					"main_page.html",
 					"register1.html",
 					"find_pw.html",
-					"tab-webview-main.html"
+					"tab-webview-main.html",
+					"check.html"
 				],
 				"priority": 0
 			},
@@ -230,7 +231,9 @@
 					"img/my-skills/消息(1).png",
 					"img/my-skills/我的.png"
 				],
-				"refer": [],
+				"refer": [
+					"Release_skills.html"
+				],
 				"priority": 0
 			},
 			"main_page.html": {
@@ -265,14 +268,16 @@
 					"Set_up.html",
 					"propelling_classify.html",
 					"send_all_orders.html",
-					"my_skills2.html"
+					"my_skills2.html",
+					"my_money.html"
 				],
 				"priority": 0
 			},
 			"register1.html": {
 				"resources": [],
 				"refer": [
-					"register_data.html"
+					"register_data.html",
+					"register1.html"
 				],
 				"priority": 0
 			},
@@ -283,7 +288,8 @@
 				"refer": [
 					"message_interface.html",
 					"self-center.html",
-					"my-skills.html"
+					"my-skills.html",
+					"sys_infor.html"
 				],
 				"priority": 0
 			},
@@ -315,6 +321,42 @@
 				"resources": [],
 				"refer": [
 					"task_paid.html"
+				],
+				"priority": 0
+			},
+			"personal_data.html": {
+				"resources": [],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			},
+			"register_data.html": {
+				"resources": [],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			},
+			"check.html": {
+				"resources": [],
+				"refer": [
+					"new_pw.html"
+				],
+				"priority": 0
+			},
+			"new_pw.html": {
+				"resources": [],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			},
+			"my_skills2.html": {
+				"resources": [],
+				"refer": [
+					"message_interface.html",
+					"self-center.html"
 				],
 				"priority": 0
 			}

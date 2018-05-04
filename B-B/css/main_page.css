@@ -16,10 +16,10 @@
 				box-shadow: none;
 			}
 			.mui-pull-top-pocket {
-    			top: 1.7.5rem!important;
+    			top: 1.75rem!important;
 			}
 			.mui-bar-nav~.mui-content {
-				padding-top: 10.7%;
+				padding-top: 0%;
 			}
 			/*导航栏*/
 			
@@ -382,58 +382,4 @@
 				color: #888888;
 
 			}
-#bottom{
-height: 1.481481rem;
-font-family: "microsoft yahei";
-font-size: 0.333333rem;
-color: #555555;
-background-color: #FFF;
-position: fixed;
-bottom: 0;
-width: 100%;
-}
-#bottom_left{
-	width: 50%;
-	float: left;
-	height: 100%;
-	display: inline-block;
-}
-#bottom_right{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-}
-#bottom_part1{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-	float: left;
-}
-#bottom_part2{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-	float: right;
-}
-#bottom_part3{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-	float: left;
-}
-#bottom_part4{
-	width: 50%;
-	height: 100%;
-	display: inline-block;
-}
-#bottom img{
-	width: 0.574074rem;
-	height: 0.583333rem;
-	display: block;
-	margin: 0.185185rem auto;
-}
-#bottom label{
-	display:block;
-	margin: 0 auto;
-	text-align: center;
-}
+

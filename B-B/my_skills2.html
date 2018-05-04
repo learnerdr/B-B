@@ -13,74 +13,11 @@
 	</head>
 	<body>
 		<div class="tittle" id="header">
-			<p>技能</p>
-			<img src="img/add.png"  id="add_skill"/>
+			<img class="img_back" id="back_center" src="img/my-skills/back.png" class="mui-action-back">
+			<p>我的技能</p>
+			<img class="img_add" src="img/add.png"  id="add_skill"/>
 		</div>
-		<!--<div class="skill" id="content">
-			<div class="skill- skill-a"><a id="askill" onclick="CAskill()">全部技能</a></div>
-			<div class="skill- skill-b"><a id="mskill" onclick="CMskill()">我的技能</a></div>
-		</div>-->
-		
-		<!--<div class="Askill" id="all-skill">
-			<div class="xinxi">
-				<div class="xinxi_p">
-					<img src="img/my-skills/touxiang.png" />
-				</div>
-				<div class="xinxi_right">
-					<div class="xinxi_right_a">
-						<a>咸鱼子</a>
-						<img src="img/my-skills/skills_icon.png">
-						<img src="img/my-skills/sex.png">
-						<a class="time">10:30</a>
-					</div>
-					<div class="xinxi_right_b">
-						<p>因为这个月一直都在家养病，所以把CC忍痛租出，有意的朋友请联系我！</p>
-					</div>
-					<div class="xinxi_right_c">
-						<img src="img/my-skills/contact.png"/>
-					</div>
-				</div>
-			</div>
-			<div class="xinxi">
-				<div class="xinxi_p">
-					<img src="img/my-skills/t3.png" />
-				</div>
-				<div class="xinxi_right">
-					<div class="xinxi_right_a">
-						<a>猫腻强子</a>
-						<img src="img/my-skills/skills_icon.png">
-						<img src="img/my-skills/sex.png">
-						<a class="time">10:30</a>
-					</div>
-					<div class="xinxi_right_b">
-						<p>我会游泳，仰泳，蛙泳统统都会，夏天快到了，想要学游泳的同学可以找我，让你的夏天变得美妙清爽！</p>
-					</div>
-					<div class="xinxi_right_c">
-						<img src="img/my-skills/contact.png"/>
-					</div>
-				</div>
-			</div>
-			<div class="xinxi">
-				<div class="xinxi_p">
-					<img src="img/my-skills/t1.png" />
-				</div>
-				<div class="xinxi_right">
-					<div class="xinxi_right_a">
-						<a>羞羞的铁拳</a>
-						<img src="img/my-skills/skills_icon.png">
-						<img src="img/my-skills/sex.png">
-						<a class="time">10:30</a>
-					</div>
-					<div class="xinxi_right_b">
-						<p>出租山地自行车，有意的朋友请联系我！</p>
-					</div>
-					<div class="xinxi_right_c">
-						<img src="img/my-skills/contact.png"/>
-					</div>
-				</div>
-			</div>
-		</div>-->
-		
+
 		<div class="Mskill" id="my-skill">
 			<div class="xinxi">
 				<div class="xinxi_p">
@@ -139,6 +76,45 @@
 					</div>
 				</div>
 			</div>
+			<div class="xinxi">
+				<div class="xinxi_p">
+					<img src="img/my-skills/touxiang.png" />
+				</div>
+				<div class="xinxi_right">
+					<div class="xinxi_right_a">
+						<a>咸鱼子</a>
+						<img src="img/my-skills/skills_icon.png">
+						<img src="img/my-skills/sex.png">
+						<a class="xinxi_time">10:30</a>
+					</div>
+					<div class="xinxi_right_b">
+						<p>我在成都玩耍，这周星期天回学校，需要要我带东西的同学可以联系我，温馨提示，带的东向不能太多太大哦</p>
+					</div>
+					<div class="xinxi_right_c">
+						<img src="img/my-skills/delete_release.png"/>
+					</div>
+				</div>
+			</div>
+			<div class="xinxi">
+				<div class="xinxi_p">
+					<img src="img/my-skills/touxiang.png" />
+				</div>
+				<div class="xinxi_right">
+					<div class="xinxi_right_a">
+						<a>咸鱼子</a>
+						<img src="img/my-skills/skills_icon.png">
+						<img src="img/my-skills/sex.png">
+						<a class="xinxi_time">10:30</a>
+					</div>
+					<div class="xinxi_right_b">
+						<p>我在成都玩耍，这周星期天回学校，需要要我带东西的同学可以联系我，温馨提示，带的东向不能太多太大哦</p>
+					</div>
+					<div class="xinxi_right_c">
+						<img src="img/my-skills/delete_release.png"/>
+					</div>
+				</div>
+			</div>
+			s
 			
 		</div>
 
@@ -150,6 +126,10 @@
 		var add_skill=document.getElementById('add_skill');
 		add_skill.addEventListener('tap', function() {
 			openView.usuView('Release_skills.html','Release_skills.html');
+			});
+			var add_skill=document.getElementById('back_center');
+		add_skill.addEventListener('tap', function() {
+			openView.usuView('self-center.html','self-center.html');
 			});
 	</script>
 	

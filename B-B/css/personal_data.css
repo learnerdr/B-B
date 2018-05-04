@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .status_bar{
 	background-color: #565656;
 	height: 0.694444rem;
@@ -154,3 +155,210 @@ button{
 	border-radius: 0.277777rem;
 	border: 0rem;
 }
+=======
+body {
+				margin: 0px;
+				padding: 0px;
+				background-color: #f2f2f2;
+			}
+			p{
+				margin-bottom: 0rem;
+			}
+			
+			/*取消导航栏content的影响*/
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			/*.mui-bar-nav~.mui-content {
+				padding-top: 13%;
+				margin-bottom: 1.481rem;
+			}
+			*/
+			
+			/*导航栏*/
+			
+			.header_set{
+				height: 44px;
+				background-color: #1AB394;
+				padding: 0px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.back{
+				height: 44px;
+				width: 20%;
+				display: flex;
+				align-items: center;
+			}
+			.return {
+				width: 0.305rem;
+				height: 0.527rem;
+				overflow: hidden;
+				margin-left: 0.555rem;
+			}
+			
+			.return_text {
+				margin-left: 24.5%;
+			}
+			
+			.return_text p {
+				font-size: 0.5rem;
+				font-family: "microsoft yahei";
+				color: #f2f2f2;
+			}
+			
+			
+			
+			/*选项*/
+			.head{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.head_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.head_img{
+				margin: 0;
+				margin-right: 0.546rem;
+				width: 1.111rem;
+				height: 1.111rem;
+				border-radius: 45px;
+				overflow: hidden;
+			}
+			.head_img img{
+				width: 100%;
+				height: 100%;
+			}
+			
+			
+			
+			.nickname{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 0.3%;
+			}
+			.nick_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.mynickname p{
+				margin: 0;
+				margin-right: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			
+			.sex{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 0.3%;
+			}
+			.sex_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.mysex p{
+				margin: 0;
+				margin-right: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			
+			
+			.dress{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 0.3%;
+			}
+			.dress_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.mydress p{
+				margin: 0;
+				margin-right: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			.phonenumber{
+				background-color:#FFFFFF ;
+				width: 100%;
+				height: 1.388rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 0.3%;
+			}
+			.phonenumber_p p{
+				margin: 0;
+				margin-left: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			.myphonenumber p{
+				margin: 0;
+				margin-right: 0.546rem;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+			}
+			
+			/*按钮*/
+			.btn_Log_out{
+				display: flex;
+				justify-content: center;
+				margin-top: 0.833rem;
+			}
+			.btn_Log_out button{
+				width: 7.731rem;
+				height: 1.111rem;
+				border-radius: 0.277rem;
+				background-color: #1ab394;
+				font-family: 'microsoft yahei';
+				font-size: 0.5rem;
+				color: #FFFFFF;
+			}
+>>>>>>> b4f48228b46d3be7c27c57d24ef607252215287f

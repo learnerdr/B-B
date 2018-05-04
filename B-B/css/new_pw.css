@@ -1,0 +1,144 @@
+body {
+				margin: 0px;
+				padding: 0px;
+				background-color: #f2f2f2;
+			}
+			p{
+				margin-bottom: 0rem;
+			}
+	input::-webkit-input-placeholder {
+   /* placeholder颜色  */
+  	color: #888888;
+/* placeholder字体大小  */
+  	font-size: 0.444rem;
+ /* placeholder位置  text-align: right;*/
+    
+   }
+			/*取消导航栏content的影响*/
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			.mui-bar-nav~.mui-content {
+				padding-top: 10%;
+				margin-bottom: 1.481rem;
+			}
+			
+			
+			/*导航栏*/
+			
+			.header_Reset {
+				height: 44px;
+				background-color: #1AB394;
+				padding: 0px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.back{
+				height: 44px;
+				width: 20%;
+				display: flex;
+				align-items: center;
+			}
+			.return {
+				width: 0.305rem;
+				height: 0.527rem;
+				overflow: hidden;
+				margin-left: 0.555rem;
+			}
+			
+			.return_text {
+				margin-left: 30%;
+			}
+			
+			.return_text p {
+				font-size: 0.5rem;
+				font-family: "microsoft yahei";
+				color: #f2f2f2;
+			}
+			.old_password{
+				width: 100%;
+				height: 1.388rem;
+				background-color: #FFFFFF;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.old_password label{
+				flex: 1;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+				margin-left: 0.592rem;
+			}
+			.old_password input{
+				margin: 0;
+				flex: 3;
+				border: none;
+			}
+			.new_password{
+				width: 100%;
+				height: 1.388rem;
+				background-color: #FFFFFF;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-top: 0.018rem;
+			}
+			.new_password label{
+				flex: 1;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+				margin-left: 0.592rem;
+			}
+			.new_password input{
+				margin: 0;
+				flex: 3;
+				border: none;
+			}
+			.Confirm_the_new_password{
+				width: 100%;
+				height: 1.388rem;
+				background-color: #FFFFFF;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-top: 0.018rem;
+			}
+			.Confirm_the_new_password label{
+				flex: 1;
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #333333;
+				margin-left: 0.592rem;
+			}
+			.Confirm_the_new_password input{
+				margin: 0;
+				flex: 3;
+				border: none;
+			}
+			/*输入框文字*/
+			input::-webkit-input-placeholder,
+			textarea::-webkit-input-placeholder {
+				font-family: "microsoft yahei";
+				font-size: 0.444rem;
+				color: #888888;
+			}
+			
+			/*按钮*/
+			.btn_Confirmation_of_modification{
+				display: flex;
+				justify-content: center;
+				margin-top: 0.833rem;
+			}
+			.btn_Confirmation_of_modification button{
+				width: 7.731rem;
+				height: 1.111rem;
+				border-radius: 0.277rem;
+				background-color: #1ab394;
+				font-family: 'microsoft yahei';
+				font-size: 0.5rem;
+				color: #FFFFFF;
+			}

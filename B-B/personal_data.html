@@ -12,66 +12,84 @@
 	</head>
 
 	<body>
-		<div class="header" id="header">
-			<img src="img/personal_data/back.png" class="mui-action-back"/>
-			<span>个人信息</span>
-		</div>
-		<div id="profile_picture" id="content">
-			<table>
-				<tbody>
-					<tr>
-						<td><span>头像</span></td>
-						<td><img src="img/personal_data/user_head2.png" align="center" /></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div id="nickname">
-			<table>
-				<tbody>
-					<tr>
-						<td style="width: 15%"><span id="nickname_span1">昵称</span></td>
-						<td style="width: 74%"><span id="nickname_span2">咸鱼子</span></td>
-						<td><img src="img/personal_data/chos_way.png" align="center" /></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div id="sex">
-			<table>
-				<tbody>
-					<tr>
-						<td style="width: 15%"><span id="sex_span1">性别</span></td>
-						<td style="width: 74%"><span id="sex_span2">女</span></td>
-						<td><img src="img/personal_data/chos_way.png" align="center" /></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div id="address">
-			<table>
-				<tbody>
-					<tr>
-						<td><span>默认联系地址</span></td>
-						<td><img src="img/personal_data/chos_way.png" align="center" /></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div id="TEL">
-			<table>
-				<tbody>
-					<tr>
-						<td style="width: 35%"><span id="TEL_span1">默认联系电话</span></td>
-						<td style="width: 54%"><span id="TEL_span2">17760475951</span></td>
-						<td><img src="img/personal_data/chos_way.png" align="center" /></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<button id="Exit_logon">
-			退出登录
-		</button>
+		<!--导航栏-->
+		<header id="header" class="mui-bar mui-bar-nav  header_set">
+				<!--图标-->
+			<div id=""class="back mui-action-back">
+				<img src="img/return.png" class="return" />
+			</div>
+				<!--字-->
+				<div class="return_text">
+					<p>个人信息</p>
+				</div>
+		</header>
+		<div class="mui-content" id="content">
+			<a href="#">
+			<div class="head" id="head_data">
+				<div class="head_p">
+					<p>头像</p>
+				</div>
+					
+				<div class="head_img">
+					<img src="img/communication/user_head2.png"/>
+				</div>
+			</div>
+			</a>
+			
+			<a href="#">
+			<div class=" nickname" id="nickname_data">
+				<div class="nick_p">
+					<p>昵称</p>
+				</div>
+				<div class="mynickname">
+					<p>咸鱼子</p>
+				</div>
+					
+				
+			</div>
+			</a>
+			
+			<a href="#">
+			<div class="sex">
+				
+				<div class="sex_p">
+					<p>性别</p>
+				</div>
+				<div class="mysex">
+					<p>女</p>
+				</div>
+				
+			</div>
+			</a>
+			
+			<a href="#">
+			<div class=" dress">
+				
+				<div class="dress_p">
+					<p>默认联系地址</p>
+				</div>
+				<div class="mydress">
+					<p></p>
+				</div>
+
+				
+			</div>
+			</a>
+			
+			<a href="#">
+			<div class=" phonenumber">				
+				<div class="phonenumber_p">
+					<p>默认联系地话</p>
+				</div>
+				<div class="myphonenumber">
+					<p>17760475951</p>
+				</div>
+			</div>
+			</a>
+			
+			<div class="btn_Log_out" id="Exit_logon">
+				<button>退出登录</button>
+			</div>
 		<script src="js/immersed.js"></script>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" src="js/config.js" ></script>

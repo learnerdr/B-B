@@ -9,15 +9,7 @@
 					}
 					/*取消导航栏content的影响*/
 					
-					.mui-bar {
-						-webkit-box-shadow: none;
-						box-shadow: none;
-					}
-					
-					.mui-bar-nav~.mui-content {
-						padding-top: 13%;
-						margin-bottom: 1.481rem;
-					}
+				
 					
 					.header_new {
 						height: 1.333rem;

@@ -21,7 +21,7 @@
 				<p>接任务</p>
 			</div>
 			<!--图标-->
-			<a href="#">
+			<a href="#" id="new_task">
 				<img src="img/add.png" class="add" />
 			</a>
 		</header>
@@ -29,18 +29,23 @@
 		<div class="mui-content" id="content">
 			<div class="Sort_bar">
 				<div class="Reputation_ranking" id="reputation_rank" onclick="r_rank()">
-					<p id="Reputation">信誉排序</p>
+					<div class="sorting_title">
+						<p id="Reputation">信誉排序</p>
 					<div class="Inverted_triangle2" id="triangle"></div>
+					</div>
 				</div>
 				<div class="Learning_guidance" id="learn_rank" onclick="l_rank()">
-					<p id="Learning">学习辅导</p>
+					<div class="type_title">
+						<p id="Learning">学习辅导</p>
 					<div class="Inverted_triangle" id="triangle2"></div>
+					</div>
+					<div></div>
 				</div>
 			</div>
 			<div class="xiala_bar" id="xiala_bar_a">
 				<li onclick="show_img1()"><a>时间排序</a><img src="img/task_list/tick.png" id="check_img1"></li>
 				<li onclick="show_img2()"><a>价格排序</a><img src="img/task_list/tick.png" id="check_img2"></li>
-				<li onclick="show_img3()"><a>荣誉排序</a><img src="img/task_list/tick.png" id="check_img3"></li>
+				<li onclick="show_img3()"><a>信誉排序</a><img src="img/task_list/tick.png" id="check_img3"></li>
 			</div>
 			<div class="xiala_bar" id="xiala_bar_b"> 
 				<li onclick="show_img4()"><a>全部</a><img src="img/task_list/tick.png" id="check_img4"></li>
@@ -122,37 +127,34 @@
 			mui.init()
 			var p1 = document.getElementById('Reputation');
 			var p2 = document.getElementById('Learning');
-			//var c1 = document.getElementById('content1');
-			//var c2 = document.getElementById('content2');
 			var t1 = document.getElementById('triangle');
 			var t2 = document.getElementById('triangle2');
+
 			var oXiala_bar_a = document.getElementById('xiala_bar_a');
 			var oXiala_bar_b = document.getElementById('xiala_bar_b');
 			var oMark = document.getElementById('mark');
-			//var img = document.getElementById('oXiala_bar_a').childNodes.childNodes;
 			function r_rank(){
 				p2.style.color='#555555';
 				t2.className='Inverted_triangle';
-				//c2.style.display='none';
 				p1.style.color='#1AB394'; 
 				t1.className='Inverted_triangle2';
+
 				oXiala_bar_b.style.display="none";
 				oXiala_bar_a.style.display="block";
 				oMark.style.display="block"; 
 				oMark.style.opacity="0.3";
 				
 			}
-			function l_rank(){
+			function l_rank(obj){
 				p1.style.color='#555555';
 				t1.className='Inverted_triangle';
 				//c1.style.display='none';
 				p2.style.color='#1AB394'; 
 				t2.className='Inverted_triangle2';
-				//c2.style.display='block';
 				oXiala_bar_a.style.display="none";
 				oXiala_bar_b.style.display="block"; 
 				oMark.style.display="block"; 
-				oMark.style.opacity="0.3";
+				oMark.style.opacity="0.4";
 			}
 			function mark(){
 				oXiala_bar_a.style.display="none";
@@ -162,6 +164,7 @@
 		
 		</script>
 		<script type="text/javascript">
+			
 			var ocheck_img1 = document.getElementById('check_img1');
 			var ocheck_img2 = document.getElementById('check_img2');
 			var ocheck_img3 = document.getElementById('check_img3');
@@ -171,68 +174,93 @@
 			var ocheck_img7 = document.getElementById('check_img7');
 			var ocheck_img8 = document.getElementById('check_img8');
 			var ocheck_img9 = document.getElementById('check_img9');
+			function clear_imgs1(){
+				ocheck_img1.style.display="none";
+				ocheck_img2.style.display="none";
+				ocheck_img3.style.display="none";
+			}
+			function clear_imgs2(){
+				ocheck_img4.style.display="none";
+				ocheck_img5.style.display="none";
+				ocheck_img6.style.display="none";
+				ocheck_img7.style.display="none";
+				ocheck_img8.style.display="none";
+				ocheck_img9.style.display="none";
+			}
 			function show_img1(){
-				if(ocheck_img1.style.display=="none"){
-					ocheck_img1.style.display="inline-block";
-				}else{
-					ocheck_img1.style.display="none";
-				}
+				clear_imgs1();
+				ocheck_img1.style.display="inline-block";
+				oXiala_bar_a.style.display="none";
+				p1.innerHTML="时间排序";
+				oMark.style.display="none";  
+				
 			}
 			function show_img2(){
-				if(ocheck_img2.style.display=="none"){
-					ocheck_img2.style.display="inline-block";
-				}else{
-					ocheck_img2.style.display="none";
-				}
+				clear_imgs1(); 
+				ocheck_img2.style.display="inline-block";
+				oXiala_bar_a.style.display="none";
+				p1.innerHTML="价格排序";
+				oMark.style.display="none"; 
 			}
 			function show_img3(){
-				if(ocheck_img3.style.display=="none"){
-					ocheck_img3.style.display="inline-block";
-				}else{
-					ocheck_img3.style.display="none";
-				}
+				clear_imgs1();
+				ocheck_img3.style.display="inline-block";
+				oXiala_bar_a.style.display="none";
+				p1.innerHTML="信誉排序";
+				oMark.style.display="none"; 
 			}
 			function show_img4(){
-				if(ocheck_img4.style.display=="none"){
-					ocheck_img4.style.display="inline-block";
-				}else{
-					ocheck_img4.style.display="none";
-				}
+				clear_imgs2();
+				ocheck_img4.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="全部任务";
+				oMark.style.display="none"; 
 			}
 			function show_img5(){
-				if(ocheck_img5.style.display=="none"){
-					ocheck_img5.style.display="inline-block";
-				}else{
-					ocheck_img5.style.display="none";
-				}
+				clear_imgs2();
+				ocheck_img5.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="跑腿任务";
+				oMark.style.display="none"; 
 			}
 			function show_img6(){
-				if(ocheck_img6.style.display=="none"){
-					ocheck_img6.style.display="inline-block";
-				}else{
-					ocheck_img6.style.display="none";
-				}
+				clear_imgs2();
+				ocheck_img6.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="租借任务";
+				oMark.style.display="none"; 
 			}
 			function show_img7(){
-				if(ocheck_img7.style.display=="none"){
-					ocheck_img7.style.display="inline-block";
-				}else{
-					ocheck_img7.style.display="none";
-				}
-			}function show_img8(){
-				if(ocheck_img8.style.display=="none"){
-					ocheck_img8.style.display="inline-block";
-				}else{
-					ocheck_img8.style.display="none";
-				}
+				clear_imgs2();
+				ocheck_img7.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="学习辅导";
+				oMark.style.display="none"; 
+			}
+			function show_img8(){
+				clear_imgs2();
+				ocheck_img8.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="维修服务";
+				oMark.style.display="none";  
 			}
 			function show_img9(){
-				if(ocheck_img9.style.display=="none"){
-					ocheck_img9.style.display="inline-block";
-				}else{
-					ocheck_img9.style.display="none";
-				}
+				clear_imgs2();
+				ocheck_img9.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="其他服务";
+				oMark.style.display="none";  
 			}
+		</script>
+		<script>
+			var next =document.getElementById('new_task');
+		    next.addEventListener('tap', function() {  
+				openView.usuView('Release_task.html','Release_task.html');
+			});
+			var next =document.getElementById('button1');
+		    next.addEventListener('tap', function() {  
+				openView.usuView('task_detail.html','task_detail.html');
+			});
 		</script>
 	</body>
 

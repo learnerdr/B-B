@@ -12,10 +12,11 @@ body {
 				-webkit-box-shadow: none;
 				box-shadow: none;
 			}
+
 			.mui-bar-nav~.mui-content {
-				padding-top: 12%;
-				margin-bottom: 1.481rem;
-			}
+				padding-top: 12%;	
+}
+		
 			
 			
 			/*导航栏*/
