@@ -5,29 +5,29 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
-		<link href="css/self-center.css" rel="stylesheet" />
-		
+		<link href="css/self-center.css" rel="stylesheet" media="screen" />
+
 		<title></title>
 	</head>
 
 	<body>
 		<!--头部-->
-			<div class="head " >
-				<div class="head_box">
-					<img src="img/my_head.png" />
-				</div>
+		<div class="head ">
+			<div class="head_box">
+				<img src="img/my_head.png" />
+			</div>
 
-				<div class="head_text">
-					<p>18236789609</p>
-					<img src="img/sex.png" />
-			    </div>
-			    <div class="head_text_school">
-			    	<p>成都东软学院</p>
-			    </div>
-		    </div>
-		    
-		    
+			<div class="head_text">
+				<p>18236789609</p>
+				<img src="img/sex.png" />
+			</div>
+			<div class="head_text_school">
+				<p>成都东软学院</p>
+			</div>
+		</div>
+
 		<div class="mui-content">
+
 			
 		    <!--四个按钮-->
 		    <div class="four-sides">
@@ -155,6 +155,127 @@
 			openView.usuView('my_money.html','my_money.html'); 
 	});
 		</script>
+
+
+			<!--四个按钮-->
+			<div class="four-sides">
+				<a href="#" id="history_send">
+					<div class="side">
+						<img src="img/history_post.png" />
+						<p>历史发布</p>
+					</div>
+				</a>
+
+				<a href="#" id="history_receipt">
+					<div class="side">
+						<img src=" img/history_get.png" />
+						<p>历史接单</p>
+					</div>
+				</a>
+
+				<a href="#" id="my_sk">
+					<div class="side">
+						<img src="img/my_skill.png" />
+						<p>我的技能</p>
+					</div>
+				</a>
+
+				<a href="#">
+					<div class="side">
+						<img src="img/review.png" />
+						<p>等待评价</p>
+					</div>
+				</a>
+			</div>
+			<!--五列选项-->
+			<div class="five-lists">
+
+				<div class="list">
+					<div class="list_first">
+						<img src="img/get_money.png" />
+						<p>我的钱包</p>
+					</div>
+					<div class="mymoney">
+						<p>0.00元</p>
+						<div class="mymoney_join">
+							<img src="img/chos_way.png" />
+						</div>
+					</div>
+				</div>
+				<div class="list">
+					<div class="list_first">
+						<img src="img/my_mode.png" />
+						<p>勿扰模式</p>
+					</div>
+					<div class="ios-checkbox">
+						<input type="checkbox" id="ios-checkbox" name="emulate-ios-button" class="raw-checkbox">
+						<label for="ios-checkbox" class="emulate-ios-button"></label>
+					</div>
+				</div>
+				<div class="list" id="Credit_score">
+					<div class="list_first">
+						<img src="img/reputation.png" />
+						<p>信誉积分</p>
+					</div>
+					<div class="join">
+						<img src="img/chos_way.png" />
+					</div>
+				</div>
+				<div class="list" id="recommend">
+					<div class="list_first">
+						<img src="img/recommend_classify.png" />
+						<p>推送类型</p>
+					</div>
+					<div class="join">
+						<img src="img/chos_way.png" />
+					</div>
+
+				</div>
+				<div class="list" id="set_up">
+					<div class="list_first">
+						<img src="img/set.png" />
+						<p>设置</p>
+					</div>
+					<div class="join">
+						<img src="img/chos_way.png" />
+					</div>
+				</div>
+
+			</div>
+
+			<script type="text/javascript" src="js/flexible.js"></script>
+			<script src="js/immersed.js"></script>
+			<script type="text/javascript" src="js/config.js"></script>
+			<script src="js/mui.min.js"></script>
+			<script type="text/javascript">
+				mui.init;
+				var set_up = document.getElementById('set_up');
+				set_up.addEventListener('tap', function() {
+
+					openView.usuView('Set_up.html', 'Set_up.html');
+				});
+				var recommend = document.getElementById('recommend');
+				recommend.addEventListener('tap', function() {
+
+					openView.usuView('propelling_classify.html', 'propelling_classify.html');
+				});
+				var o_history_send = document.getElementById('history_send');
+				o_history_send.addEventListener('tap', function() {
+
+					openView.usuView('send_all_orders.html', 'send_all_orders.html');
+				});
+				var o_history_receipt = document.getElementById('history_receipt');
+				o_history_receipt.addEventListener('tap', function() {
+
+					openView.usuView('reception_all_oreders.html', 'reception_all_oreders.html');
+				});
+				var o_my_sk = document.getElementById('my_sk');
+				o_my_sk.addEventListener('tap', function() {
+
+					openView.usuView('my_skills2.html', 'my_skills2.html');
+				});
+			</script>
+
 	</body>
 
 </html>
