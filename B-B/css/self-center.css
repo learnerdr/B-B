@@ -2,9 +2,12 @@ body,
 html {
 	background-color: #f2f2f2;
 }
-p{
+
+p {
 	margin-bottom: 0rem;
 }
+
+
 /*取消导航栏content的影响*/
 
 .mui-bar {
@@ -16,7 +19,10 @@ p{
 	padding-top: 13%;
 	margin-bottom: 1.481rem;
 }
+
+
 /*头部*/
+
 .head {
 	width: 100%;
 	height: 5.7rem;
@@ -27,6 +33,7 @@ p{
 	display: flex;
 	flex-direction: column;
 }
+
 .head_box {
 	width: 2.222rem;
 	height: 2.222rem;
@@ -42,36 +49,36 @@ p{
 	height: 100%;
 }
 
-
-
-
-
-.head_text{
+.head_text {
 	display: flex;
 	flex-direction: row;
 	margin-top: 0.277rem;
 	margin-left: 3.611rem;
 }
-.head_text p{
+
+.head_text p {
 	margin: 0;
 	font-family: "microsoft yahei";
 	font-size: 0.444rem;
 	color: #333333;
 }
-.head_text img{
+
+.head_text img {
 	width: 0.462rem;
 	height: 0.462rem;
 	margin-left: 0.268rem;
 	border-radius: 45px;
 	overflow: hidden;
 }
-.head_text_school{
+
+.head_text_school {
 	display: flex;
 	flex: row;
 	align-items: center;
 	justify-content: center;
 }
-.head_text_school p{
+
+.head_text_school p {
 	margin: 0;
 	margin-top: 0.268rem;
 	font-family: "microsoft yahei";
@@ -80,9 +87,9 @@ p{
 }
 
 
-
 /*四个按钮*/
-.four-sides{
+
+.four-sides {
 	width: 100%;
 	height: 2.416rem;
 	background-color: #FFFFFF;
@@ -90,12 +97,14 @@ p{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-}			
-.side{
+}
+
+.side {
 	display: flex;
 	flex-direction: column;
 }
-.side img{
+
+.side img {
 	width: 1.111rem;
 	height: 1.111rem;
 	margin: 0 auto;
@@ -103,17 +112,20 @@ p{
 	border-radius: 45px;
 	overflow: hidden;
 }
-.side p{
+
+.side p {
 	margin: 0;
 	font-family: "microsoft yahei";
 	font-size: 0.388rem;
 	color: #555555;
 	margin-top: 0.277rem;
 }
-.five-lists{
+
+.five-lists {
 	margin-top: 3.5%;
 }
-.list{
+
+.list {
 	width: 100%;
 	height: 1.481rem;
 	background-color: #FFFFFF;
@@ -123,26 +135,30 @@ p{
 	align-items: center;
 	margin-top: 0.3%;
 }
-.list_first{
+
+.list_first {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
-.list img{
+
+.list img {
 	width: 0.509rem;
 	height: 0.509rem;
 	margin: auto 0;
 	margin-left: 0.555rem;
 	overflow: hidden;
 }
-.list p{
+
+.list p {
 	font-family: "microsoft yahei";
 	font-size: 0.444rem;
 	color: #333333;
 	margin: auto 0;
 	margin-left: 0.287rem;
 }
-.mymoney{
+
+.mymoney {
 	width: 28%;
 	margin-right: 2%;
 	display: flex;
@@ -150,38 +166,136 @@ p{
 	justify-content: center;
 	align-items: center;
 }
-.mymoney p{
+
+.mymoney p {
 	color: #888888;
 	font-family: "微软雅黑";
 	font-size: 0.444rem;
 }
+
 .join {
 	width: 0.24rem;
 	height: 0.416rem;
 	margin-right: 5%;
 	overflow: hidden;
 }
-.join img{
+
+.join img {
 	width: 100%;
 	height: 100%;
 	margin-left: 0;
 }
-.mymoney_join{
+
+.mymoney_join {
 	width: 0.24rem;
 	height: 0.416rem;
 	margin-left: 15%;
 	overflow: hidden;
 }
-.mymoney_join img{
+
+.mymoney_join img {
 	width: 100%;
 	height: 100%;
 	margin-left: 0;
 }
-.btn{
-	    position: relative;
-    	right: 4%;
-    	display: flex;
-	flex-direction: row;
-	justify-content: center;
+
+.ios-checkbox {
+	margin-right: 5%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
 	align-items: center;
+}
+
+
+/* ==========================================================================
+                    label标签模拟按钮         
+       ========================================================================== */
+
+.emulate-ios-button {
+	display: block;
+	width: 1.5rem;
+	height: 0.6rem;
+	background: #FFFFFF;
+	border-radius: 5rem;
+	border: 0.05rem solid #ddd;
+	cursor: pointer;
+	position: relative;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+
+/* ==========================================================================
+                    设置伪类,来实现模拟滑块滑动,过渡用了transition来实现 ,
+                    translateZ来强制启用硬件渲染   
+       ========================================================================== */
+
+.emulate-ios-button:after {
+	content: '';
+	display: block;
+	width: 0.4rem;
+	height: 0.4rem;
+	border-radius: 100%;
+	background: #1AB394;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+	position: absolute;
+	left: 0.07rem;
+	top: 0.06rem;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.emulate-ios-button:active:after {
+	width: 1.1rem;
+}
+
+
+/* ==========================================================================
+                    设置raw-checkbox,视觉直观比较 
+       ========================================================================== */
+
+.raw-checkbox {
+	display: none;
+}
+
+.raw-checkbox:checked+label {
+	background: #DDDDDD;
+}
+
+
+/* 这里是伪元素偏移,初始是0.9+0.05 ,所以这里1.05rem */
+
+.raw-checkbox:checked+label:after {
+	left: 0.97rem;
+}
+
+.raw-checkbox:checked+label:active:after {
+	left: .5rem;
+}
+
+.raw-checkbox:disabled+label {
+	background: #d5d5d5;
+	pointer-events: none;
+}
+
+.raw-checkbox:disabled+label:after {
+	background: #bcbdbc;
 }

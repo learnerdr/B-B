@@ -362,7 +362,8 @@
 				"resources": [],
 				"refer": [
 					"check.html",
-					"register1.html"
+					"register1.html",
+					"tab-webview-main.html"
 				],
 				"priority": 0
 			}
