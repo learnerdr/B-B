@@ -18,7 +18,7 @@
 				</div>
 				
 			</a>
-			<a class="mui-tab-item"data-name = "消息" href="sys_infor.html">
+			<a class="mui-tab-item"data-name = "消息" href="sys_infor.html" id="new_button">
 				<div class="box">
 				<img class="news" src="img/tab-webview-main/infor.png" id="news_img"/>
 				<span class="mui-tab-label">消息</span>
@@ -53,7 +53,7 @@
 			};
 			
 			var aniShow = {};
-			
+			var id = null;
 			 //创建子页面，首个选项卡页面显示，其它均隐藏；
 			mui.plusReady(function() {
 				var self = plus.webview.currentWebview();
@@ -70,7 +70,7 @@
 				}
 			});
 			
-
+				var newsid = 'news';
 				var img1=  document.getElementById("main_img");
 				var img2=  document.getElementById("news_img");
 				var img3=  document.getElementById("skills_img");
@@ -109,6 +109,8 @@
 					img3.src ='img/tab-webview-main/skills.png';
 					img4.src ='img/tab-webview-main/my_hover.png';
 				}
+			
+			
 				var targetTab = this.getAttribute('href');
 				if (targetTab == activeTab) {
 					return;
@@ -127,7 +129,10 @@
 				//隐藏当前;
 				plus.webview.hide(activeTab);
 				//更改当前活跃的选项卡
-				activeTab = targetTab;
+
+					activeTab = targetTab;
+				
+				
 			});
 			 //自定义事件，模拟点击“首页选项卡”
 			document.addEventListener('gohome', function() {
@@ -141,6 +146,40 @@
 					defaultTab.classList.add('mui-active');
 				}
 			});
+			//添加newId自定义事件监听
+			window.addEventListener('newsId',function(event){
+			  //获得事件参数
+			  id = event.detail.id;
+			  console.log(id);
+			  if(newsid == id)
+			  {
+			  	var defaultTab = document.getElementById("defaultTab");
+			  	var new_button = document.getElementById("new_button");
+			  	img1.src ='img/tab-webview-main/main.png';
+				img2.src ='img/tab-webview-main/infor_hover.png';
+				img3.src ='img/tab-webview-main/skills.png';
+				img4.src ='img/tab-webview-main/my.png';
+				activeTab = subpages[1];
+				defaultTab.classList.remove('mui-active');
+				new_button.classList.add('mui-active');
+				}
+			});
+			
+			//添加schoolid自定义事件监听
+			window.addEventListener('schoolName',function(event){
+			  //获得事件参数
+			 var name = event.detail.id;
+			 console.log(name);
+			  //获得详情页面
+			detailPage = plus.webview.getWebviewById('main_page.html');
+			//触发详情页面的schoolId事件
+			
+			console.log(name);
+			mui.fire(detailPage,'schoolId',{
+					id:name
+				});
+			});
+			
 		</script>
 	</body>
 

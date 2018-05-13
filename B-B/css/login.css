@@ -6,7 +6,9 @@ body {
 	background-size: 100%;
 }
 
-
+p{
+	margin: 0;
+}
 
 /*头像*/
 
@@ -199,4 +201,27 @@ input {
 
 .mui-btn-block {
 	padding: 5px 0;
+}
+.remember
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: absolute;
+    top: 5.6rem;
+    left: 2rem;
+}
+.remember_number{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	 width: 2rem;
+	
+}
+.remember_number p{
+	/*color: #1AB394;
+	font-family: "微软雅黑";
+	font-size: 0.388rem;*/
+	margin-left: 5%;
 }

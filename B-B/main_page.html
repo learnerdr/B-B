@@ -16,7 +16,7 @@
 				<!--图标-->
 				<img src="img/position.png" class="position" />
 			<!--字-->
-				<p>成都东软学院</p>
+				<p id="school"></p>
 			</div>
 			<img src="img/contact_others.png"  class="contact_others" id="news"/>
 			
@@ -38,7 +38,13 @@
 					top: '65px',
 					bottom: '0px',
 				}
-			}]
+			}],
+			preloadPages:[{
+    		id:'sys_infor.html',
+    		url:'sys_infor.html'           
+  			}
+ 			 ]
+			
 		});
 	//下拉刷新
 		var contentWebview = null;
@@ -48,19 +54,44 @@
 			}
 			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
 		});
+		mui.plusReady(function () {
+				
+			})
 		
-		//页面跳转
-			mui.plusReady(function () {
+		var detailPage = null;
+		var news = document.getElementById("news");
+		news.addEventListener("tap",function () {
+			 var id = 'news';
+		  //获得详情页面
+		  if(!detailPage){
+		    detailPage = plus.webview.getWebviewById('tab-webview-main.html');
+		  }
+		  //触发详情页面的newsId事件
+		  mui.fire(detailPage,'newsId',{
+		    id:id
+		  });
+		//打开详情页面          
+		  mui.openWindow({
+		    id:'sys_infor.html'
+		  });
+		});
+		
+		
+			
+				//添加schoolid自定义事件监听
+			window.addEventListener('schoolId',function(event){
+			  //获得事件参数
+			var  name = event.detail.id;
+			  console.log(name);
+			  var school =document.getElementById("school");
+				school.innerHTML = name;
+			});
+			//页面跳转
 	var position=document.getElementById('position');
 	       position.addEventListener('tap', function() {
 		       openView.usuView('search_college.html','search_college.html');
 	});
-	var news=document.getElementById('news');
-	       news.addEventListener('tap', function() {
-		      openView.usuView('sys_infor.html','sys_infor.html');
-	});
-	
-	})		
+		
 		</script>
 	</body>
 

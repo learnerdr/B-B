@@ -7,7 +7,7 @@
  * title：导航条上显示的名称
  */
 var openView = {
-	usuView: function(url, id, extras,bounce) {
+	usuView: function(url, id, extras1,extras2,bounce) {
 		var extras = extras || '';
 		var bounce = bounce ||'none';
 		mui.openWindow({
@@ -16,7 +16,11 @@ var openView = {
 			waiting: {
 				autoShow: false,
 			},
-			extras: extras,
+			extras: 
+			{
+				value1: extras1,
+				value2: extras2
+			},
 			styles:{
 				bounce:bounce
 			}

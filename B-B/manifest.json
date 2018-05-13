@@ -363,7 +363,8 @@
 				"refer": [
 					"check.html",
 					"register1.html",
-					"tab-webview-main.html"
+					"tab-webview-main.html",
+					"main_page.html"
 				],
 				"priority": 0
 			}
