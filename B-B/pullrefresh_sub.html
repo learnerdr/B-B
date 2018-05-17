@@ -154,10 +154,9 @@
  			var firstbanner2 = document.getElementById("firstbanner2");
  			var fourthbanner2 = document.getElementById("fourthbanner2");
  			mui.ready(function(){
- 				
- 				askbanners();
- 				threetasks();moretasks();
- 			})
+   				askbanners();
+ 			});
+ 			mui.plusReady(function(){});
  			function askbanners() {
  				$.ajax({
 						async : false,
@@ -175,42 +174,6 @@
 					  fourthbanner.src =banners[3];
 					  firstbanner2.src =banners[0];
 					  fourthbanner2.src =banners[3];
-						},
-						error: function(jqXHR) {
-//						alert("发生错误：" + jqXHR.status);
-						}
-						});
- 			}
- 			function threetasks() {
- 				$.ajax({
-						async : false,
-						type: "post",
-						url: ajaxUrl2,
-						dataType: 'json',
-						data: {
-						},
-						success: function(text) {
-						threeTasks = text;
-						},
-						error: function(jqXHR) {
-//						alert("发生错误：" + jqXHR.status);
-						}
-						});
- 			}
- 			function moretasks() {
- 				$.ajax({
-						async : false,
-						type: "post",
-						url: ajaxUrl3,
-						dataType: 'json',
-						data: {
-							nickname: lastnickname,
-							time: lasttime
-						},
-						success: function(text) {
-						moreTasks = text;
-						console.log(moreTasks[1].price);
-
 						},
 						error: function(jqXHR) {
 //						alert("发生错误：" + jqXHR.status);
@@ -236,20 +199,40 @@
  			var ispulldownRefresh = false;
  			function pulldownRefresh() {
  				setTimeout(function() {
+ 					$.ajax({
+						async : false,
+						type: "post",
+						url: ajaxUrl2,
+						dataType: 'json',
+						data: {
+						},
+						success: function(text) {
+						threeTasks = text;
+						},
+						error: function(jqXHR) {
+//						alert("发生错误：" + jqXHR.status);
+						}
+						});
  						var table = document.body.querySelector('.mission_list_contant_add');
  					var cells = document.body.querySelectorAll('.mission_list_contant');
  					table.innerHTML ="";
  					for (var i = 0, len = 3; i < len; i++) {
  						var div = document.createElement('div');
  						div.className = 'mission_list_contant';
- 						if(threeTasks[i].sendusersex==0)
+ 						if(threeTasks[i].sendusersex ==0)
  						{
  						div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src="+'threeTasks[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+threeTasks[i].nickname+"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+threeTasks[i].price+"</p></div></div><div class='right_contant_middle'><p>"+threeTasks[i].content+"</p></div><div class='right_contant_bottom'><p></p><p>"+threeTasks[i].time+"</p></div></div></div>";	
  						}
  						else{
  						div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src="+'threeTasks[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+threeTasks[i].nickname+"</p><img class='top_left_img' src='img/male.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+threeTasks[i].price+"</p></div></div><div class='right_contant_middle'><p>"+threeTasks[i].content+"</p></div><div class='right_contant_bottom'><p></p><p>"+threeTasks[i].time+"</p></div></div></div>";	
  						}
- 						
+ 						if(i==2)
+ 						{
+   							lastnickname = threeTasks[i].nickname;
+   							console.log(lastnickname);
+   							lasttime = threeTasks[i].time;
+   							console.log(lasttime);
+ 						}
  						//下拉刷新，新纪录插到最前面；
  						table.appendChild(div, table.firstChild);
  					}
@@ -266,6 +249,23 @@
  			function pullupRefresh() {
  				
  				setTimeout(function() {
+ 					$.ajax({
+					async : false,
+					type: "post",
+					url: ajaxUrl3,
+					dataType: 'json',
+					data: {
+						nickname: lastnickname,
+						time: lasttime
+					},
+					success: function(text) {
+						moreTasks = text;
+						console.log(moreTasks);
+					},
+					error: function(jqXHR) {
+						alert("发生错误：" + jqXHR.status);
+					}
+				});
  					if(!ispulldownRefresh)
  					{
  					count2 = ++count;
@@ -286,18 +286,25 @@
  					for (var i = 0, len = 3; i < len; i++) {
  						var div = document.createElement('div');
  						div.className = 'mission_list_contant';
- 						
- 						div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src="+'moreTasks[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ moreTasks[i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+moreTasks[i].price+"</p></div></div><div class='right_contant_middle'><p>"+moreTasks[i].content+"</p></div><div class='right_contant_bottom'><p></p><p>"+moreTasks[i].time+"</p></div></div></div>";
+ 						if(moreTasks[i].sendusersex ==0)
+ 						{
+ 							div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src="+'moreTasks[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ moreTasks[i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+moreTasks[i].price+"</p></div></div><div class='right_contant_middle'><p>"+moreTasks[i].content+"</p></div><div class='right_contant_bottom'><p></p><p>"+moreTasks[i].time+"</p></div></div></div>";
+ 						}
+ 						else{
+ 							div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src="+'moreTasks[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ moreTasks[i].nickname +"</p><img class='top_left_img' src='img/male.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+moreTasks[i].price+"</p></div></div><div class='right_contant_middle'><p>"+moreTasks[i].content+"</p></div><div class='right_contant_bottom'><p></p><p>"+moreTasks[i].time+"</p></div></div></div>";
+ 						}
  						if(i==2)
  						{
    							lastnickname = moreTasks[i].nickname;
+   							console.log(lastnickname);
    							lasttime = moreTasks[i].time;
+   							console.log(lasttime);
  						}
  						table.appendChild(div);
  					}
  				}, 1500);
  			}
- 			
+ 		
  			//			轮播
 			var gallery = mui('.mui-slider');
 			gallery.slider({

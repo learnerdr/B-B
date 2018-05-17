@@ -16,6 +16,8 @@ p{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	position: fixed;
+	top: 0rem;
 }
 
 .tittle p{
@@ -23,20 +25,24 @@ p{
 	color: #FFFFFF;
 	font-family: "microsoft yahei";
 	margin-left: 45%;
+	margin-bottom: 0.3rem;
 }
 .tittle img{
 	width: 0.527rem;
 	height: 0.527rem;
 	overflow: hidden;
 	margin-left: 35%;
+	margin-bottom: 0.3rem;
 }
 
 
 /*===============================================================*/
 .skill{
+	position: fixed;
 	width: 100%;
 	height: 1.111rem;
 	background-color: #FFFFFF;
+	top: 1.65rem; 
 }
 .skill-{
 	width: 5rem;
@@ -69,13 +75,13 @@ p{
 	width: 100%;
 	height: 4.629rem;
 	display:block;
-	
+	margin-top: 3rem ;
 }
 .Mskill{
 	width: 100%;
 	height: 4.629rem;
 	display:none;
-
+	margin-top: 3rem ;
 }
 
 
@@ -103,13 +109,13 @@ p{
 	margin-left: 1.944rem;
 }
 .xinxi_right_a{
-	height: 1.296rem;
+	height: 1rem;      /*更改昵称与信息内容的间距时调整*/
+	padding-top: 0.4rem;
 	width: 7.5rem;
 }
 .xinxi_right_a a{
 	font-size: 0.388rem;
 	color: #333333;
-	line-height: 1.296rem;
 	font-family: "microsoft yahei";
 }
 .xinxi_right_a img{
@@ -117,8 +123,8 @@ p{
 	height: 0.388rem;
 	margin-left: 0.08rem;
 }
-.time{
-	font-size: 0.333rem;
+.xinxi_time{
+	font-size: 1.333rem;
 	color: #888888;
 	float: right;
 	margin-right: 0.555rem;
@@ -134,7 +140,6 @@ p{
 	height: 0.833rem;
 	margin-left: 5.378rem;
 }
-
 
 
 /*===============================================================*/

@@ -142,30 +142,46 @@
 				label.appendChild(mystring);
 			}	
 			
+
+
 			
 			
 				
+
 			var Tick1= document.getElementById("all");
 			var img1=  document.getElementById("all_img");
-		
-		
+			var Tick2= document.getElementById("Running_leg");
+			var img2= document.getElementById("Running_leg_img");
+			var Tick3= document.getElementById("Leased_class");
+			var img3= document.getElementById("Leased_class_img");
+			var Tick4= document.getElementById("Learning_guidance");
+			var img4= document.getElementById("Learning_guidance_img");
+			var Tick5= document.getElementById("Maintenance_service");
+			var img5= document.getElementById("Maintenance_service_img");
+			var Tick6= document.getElementById("other_service");
+			var img6= document.getElementById("other_service_img");
 				Tick1.addEventListener('tap', function(event) {
 					if(a==0){
 						img1.src='img/tick.png';
+						img2.src='img/tick.png';
+						img3.src='img/tick.png';
+						img4.src='img/tick.png';
+						img5.src='img/tick.png';
+						img6.src='img/tick.png'; 
 						a=1;
 					}
 					else if(a==1){
 						img1.src='img/no_tick.png';
+						img2.src='img/no_tick.png';
+						img3.src='img/no_tick.png';
+						img4.src='img/no_tick.png';
+						img5.src='img/no_tick.png';
+						img6.src='img/no_tick.png';
 						a=0;
 					}
 				}, false);
-			
-			
-			
-	
-					  
-				var Tick2= document.getElementById("Running_leg");
-				var img2= document.getElementById("Running_leg_img");
+			  
+				
 				Tick2.addEventListener('tap', function(event) {
 							if(b==0){
 								img2.src='img/tick.png';
@@ -178,8 +194,7 @@
 						}, false);
 					
 					
-					var Tick3= document.getElementById("Leased_class");
-					var img3= document.getElementById("Leased_class_img");
+					
 				Tick3.addEventListener('tap', function(event) {
 							if(c==0){
 								img3.src='img/tick.png';
@@ -190,8 +205,6 @@
 								c=0;
 							}
 						}, false);
-					var Tick4= document.getElementById("Learning_guidance");
-					var img4= document.getElementById("Learning_guidance_img");
 					Tick4.addEventListener('tap', function(event) {
 							if(d==0){
 								img4.src='img/tick.png';
@@ -203,8 +216,6 @@
 							}
 						}, false);
 					
-					var Tick5= document.getElementById("Maintenance_service");
-					var img5= document.getElementById("Maintenance_service_img");
 					Tick5.addEventListener('tap', function(event) {
 							if(e==0){
 								img5.src='img/tick.png';
@@ -216,8 +227,6 @@
 							}
 						}, false);
 					
-					var Tick6= document.getElementById("other_service");
-					var img6= document.getElementById("other_service_img");
 					Tick6.addEventListener('tap', function(event) {
 							if(f==0){
 								img6.src='img/tick.png';

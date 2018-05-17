@@ -191,7 +191,7 @@
 					"xxhdpi": ""
 				}
 			}
-		}
+		},"ads":{"rp":false,"splash":false,"push":false},"adid":""
 	},
 	"dependencies": {
 		"pages": {
@@ -268,7 +268,8 @@
 					"Set_up.html",
 					"propelling_classify.html",
 					"send_all_orders.html",
-					"my_skills2.html"
+					"my_skills2.html",
+					"my_money.html"
 				],
 				"priority": 0
 			},
@@ -354,7 +355,8 @@
 			"my_skills2.html": {
 				"resources": [],
 				"refer": [
-					"message_interface.html"
+					"message_interface.html",
+					"self-center.html"
 				],
 				"priority": 0
 			},

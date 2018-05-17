@@ -12,10 +12,11 @@ body {
 				-webkit-box-shadow: none;
 				box-shadow: none;
 			}
-			/*.mui-bar-nav~.mui-content {
-				padding-top: 13%;
-				margin-bottom: 1.481rem;
-			}*/
+
+			.mui-bar-nav~.mui-content {
+				padding-top: 12%;	
+}
+		
 			
 			
 			/*导航栏*/
@@ -144,4 +145,5 @@ body {
 				font-family: 'microsoft yahei';
 				font-size: 0.5rem;
 				color: #FFFFFF;
+				border: 0rem;
 			}

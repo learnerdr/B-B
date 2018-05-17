@@ -21,7 +21,7 @@
 				<p>接任务</p>
 			</div>
 			<!--图标-->
-			<a href="#">
+			<a href="#" id="new_task">
 				<img src="img/add.png" class="add" />
 			</a>
 		</header>
@@ -30,151 +30,197 @@
 			<div class="Sort_bar">
 				<div class="Reputation_ranking" id="reputation_rank" onclick="r_rank()">
 					<div class="sorting_title">
-						<p id="Reputation">信誉排序</p>
+						<p id="Reputation">时间排序</p>
 					<div class="Inverted_triangle2" id="triangle"></div>
 					</div>
 				</div>
 				<div class="Learning_guidance" id="learn_rank" onclick="l_rank()">
 					<div class="type_title">
-						<p id="Learning">学习辅导</p>
+						<p id="Learning">全部任务</p>
 					<div class="Inverted_triangle" id="triangle2"></div>
 					</div>
 					<div></div>
 				</div>
-				
 			</div>
-			
-			
-			<div id="content1">
-				<div class="mission_list_contant">
-					<div class="left_head">
-						<div class="left_head_img">
-							<img src="img/user_head.png" />
-						</div>
-					</div>
-					<div class="right_contant">
-						<div class="right_contant_top">
-							<div class="right_contant_top_left">
-								<p>咸鱼子</p>
-								<img class="top_left_img" src="img/sex.png" align="center" />
-							</div>
-							<div class="right_contant_top_right">
-								<img class="top_right_img" src="img/task_money.png" />
-								<p>5.00元</p>
-							</div>
-
-						</div>
-						<div class="right_contant_middle">
-							<p>需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！
-							</p>
-						</div>
-						<div>
-							<div id="button1">接受此单</div>
-							<div id="button2">马上联系</div>
-						</div>
-						
-					</div>
-				</div>
+			<div class="xiala_bar" id="xiala_bar_a">
+				<li onclick="show_img1()"><a>时间排序</a><img src="img/task_list/tick.png" id="check_img1"></li>
+				<li onclick="show_img2()"><a>价格排序</a><img src="img/task_list/tick.png" id="check_img2"></li>
+				<li onclick="show_img3()"><a>信誉排序</a><img src="img/task_list/tick.png" id="check_img3"></li>
 			</div>
-			
-			<div class="tasks" id="content2">
-				
-				<div class="mission_list_contant">
-					<div class="left_head">
-						<div class="left_head_img">
-							<img src="img/user_head.png" />
-						</div>
-					</div>
-					<div class="right_contant">
-						<div class="right_contant_top">
-							<div class="right_contant_top_left">
-								<p>咸鱼子</p>
-								<img class="top_left_img" src="img/sex.png" align="center" />
-							</div>
-							<div class="right_contant_top_right">
-								<img class="top_right_img" src="img/task_money.png" />
-								<p>5.00元</p>
-							</div>
-
-						</div>
-						<div class="right_contant_middle">
-							<p>需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！
-							</p>
-						</div>
-						<div>
-							<div id="button1">接受此单</div>
-							<div id="button2">马上联系</div>
-						</div>
-						
-					</div>
-				</div>
-				
-				<div class="mission_list_contant">
-					<div class="left_head">
-						<div class="left_head_img">
-							<img src="img/user_head.png" />
-						</div>
-					</div>
-					<div class="right_contant">
-						<div class="right_contant_top">
-							<div class="right_contant_top_left">
-								<p>咸鱼子</p>
-								<img class="top_left_img" src="img/sex.png" align="center" />
-							</div>
-							<div class="right_contant_top_right">
-								<img class="top_right_img" src="img/task_money.png" />
-								<p>5.00元</p>
-							</div>
-
-						</div>
-						<div class="right_contant_middle">
-							<p>需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！ 需要买一笼包子和豆浆，送到D5-2019，谢谢啦！
-							</p>
-						</div>
-						<div>
-							<div id="button1">接受此单</div>
-							<div id="button2">马上联系</div>
-						</div>
-						
-					</div>
-				</div>
+			<div class="xiala_bar" id="xiala_bar_b"> 
+				<li onclick="show_img4()"><a>全部</a><img src="img/task_list/tick.png" id="check_img4"></li>
+				<li onclick="show_img5()"><a>跑腿类</a><img src="img/task_list/tick.png" id="check_img5"></li>
+				<li onclick="show_img6()"><a>租借类</a><img src="img/task_list/tick.png" id="check_img6"></li>
+				<li onclick="show_img7()"><a>学习辅导</a><img src="img/task_list/tick.png" id="check_img7"></li>
+				<li onclick="show_img8()"><a>维修服务</a><img src="img/task_list/tick.png" id="check_img8"></li>
+				<li onclick="show_img9()"><a>其他服务</a><img src="img/task_list/tick.png" id="check_img9" onclick=""></li>
 			</div>
-			
+			<div id="mark" onclick="mark()"></div>
 			
 		</div>
 		
-		
-		
 		<script src="js/immersed.js"></script>
 		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/jquery-1.11.1.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/config.js" ></script>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
-			var h=1;
+			mui.init({
+				/*手势配置*/gestureConfig:{
+				/*双击*/doubletap:true
+			},
+			subpages:[{
+				url:'pullrefresh_task.html',
+				id:'pullrefresh_task.html',
+				styles:{
+					top: '105px',
+					bottom: '0px',
+				}
+			}]
+				
+			});
+			//下拉刷新
+		var contentWebview = null;
+		document.querySelector('header').addEventListener('doubletap',function () {
+			if(contentWebview==null){
+				contentWebview = plus.webview.currentWebview().children()[0];
+			}
+			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+		});
 			var p1 = document.getElementById('Reputation');
 			var p2 = document.getElementById('Learning');
-			var c1 = document.getElementById('content1');
-			var c2 = document.getElementById('content2');
 			var t1 = document.getElementById('triangle');
 			var t2 = document.getElementById('triangle2');
-			function r_rank(obj){
+//			var ajaxUrl = 'http://www.mozotech.cn/bangbang/index/taskmanage/tasklist';
+//			var taskList =null;
+			var oXiala_bar_a = document.getElementById('xiala_bar_a');
+			var oXiala_bar_b = document.getElementById('xiala_bar_b');
+			var oMark = document.getElementById('mark');	
+			function r_rank(){
 				p2.style.color='#555555';
 				t2.className='Inverted_triangle';
-				c2.style.display='none';
 				p1.style.color='#1AB394'; 
 				t1.className='Inverted_triangle2';
-				c1.style.display='block';
+
+				oXiala_bar_b.style.display="none";
+				oXiala_bar_a.style.display="block";
+				oMark.style.display="block"; 
+				oMark.style.opacity="0.3";
 				
 			}
 			function l_rank(obj){
 				p1.style.color='#555555';
 				t1.className='Inverted_triangle';
-				c1.style.display='none';
+				//c1.style.display='none';
 				p2.style.color='#1AB394'; 
 				t2.className='Inverted_triangle2';
-				c2.style.display='block';
+				oXiala_bar_a.style.display="none";
+				oXiala_bar_b.style.display="block"; 
+				oMark.style.display="block"; 
+				oMark.style.opacity="0.4";
 			}
+			function mark(){
+				oXiala_bar_a.style.display="none";
+				oXiala_bar_b.style.display="none";  
+				oMark.style.display="none"; 
+			}
+		
+		</script>
+		<script type="text/javascript">
+			
+			var ocheck_img1 = document.getElementById('check_img1');
+			var ocheck_img2 = document.getElementById('check_img2');
+			var ocheck_img3 = document.getElementById('check_img3');
+			var ocheck_img4 = document.getElementById('check_img4');
+			var ocheck_img5 = document.getElementById('check_img5');
+			var ocheck_img6 = document.getElementById('check_img6');
+			var ocheck_img7 = document.getElementById('check_img7');
+			var ocheck_img8 = document.getElementById('check_img8');
+			var ocheck_img9 = document.getElementById('check_img9');
+			function clear_imgs1(){
+				ocheck_img1.style.display="none";
+				ocheck_img2.style.display="none";
+				ocheck_img3.style.display="none";
+			}
+			function clear_imgs2(){
+				ocheck_img4.style.display="none";
+				ocheck_img5.style.display="none";
+				ocheck_img6.style.display="none";
+				ocheck_img7.style.display="none";
+				ocheck_img8.style.display="none";
+				ocheck_img9.style.display="none";
+			}
+			function show_img1(){
+				clear_imgs1();
+				ocheck_img1.style.display="inline-block";
+				oXiala_bar_a.style.display="none";
+				p1.innerHTML="时间排序";
+				oMark.style.display="none";  
+				
+			}
+			function show_img2(){
+				clear_imgs1(); 
+				ocheck_img2.style.display="inline-block";
+				oXiala_bar_a.style.display="none";
+				p1.innerHTML="价格排序";
+				oMark.style.display="none"; 
+			}
+			function show_img3(){
+				clear_imgs1();
+				ocheck_img3.style.display="inline-block";
+				oXiala_bar_a.style.display="none";
+				p1.innerHTML="信誉排序";
+				oMark.style.display="none"; 
+			}
+			function show_img4(){
+				clear_imgs2();
+				ocheck_img4.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="全部任务";
+				oMark.style.display="none"; 
+			}
+			function show_img5(){
+				clear_imgs2();
+				ocheck_img5.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="跑腿任务";
+				oMark.style.display="none"; 
+			}
+			function show_img6(){
+				clear_imgs2();
+				ocheck_img6.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="租借任务";
+				oMark.style.display="none"; 
+			}
+			function show_img7(){
+				clear_imgs2();
+				ocheck_img7.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="学习辅导";
+				oMark.style.display="none"; 
+			}
+			function show_img8(){
+				clear_imgs2();
+				ocheck_img8.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="维修服务";
+				oMark.style.display="none";  
+			}
+			function show_img9(){
+				clear_imgs2();
+				ocheck_img9.style.display="inline-block";
+				oXiala_bar_b.style.display="none";
+				p2.innerHTML="其他服务";
+				oMark.style.display="none";  
+			}
+		</script>
+		<script>
+			var next =document.getElementById('new_task');
+		    next.addEventListener('tap', function() {  
+				openView.usuView('Release_task.html','Release_task.html');
+			});
 		</script>
 	</body>
 
