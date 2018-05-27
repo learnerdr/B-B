@@ -47,16 +47,26 @@
 				<li onclick="show_img2()"><a>价格排序</a><img src="img/task_list/tick.png" id="check_img2"></li>
 				<li onclick="show_img3()"><a>信誉排序</a><img src="img/task_list/tick.png" id="check_img3"></li>
 			</div>
-			<div class="xiala_bar" id="xiala_bar_b"> 
+			<div class="xiala_bar" id="xiala_bar_b" > 
 				<li onclick="show_img4()"><a>全部</a><img src="img/task_list/tick.png" id="check_img4"></li>
 				<li onclick="show_img5()"><a>跑腿类</a><img src="img/task_list/tick.png" id="check_img5"></li>
 				<li onclick="show_img6()"><a>租借类</a><img src="img/task_list/tick.png" id="check_img6"></li>
 				<li onclick="show_img7()"><a>学习辅导</a><img src="img/task_list/tick.png" id="check_img7"></li>
 				<li onclick="show_img8()"><a>维修服务</a><img src="img/task_list/tick.png" id="check_img8"></li>
-				<li onclick="show_img9()"><a>其他服务</a><img src="img/task_list/tick.png" id="check_img9" onclick=""></li>
+				<li onclick="show_img9()"><a>其他服务</a><img src="img/task_list/tick.png" id="check_img9" ></li>
 			</div>
 			<div id="mark" onclick="mark()"></div>
 			
+			<div id="content1">
+				<!--列表刷新-->
+				<div id="pullrefresh" class=" mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="mission_list_contant_add">
+					
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<script src="js/immersed.js"></script>
@@ -66,50 +76,234 @@
 		<script type="text/javascript" src="js/config.js" ></script>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init({
+			var p1 = document.getElementById('Reputation');
+			var p2 = document.getElementById('Learning');
+			var t1 = document.getElementById('triangle');
+			var t2 = document.getElementById('triangle2');
+			var oXiala_bar_a = document.getElementById('xiala_bar_a');
+			var oXiala_bar_b = document.getElementById('xiala_bar_b');
+			var oMark = document.getElementById('mark');
+			var ocheck_img1 = document.getElementById('check_img1');
+			var ocheck_img2 = document.getElementById('check_img2');
+			var ocheck_img3 = document.getElementById('check_img3');
+			var ocheck_img4 = document.getElementById('check_img4');
+			var ocheck_img5 = document.getElementById('check_img5');
+			var ocheck_img6 = document.getElementById('check_img6');
+			var ocheck_img7 = document.getElementById('check_img7');
+			var ocheck_img8 = document.getElementById('check_img8');
+			var ocheck_img9 = document.getElementById('check_img9');
+			var tasktype = 0;
+			var sort = 'time';
+			var taskList=new Array();
+			var taskaddress =null;
+			var lastname =null;
+			var lasttime =null;
+			var table = document.body.querySelector('.mission_list_contant_add');
+			var ajaxUrl = 'http://www.mozotech.cn/bangbang/index/taskmanage/filterlist';
+			var ajaxUrl2 = 'http://www.mozotech.cn/bangbang/index/taskmanage/getaddress';
+			var ajaxUrl3 = 'http://www.mozotech.cn/bangbang/index/taskmanage/moretasklist';
+			mui.init(
+				{
 				/*手势配置*/gestureConfig:{
 				/*双击*/doubletap:true
 			},
-			subpages:[{
-				url:'pullrefresh_task.html',
-				id:'pullrefresh_task.html',
-				styles:{
-					top: '105px',
-					bottom: '0px',
-				}
-			}]
+				  pullRefresh : {
+				    container:"#pullrefresh",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+				    down : {
+				      style:'circle',//必选，下拉刷新样式，目前支持原生5+ ‘circle’ 样式
+				      color:'#2BD009', //可选，默认“#2BD009” 下拉刷新控件颜色
+				      height:'50px',//可选,默认50px.下拉刷新控件的高度,
+				      range:'100px', //可选 默认100px,控件可下拉拖拽的范围
+				      offset:'120px', //可选 默认0px,下拉刷新控件的起始位置
+				      auto: true,//可选,默认false.首次加载自动上拉刷新一次
+				      callback :pulldownRefresh //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+				    },
+				    up : {
+				      contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+				      contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+				      callback :pullupRefresh //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+				    }
+				  }
+				});
 				
-			});
-			//下拉刷新
+				if (mui.os.plus) {
+   				mui.plusReady(function() {
+   				setTimeout(function() {
+   						mui('#pullrefresh').pullRefresh().pulldownLoading();
+   					}, 1000);
+   
+   				});
+   			} else {
+   				mui.ready(function() {
+   					mui('#pullrefresh').pullRefresh().pulldownLoading();
+				});
+   			}
+ 			function getJsonLength(jsonData){
+			    var jsonLength = 0;
+			    for(var item in jsonData)
+			       jsonLength++;
+			    return jsonLength;
+				}
+			
+		function pulldownRefresh() { //下拉刷新函数
+			table.innerHTML = '';
+			setTimeout(function() {
+				$.ajax({
+					async : false,
+					type: "post",
+					url: ajaxUrl,
+					dataType: 'json',
+					data: {
+						sort: sort ,
+						tasktype: tasktype
+					},
+					success: function(text) {
+						taskList[0] = text;
+//						console.log(JSON.stringify(taskList[0])) ;
+					var length = getJsonLength(taskList[0]);
+//						console.log(length);
+						var cells = document.body.querySelectorAll('.mission_list_contant');
+   					for (var i = 0; i < length; i++) {
+   						var div = document.createElement('div');
+   						div.className = 'mission_list_contant';
+   						if(taskList[0][i].sendusersex ==0)
+   						{
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[0][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[0][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[0][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[0][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+0+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[0][i].time+"</p></div></div></div>";
+   						}
+   						else{
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[0][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[0][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[0][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[0][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+0+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[0][i].time+"</p></div></div></div>";
+   						}
+   						table.appendChild(div);
+   						if(i == length-1)
+ 						{
+   							lastnickname = taskList[0][i].nickname;
+   							lasttime = taskList[0][i].time;
+   							console.log(lastnickname,lasttime);
+ 						}
+   					}
+					/**
+					 * 下拉刷新结束
+					 * http://dev.dcloud.net.cn/mui/pulldown/
+					 */
+					mui("#pullrefresh").pullRefresh().endPulldownToRefresh();
+					// 重置上拉刷新
+					mui("#pullrefresh").pullRefresh().refresh(true);
+					},
+					error: function(jqXHR) {
+						plus.nativeUI.toast("发生错误：" + jqXHR.status);
+					}
+				});
+			
+				}, 1500);
+		};
+		/**
+ 			 * 上拉加载具体业务实现
+ 			 */
+   			function pullupRefresh() {
+   				setTimeout(function() {
+   					$.ajax({
+					async : false,
+					type: "post",
+					url: ajaxUrl3,
+					dataType: 'json',
+					data: {
+						sort: sort,
+						tasktype: tasktype,
+						nickname:lastnickname,
+						time:lasttime
+					},
+					success: function(text) {
+						taskList[1] = text;
+						var length = getJsonLength(taskList[1]);
+						console.log(JSON.stringify(taskList[1])) ;
+						console.log(length);
+   					var cells = document.body.querySelectorAll('.mission_list_contant');
+   					if(length == 0)
+						{
+							mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
+						}
+   					for (var i = 0; i < length; i++) {
+   						var div = document.createElement('div');
+   						div.className = 'mission_list_contant';
+   						if(taskList[1][i].sendusersex ==0)
+   						{
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[1][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[1][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[1][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[1][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+1+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[1][i].time+"</p></div></div></div>";
+   						}
+   						else{
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[1][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[1][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[1][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[1][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+1+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[1][i].time+"</p></div></div></div>";
+   						}
+   						table.appendChild(div);
+   						if(length <3)
+						{
+							mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
+						}
+						if(i ==length-1)
+ 						{
+   							lastnickname = taskList[1][i].nickname;
+   							lasttime = taskList[1][i].time;
+ 						}
+				
+   					}
+					},
+					error: function(jqXHR) {
+						console.log("发生错误：" + JSON.stringify(jqXHR));
+					}
+				});
+   					
+   				}, 1500);
+   			}
+   			function task_detail(that){
+ 				var num = parseInt(that.getAttribute('data-type'));
+ 				var index = parseInt(that.getAttribute('data-index'));
+ 				console.log('daafa',index);
+ 				$.ajax({
+					async : false,
+					type: "post",
+					url: ajaxUrl2,
+					dataType: 'json',
+					data: {
+						nickname: taskList[index][num].nickname,
+						tasktype: tasktype,
+						taskcontent: taskList[index][num].content,
+						time: taskList[index][num].time
+					},
+					success: function(text) {
+						taskaddress = text;
+					},
+					error: function(jqXHR) {
+						alert("发生错误：" + jqXHR.status);
+					}
+				});
+				openView.usuView('task_detail.html','task_detail.html',taskList[index][num],taskaddress,tasktype); 
+				
+			}
+			//勾选时间和全部任务
+			mui.plusReady(function() {
+				show_img1();
+				show_img4();
+				//下拉刷新
 		var contentWebview = null;
 		document.querySelector('header').addEventListener('doubletap',function () {
 			if(contentWebview==null){
 				contentWebview = plus.webview.currentWebview().children()[0];
 			}
-			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,100)");
 		});
-			var p1 = document.getElementById('Reputation');
-			var p2 = document.getElementById('Learning');
-			var t1 = document.getElementById('triangle');
-			var t2 = document.getElementById('triangle2');
-//			var ajaxUrl = 'http://www.mozotech.cn/bangbang/index/taskmanage/tasklist';
-//			var taskList =null;
-			var oXiala_bar_a = document.getElementById('xiala_bar_a');
-			var oXiala_bar_b = document.getElementById('xiala_bar_b');
-			var oMark = document.getElementById('mark');	
-			function r_rank(){
+			});
+				
+		function r_rank(){
 				p2.style.color='#555555';
 				t2.className='Inverted_triangle';
 				p1.style.color='#1AB394'; 
 				t1.className='Inverted_triangle2';
-
 				oXiala_bar_b.style.display="none";
 				oXiala_bar_a.style.display="block";
 				oMark.style.display="block"; 
 				oMark.style.opacity="0.3";
 				
 			}
-			function l_rank(obj){
+			//点击任务类型
+			function l_rank(){
 				p1.style.color='#555555';
 				t1.className='Inverted_triangle';
 				//c1.style.display='none';
@@ -120,29 +314,19 @@
 				oMark.style.display="block"; 
 				oMark.style.opacity="0.4";
 			}
+			//点击遮罩层
 			function mark(){
 				oXiala_bar_a.style.display="none";
 				oXiala_bar_b.style.display="none";  
 				oMark.style.display="none"; 
-			}
-		
-		</script>
-		<script type="text/javascript">
-			
-			var ocheck_img1 = document.getElementById('check_img1');
-			var ocheck_img2 = document.getElementById('check_img2');
-			var ocheck_img3 = document.getElementById('check_img3');
-			var ocheck_img4 = document.getElementById('check_img4');
-			var ocheck_img5 = document.getElementById('check_img5');
-			var ocheck_img6 = document.getElementById('check_img6');
-			var ocheck_img7 = document.getElementById('check_img7');
-			var ocheck_img8 = document.getElementById('check_img8');
-			var ocheck_img9 = document.getElementById('check_img9');
+			}		
+			//隐藏三种排序
 			function clear_imgs1(){
 				ocheck_img1.style.display="none";
 				ocheck_img2.style.display="none";
 				ocheck_img3.style.display="none";
 			}
+			//隐藏六种任务类型
 			function clear_imgs2(){
 				ocheck_img4.style.display="none";
 				ocheck_img5.style.display="none";
@@ -151,70 +335,106 @@
 				ocheck_img8.style.display="none";
 				ocheck_img9.style.display="none";
 			}
+			//选择时间排序
 			function show_img1(){
 				clear_imgs1();
 				ocheck_img1.style.display="inline-block";
 				oXiala_bar_a.style.display="none";
 				p1.innerHTML="时间排序";
-				oMark.style.display="none";  
-				
+				sort = 'time';
+				oMark.style.display="none";	
+				table.innerHTML = '';
+				mui('#pullrefresh').pullRefresh().pulldownLoading();
 			}
+			//选择价格排序
 			function show_img2(){
 				clear_imgs1(); 
 				ocheck_img2.style.display="inline-block";
 				oXiala_bar_a.style.display="none";
 				p1.innerHTML="价格排序";
 				oMark.style.display="none"; 
+				sort = 'price';
+				table.innerHTML = '';
+				mui('#pullrefresh').pullRefresh().pulldownLoading();
 			}
-			function show_img3(){
-				clear_imgs1();
-				ocheck_img3.style.display="inline-block";
-				oXiala_bar_a.style.display="none";
-				p1.innerHTML="信誉排序";
-				oMark.style.display="none"; 
-			}
+			//选择信誉排序
+//			function show_img3(){
+//				clear_imgs1();
+//				ocheck_img3.style.display="inline-block";
+//				oXiala_bar_a.style.display="none";
+//				p1.innerHTML="信誉排序";
+//				oMark.style.display="none";
+//				ischick = true;
+////				table.innerHTML = "";
+//			}
+			//选择全部任务
 			function show_img4(){
 				clear_imgs2();
 				ocheck_img4.style.display="inline-block";
 				oXiala_bar_b.style.display="none";
 				p2.innerHTML="全部任务";
+				tasktype = 0;
 				oMark.style.display="none"; 
+				table.innerHTML = '';
+				mui('#pullrefresh').pullRefresh().pulldownLoading();
 			}
+			//选择跑腿任务
 			function show_img5(){
 				clear_imgs2();
 				ocheck_img5.style.display="inline-block";
 				oXiala_bar_b.style.display="none";
 				p2.innerHTML="跑腿任务";
+				tasktype = 1;
 				oMark.style.display="none"; 
+				table.innerHTML = '';
+				mui('#pullrefresh').pullRefresh().pulldownLoading();
 			}
+			//选择租借类s
 			function show_img6(){
 				clear_imgs2();
 				ocheck_img6.style.display="inline-block";
 				oXiala_bar_b.style.display="none";
 				p2.innerHTML="租借任务";
-				oMark.style.display="none"; 
+				tasktype = 2;
+				oMark.style.display="none";
+				table.innerHTML = '';
+				mui('#pullrefresh').pullRefresh().pulldownLoading();
+				
 			}
+			//选择学习辅导
 			function show_img7(){
 				clear_imgs2();
 				ocheck_img7.style.display="inline-block";
 				oXiala_bar_b.style.display="none";
 				p2.innerHTML="学习辅导";
-				oMark.style.display="none"; 
+				tasktype = 3;
+				oMark.style.display="none";	
+				table.innerHTML = '';
+				mui('#pullrefresh').pullRefresh().pulldownLoading();
 			}
+			//选择维修服务
 			function show_img8(){
 				clear_imgs2();
 				ocheck_img8.style.display="inline-block";
 				oXiala_bar_b.style.display="none";
 				p2.innerHTML="维修服务";
-				oMark.style.display="none";  
+				tasktype = 4;
+				oMark.style.display="none";
+				table.innerHTML = '';
+				mui('#pullrefresh').pullRefresh().pulldownLoading();
 			}
+			//选择其他任务
 			function show_img9(){
 				clear_imgs2();
 				ocheck_img9.style.display="inline-block";
 				oXiala_bar_b.style.display="none";
 				p2.innerHTML="其他服务";
-				oMark.style.display="none";  
+				tasktype = 5;
+				oMark.style.display="none";	
+				table.innerHTML = '';
+				mui('#pullrefresh').pullRefresh().pulldownLoading();
 			}
+			
 		</script>
 		<script>
 			var next =document.getElementById('new_task');

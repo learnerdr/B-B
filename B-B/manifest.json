@@ -369,6 +369,23 @@
 					"main_page.html"
 				],
 				"priority": 0
+			},
+			"task_list.html": {
+				"resources": [
+					"pullrefresh_task.html"
+				],
+				"refer": [
+					"task_detail.html",
+					"Release_task.html"
+				],
+				"priority": 0
+			},
+			"pullrefresh_task.html": {
+				"resources": [],
+				"refer": [
+					"task_detail.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {

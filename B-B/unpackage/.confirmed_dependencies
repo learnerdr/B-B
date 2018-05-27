@@ -1,1 +1,47 @@
-null
+{
+	"main_page.html": {
+		"resources": [
+			"pullrefresh_sub.html"
+		],
+		"refer": [
+			"pullrefresh_sub.html"
+		]
+	},
+	"login.html": {
+		"refer": [
+			"tab-webview-main.html"
+		]
+	},
+	"tab-webview-main.html": {
+		"resources": [
+			"main_page.html"
+		],
+		"refer": [
+			"main_page.html",
+			"sys_infor.html",
+			"self-center.html",
+			"my-skills.html"
+		]
+	},
+	"pullrefresh_sub.html": {
+		"refer": [
+			"task_list.html",
+			"Release_task.html"
+		]
+	},
+	"task_list.html": {
+		"refer": [
+			"task_detail.html",
+			"pullrefresh_task.html",
+			"Release_task.html"
+		],
+		"resources": [
+			"pullrefresh_task.html"
+		]
+	},
+	"pullrefresh_task.html": {
+		"refer": [
+			"task_detail.html"
+		]
+	}
+}

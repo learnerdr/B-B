@@ -17,7 +17,7 @@
 		<div class="send_man" >
 			<img src="img/skills_paid/send_person.png"/>
 			<div class="send_man_a">
-				<a>发布人：咸鱼子</a>
+				<a id="name"><!--发布人：咸鱼子--></a>
 			</div>
 		</div>
 		<div class="task_detail">
@@ -28,8 +28,8 @@
 							<div class="point1"></div>
 							<a>任务类型：</a>
 						</div>
-						<div class="task_word">
-								跑腿类
+						<div class="task_word" id="type">
+								<!--跑腿类-->
 						</div>
 					</div>
 					<div class="task_detail_a">
@@ -37,17 +37,17 @@
 							<div class="point2"></div>
 							<a>任务内容：</a>
 						</div>
-						<div class="task_word">
-								帮忙去菜鸟驿站拿一下快递，中午送到寝室。
+						<div class="task_word" id="content">
+								<!--帮忙去菜鸟驿站拿一下快递，中午送到寝室。-->
 						</div>
 					</div>
 					<div class="task_detail_a">
 						<div class="task_detail_a3">
 							<div class="point3"></div>
-							<a>人物地址：</a>
+							<a>任务地址：</a>
 						</div>
-						<div class="task_word">
-								D5-4002
+						<div class="task_word" id="address">
+								<!--D5-4002-->
 						</div>
 					</div>
 					<div class="task_detail_a">
@@ -55,8 +55,8 @@
 							<div class="point4"></div>
 							<a>任务金额：</a>
 						</div>
-						<div class="task_word">
-								3.00元
+						<div class="task_word" id="money">
+								<!--3.00元-->
 						</div>
 					</div>	
 					<div class="line"></div>
@@ -68,7 +68,68 @@
 			<button class="buttom2">确认接单</button>
 		</div>
 		
+		<script type="text/javascript" src="js/mui.min.js" ></script>
 		<script src="js/immersed.js"></script>
+		<script src="js/jquery-1.11.1.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/config.js" ></script>
+		<script>
+			var ajaxUrl="http://www.mozotech.cn/bangbang/index/taskmanage/rcvtask";
+			var message =null;
+			var cphonenumber = null; 
+ 			var tasktype2 = null;
+ 			var nickname2 = null;
+ 			var taskcontent2 = null;
+ 			var time2 = null;
+			mui.init();
+			mui.plusReady(function () {
+				var self = plus.webview.currentWebview(); 
+				var data = self.value1;
+			   var taskaddress = self.value2;
+			   var tasktype = self.value3;
+			   var tasktype2 = self.value3;
+			   var name = document.getElementById("name");
+			var type =document.getElementById("type");
+			var content =document.getElementById("content");
+			var address =document.getElementById("address");
+			var money =document.getElementById("money");
+			cphonenumber = plus.storage.getItem("phonenumber");
+			name.innerText = data.nickname;
+			nickname2 = data.nickname;
+			console.log(data);
+			type.innerText = tasktype;
+			content.innerText = data.content;
+			taskcontent2 = data.content;
+			address.innerText = taskaddress;
+			money.innerText = data.price;
+			time2 = data.time;
+			}) ;
+			mui(".buttom").on("tap",".buttom2",function()
+			{
+				$.ajax({
+					async : false,
+					type: "post",
+					url: ajaxUrl,
+					dataType: 'json',
+					data: {
+						tasktype:tasktype2 ,
+						nickname:nickname2,
+						taskcontent:taskcontent2,
+						time:time2,
+						picknumber:cphonenumber
+					},
+					success: function(text) {
+						message = text;
+						console.log(message);
+					},
+					error: function(jqXHR) {
+						alert("发生错误：" + jqXHR.status);
+					}
+				});
+			})
+			 
+			
+			 
+		</script>
 	</body>
 </html>

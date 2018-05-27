@@ -12,194 +12,200 @@
 	</head>
 
 	<body>
-		
-		<div class="mui-content" >
+
+		<div class="mui-content">
 			<!--下拉刷新容器-->
-		<div id="pullrefresh" class=" mui-scroll-wrapper">
-			<div class="mui-scroll">
-				<!--轮播图-->
-			<div id="slider" class="mui-slider">
-				<div class="mui-slider-group mui-slider-loop">
-					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
-					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#">
-							<img id="fourthbanner2" src="img/main_page_banner.png">
-						</a>
+			<div id="pullrefresh" class=" mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<!--轮播图-->
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img id="fourthbanner2" src="img/main_page_banner.png">
+								</a>
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img id="firstbanner" src="img/main_page_banner.png">
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img id="secondbanner" src="img/main_page_banner.png">
+								</a>
+							</div>
+							<!-- 第三张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img id="thirdbanner" src="img/main_page_banner.png">
+								</a>
+							</div>
+							<!-- 第四张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img id="fourthbanner" src="img/main_page_banner.png">
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img id="firstbanner2" src="img/main_page_banner.png">
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+						</div>
 					</div>
-					<!-- 第一张 -->
-					<div class="mui-slider-item">
-						<a href="#">
-							<img id="firstbanner" src="img/main_page_banner.png">
-						</a>
+
+					<!--任务发布与接收-->
+					<div class="mission_send_receive">
+						<ul>
+							<li class="mission_send" id="send">
+								<a href="#">
+									<div class="send_text_one">
+										<p>发任务</p>
+									</div>
+									<div class="send_text_two">
+										<p>解决你的困难</p>
+									</div>
+								</a>
+							</li>
+							<li class="mission_receive" id="receive_task">
+								<a href="#">
+									<div class="receive_text_one">
+										<p>接任务</p>
+									</div>
+									<div class="receive_text_two">
+										<p>赚点零花钱</p>
+									</div>
+
+								</a>
+							</li>
+						</ul>
 					</div>
-					<!-- 第二张 -->
-					<div class="mui-slider-item">
-						<a href="#">
-							<img id="secondbanner" src="img/main_page_banner.png">
-						</a>
+					<!--任务列表-->
+					<div class="mission_list">
+						<!--列表顶部-->
+						<div class="mission_list_top">
+							<ul>
+								<li class="mission_new">
+									<a href="#">
+										<div class="point"></div>
+										<p>最新任务</p>
+									</a>
+								</li>
+								<li class="mission_more">
+									<a href="#">
+										<p>更多任务</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--列表刷新-->
+						<div class="mission_list_contant_add">
+
+						</div>
 					</div>
-					<!-- 第三张 -->
-					<div class="mui-slider-item">
-						<a href="#">
-							<img id="thirdbanner" src="img/main_page_banner.png">
-						</a>
-					</div>
-					<!-- 第四张 -->
-					<div class="mui-slider-item">
-						<a href="#">
-							<img id="fourthbanner" src="img/main_page_banner.png">
-						</a>
-					</div>
-					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
-					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#">
-							<img id="firstbanner2" src="img/main_page_banner.png">
-						</a>
-					</div>
-				</div>
-				<div class="mui-slider-indicator">
-					<div class="mui-indicator mui-active"></div>
-					<div class="mui-indicator"></div>
-					<div class="mui-indicator"></div>
-					<div class="mui-indicator"></div>
 				</div>
 			</div>
 
-			<!--任务发布与接收-->
-			<div class="mission_send_receive">
-				<ul>
-					<li class="mission_send" id="send">
-						<a href="#">
-							<div class="send_text_one">
-								<p>发任务</p>
-							</div>
-							<div class="send_text_two">
-								<p>解决你的困难</p>
-							</div>
-						</a>
-					</li>
-					<li class="mission_receive" id="receive_task">
-						<a href="#">
-							<div class="receive_text_one">
-								<p>接任务</p>
-							</div>
-							<div class="receive_text_two">
-								<p>赚点零花钱</p>
-							</div>
+			<script src="js/immersed.js"></script>
+			<script type="text/javascript" src="js/flexible.js"></script>
+			<script src="js/mui.min.js"></script>
+			<script src="js/jquery-1.11.1.js"></script>
+			<script src="js/jquery-1.11.1.min.js"></script>
+			<script type="text/javascript" src="js/config.js"></script>
 
-						</a>
-					</li>
-				</ul>
-			</div>
-		<!--任务列表-->
-			<div class="mission_list">
-				<!--列表顶部-->
-				<div class="mission_list_top">
-					<ul>
-						<li class="mission_new">
-							<a href="#">
-								<div class="point"></div>
-								<p>最新任务</p>
-							</a>
-						</li>
-						<li class="mission_more">
-							<a href="#">
-								<p>更多任务</p>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<!--列表刷新-->
-				<div class="mission_list_contant_add">
-					
-				</div>
-			</div>
-			</div>
-		</div>
+			<script>
+				var ajaxUrl = 'http://www.mozotech.cn/bangbang/index/homepage/banner';
+				var ajaxUrl2 = 'http://www.mozotech.cn/bangbang/index/homepage/hometask';
+				var ajaxUrl3 = 'http://www.mozotech.cn/bangbang/index/homepage/moretask';
+				var banners = null;
+				var threeTasks = null;
+				var moreTasks = null;
+				var lastnickname = null;
+				var lasttime = null;
+				var firstbanner = document.getElementById("firstbanner");
+				var secondbanner = document.getElementById("secondbanner");
+				var thirdbanner = document.getElementById("thirdbanner");
+				var fourthbanner = document.getElementById("fourthbanner");
+				var firstbanner2 = document.getElementById("firstbanner2");
+				var fourthbanner2 = document.getElementById("fourthbanner2");
+				mui.init({
+				  pullRefresh: {
+//					容器
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+				});
+				
+				mui.plusReady(function() {
+					askbanners();
+				});
+			if(mui.os.plus) {
+					mui.plusReady(function() {
+						setTimeout(function() {
+							mui('#pullrefresh').pullRefresh().pulldownLoading();
+						}, 1000);
 
-			
-		<script src="js/immersed.js"></script>
-		<script type="text/javascript" src="js/flexible.js"></script>
-		<script src="js/mui.min.js"></script>
-		<script src="js/jquery-1.11.1.js"></script>
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script type="text/javascript" src="js/config.js" ></script>
-
-		<script>
-			mui.init({
- 			pullRefresh: {
- //					容器
- 					container: '#pullrefresh',
- 					down: {
- 						callback: pulldownRefresh
- 					},
- 					up: {
- 						contentrefresh: '正在加载...',
- 						callback: pullupRefresh
- 					}
- 				}
- 			});
- 			var ajaxUrl = 'http://www.mozotech.cn/bangbang/index/homepage/banner';
- 			var ajaxUrl2 = 'http://www.mozotech.cn/bangbang/index/homepage/hometask';
- 			var ajaxUrl3 = 'http://www.mozotech.cn/bangbang/index/homepage/moretask';
- 			var banners = new Array();
- 			var threeTasks = new Array();
- 			var moreTasks = new Array();
- 			var lastnickname = null;
- 			var lasttime =null; 
- 			var firstbanner = document.getElementById("firstbanner");
- 			var secondbanner = document.getElementById("secondbanner");
- 			var thirdbanner = document.getElementById("thirdbanner");
- 			var fourthbanner = document.getElementById("fourthbanner");
- 			var firstbanner2 = document.getElementById("firstbanner2");
- 			var fourthbanner2 = document.getElementById("fourthbanner2");
- 			mui.ready(function(){
-   				askbanners();
- 			});
- 			mui.plusReady(function(){});
- 			function askbanners() {
- 				$.ajax({
-						async : false,
+					});
+				} else {
+					mui.ready(function() {
+						mui('#pullrefresh').pullRefresh().pulldownLoading();
+					});
+				}
+				function askbanners() {
+					$.ajax({
+						async: false,
 						type: "post",
 						url: ajaxUrl,
 						dataType: 'json',
-						data: {
-						},
+						data: {},
 						success: function(text) {
-						banners = text;
-//						console.log(banners);
-					  firstbanner.src =	banners[0];
-					  secondbanner.src =banners[1];
-					  thirdbanner.src =	banners[2];
-					  fourthbanner.src =banners[3];
-					  firstbanner2.src =banners[0];
-					  fourthbanner2.src =banners[3];
+							banners = text;
+							//						console.log(banners);
+							firstbanner.src = banners[0];
+							secondbanner.src = banners[1];
+							thirdbanner.src = banners[2];
+							fourthbanner.src = banners[3];
+							firstbanner2.src = banners[0];
+							fourthbanner2.src = banners[3];
 						},
 						error: function(jqXHR) {
-//						alert("发生错误：" + jqXHR.status);
+							//						alert("发生错误：" + jqXHR.status);
 						}
-						});
- 			}
+					});
+				}
 
- 		if (mui.os.plus) {
- 				mui.plusReady(function() {
- 				setTimeout(function() {
- 						mui('#pullrefresh').pullRefresh().pulldownLoading();
- 					}, 1000);
- 
- 				});
- 			} else {
- 				mui.ready(function() {
- 					mui('#pullrefresh').pullRefresh().pulldownLoading();
- 				});
- 			}
- 			 			/**
- 			 * 下拉刷新具体业务实现
- 			 */
- 			var ispulldownRefresh = false;
- 			function pulldownRefresh() {
- 				setTimeout(function() {
- 					$.ajax({
+				
+
+				function getJsonLength(jsonData) {
+					var jsonLength = 0;
+					for(var item in jsonData)
+						jsonLength++;
+					return jsonLength;
+				}
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				console.log("sds");
+				setTimeout(function() {
+					$.ajax({
 						async : false,
 						type: "post",
 						url: ajaxUrl2,
@@ -210,118 +216,102 @@
 						threeTasks = text;
 						},
 						error: function(jqXHR) {
-//						alert("发生错误：" + jqXHR.status);
+						alert("发生错误：" + jqXHR.status);
 						}
 						});
- 						var table = document.body.querySelector('.mission_list_contant_add');
- 					var cells = document.body.querySelectorAll('.mission_list_contant');
- 					table.innerHTML ="";
- 					for (var i = 0, len = 3; i < len; i++) {
- 						var div = document.createElement('div');
- 						div.className = 'mission_list_contant';
- 						if(threeTasks[i].sendusersex ==0)
- 						{
- 						div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src="+'threeTasks[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+threeTasks[i].nickname+"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+threeTasks[i].price+"</p></div></div><div class='right_contant_middle'><p>"+threeTasks[i].content+"</p></div><div class='right_contant_bottom'><p></p><p>"+threeTasks[i].time+"</p></div></div></div>";	
- 						}
- 						else{
- 						div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src="+'threeTasks[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+threeTasks[i].nickname+"</p><img class='top_left_img' src='img/male.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+threeTasks[i].price+"</p></div></div><div class='right_contant_middle'><p>"+threeTasks[i].content+"</p></div><div class='right_contant_bottom'><p></p><p>"+threeTasks[i].time+"</p></div></div></div>";	
- 						}
- 						if(i==2)
- 						{
-   							lastnickname = threeTasks[i].nickname;
-   							console.log(lastnickname);
-   							lasttime = threeTasks[i].time;
-   							console.log(lasttime);
- 						}
- 						//下拉刷新，新纪录插到最前面；
- 						table.appendChild(div, table.firstChild);
- 					}
- 					ispulldownRefresh =true;
-   					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
-   					mui('#pullrefresh').pullRefresh().refresh(true);//refresh completed
- 				}, 1000);
- 			}
- 			var count = 0;
- 			var count2 = 0;
- 			/**
+					var length = getJsonLength(threeTasks);
+								console.log(length);
+								var table = document.body.querySelector('.mission_list_contant_add');
+								var cells = document.body.querySelectorAll('.mission_list_contant');
+								table.innerHTML = "";
+								for(var i = 0; i < length; i++) {
+									var div = document.createElement('div');
+									div.className = 'mission_list_contant';
+									if(threeTasks[i].sendusersex == 0) {
+										div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src=" + 'threeTasks[i].headimg' + "/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>" + threeTasks[i].nickname + "</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>" + threeTasks[i].price + "</p></div></div><div class='right_contant_middle'><p>" + threeTasks[i].content + "</p></div><div class='right_contant_bottom'><p></p><p>" + threeTasks[i].time + "</p></div></div></div>";
+									} else {
+										div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src=" + 'threeTasks[i].headimg' + "/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>" + threeTasks[i].nickname + "</p><img class='top_left_img' src='img/male.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>" + threeTasks[i].price + "</p></div></div><div class='right_contant_middle'><p>" + threeTasks[i].content + "</p></div><div class='right_contant_bottom'><p></p><p>" + threeTasks[i].time + "</p></div></div></div>";
+									}
+									if(i == length - 1) {
+										lastnickname = threeTasks[i].nickname;
+										lasttime = threeTasks[i].time;
+										console.log(lastnickname);
+									}
+									//下拉刷新，新纪录插到最前面；
+									table.appendChild(div, table.firstChild);
+								}
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+					mui("#pullrefresh").pullRefresh().refresh(true);//refresh completed
+				}, 1000);
+			}
+			var count = 0;
+			/**
  			 * 上拉加载具体业务实现
  			 */
  			function pullupRefresh() {
- 				
+ 				console.log('daa');
  				setTimeout(function() {
  					$.ajax({
-					async : false,
-					type: "post",
-					url: ajaxUrl3,
-					dataType: 'json',
-					data: {
-						nickname: lastnickname,
-						time: lasttime
-					},
-					success: function(text) {
+						async : false,
+						type: "post",
+						url: ajaxUrl3,
+						dataType: 'json',
+						data: {
+							nickname: lastnickname,
+							time: lasttime
+						},
+						success: function(text) {
 						moreTasks = text;
-						console.log(moreTasks);
-					},
-					error: function(jqXHR) {
+						console.log(JSON.stringify(moreTasks[0].sendusersex));
+						},
+						error: function(jqXHR) {
 						alert("发生错误：" + jqXHR.status);
-					}
-				});
- 					if(!ispulldownRefresh)
- 					{
- 					count2 = ++count;
- 					}
- 					if(ispulldownRefresh == true)
- 					{
- 						count2 =0;
- 						count =2;
- 						ispulldownRefresh =false;
- 					}
- 					mui('#pullrefresh').pullRefresh().endPullupToRefresh(count2 > 3); //参数为true代表没有更多数据了。
- 					if(count2 == 0)
- 					{
- 						mui('#pullrefresh').pullRefresh().refresh(true);
- 					}
+						}
+						});
+						var length = getJsonLength(moreTasks);
+						if(length == 0||length < 3) {
+										mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
+									}
+
+ 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 3)); //参数为true代表没有更多数据了。
  					var table = document.body.querySelector('.mission_list_contant_add');
  					var cells = document.body.querySelectorAll('.mission_list_contant');
- 					for (var i = 0, len = 3; i < len; i++) {
+ 					for (var i = 0;  i < length; i++) {
  						var div = document.createElement('div');
  						div.className = 'mission_list_contant';
- 						if(moreTasks[i].sendusersex ==0)
- 						{
- 							div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src="+'moreTasks[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ moreTasks[i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+moreTasks[i].price+"</p></div></div><div class='right_contant_middle'><p>"+moreTasks[i].content+"</p></div><div class='right_contant_bottom'><p></p><p>"+moreTasks[i].time+"</p></div></div></div>";
- 						}
- 						else{
- 							div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src="+'moreTasks[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ moreTasks[i].nickname +"</p><img class='top_left_img' src='img/male.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+moreTasks[i].price+"</p></div></div><div class='right_contant_middle'><p>"+moreTasks[i].content+"</p></div><div class='right_contant_bottom'><p></p><p>"+moreTasks[i].time+"</p></div></div></div>";
- 						}
- 						if(i==2)
- 						{
-   							lastnickname = moreTasks[i].nickname;
-   							console.log(lastnickname);
-   							lasttime = moreTasks[i].time;
-   							console.log(lasttime);
- 						}
+ 						console.log(moreTasks[i].price);
+ 						if(moreTasks[i].sendusersex == 0) {
+										div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src=" + 'moreTasks[i].headimg' + "/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>" + moreTasks[i].nickname + "</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>" + moreTasks[i].price + "</p></div></div><div class='right_contant_middle'><p>" + moreTasks[i].content + "</p></div><div class='right_contant_bottom'><p></p><p>" + moreTasks[i].time + "</p></div></div></div>";
+									} else {
+										div.innerHTML = "<div class='mission_list_contant'><div class='left_head'><div class='left_head_img'><img src=" + 'moreTasks[i].headimg' + "/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>" + moreTasks[i].nickname + "</p><img class='top_left_img' src='img/male.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>" + moreTasks[i].price + "</p></div></div><div class='right_contant_middle'><p>" + moreTasks[i].content + "</p></div><div class='right_contant_bottom'><p></p><p>" + moreTasks[i].time + "</p></div></div></div>";
+									}
+							if(i == length-1) {
+											lastnickname = moreTasks[i].nickname;
+											lasttime = moreTasks[i].time;
+											console.log(i);
+										console.log(lastnickname);console.log(lasttime);
+										}
  						table.appendChild(div);
+ 						
+ 						
  					}
  				}, 1500);
  			}
- 		
- 			//			轮播
-			var gallery = mui('.mui-slider');
-			gallery.slider({
-				interval: 2000 //自动轮播周期，若为0则不自动播放，默认为0；
-			});
-	    var receive_task=document.getElementById('receive_task');
-	       receive_task.addEventListener('tap', function() {
-		      openView.usuView('task_list.html','task_list.html');
-	});
-			var send=document.getElementById('send');
-	       send.addEventListener('tap', function() {
-		      openView.usuView('Release_task.html','Release_task.html');
-			})
 
-	
-			
-		</script>
+				//			轮播
+				var gallery = mui('.mui-slider');
+				gallery.slider({
+					interval: 2000 //自动轮播周期，若为0则不自动播放，默认为0；
+				});
+				var receive_task = document.getElementById('receive_task');
+				receive_task.addEventListener('tap', function() {
+					openView.usuView('task_list.html', 'task_list.html');
+				});
+				var send = document.getElementById('send');
+				send.addEventListener('tap', function() {
+					openView.usuView('Release_task.html', 'Release_task.html');
+				})
+			</script>
 	</body>
 
 </html>

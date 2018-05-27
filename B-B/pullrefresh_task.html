@@ -29,17 +29,183 @@
 		<script type="text/javascript" src="js/config.js" ></script>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
+			
+			
+			var	tasktype = null;
+			var sort = null;
+			var dataobj = null;
+			var ajaxUrl = 'http://www.mozotech.cn/bangbang/index/taskmanage/filterlist';
+			var ajaxUrl2 = 'http://www.mozotech.cn/bangbang/index/taskmanage/getaddress';
+			var taskList =null;
+			var flag = false;
+			var table = document.body.querySelector('.mission_list_contant_add');
+			//页面传参
+			mui.plusReady(function() {
+				//添加newId自定义事件监听
+				window.addEventListener('tasksId', function(event) {
+					//获得事件参数
+				tasktype = event.detail.tasktype;
+				sort = event.detail.sort;
+				console.log(tasktype,sort);
+					//根据id向服务器请求新闻详情
+					mui('#pullrefresh').pullRefresh({
+				        down: {
+					    auto: false,//可选,默认false.自动下拉刷新一次
+						callback: function() {
+							pulldownRefresh(true);
+							flag = true;
+						}
+					}
+				  });
+				  
+				});
+			});
+			
 			mui.init({
  			pullRefresh: {
  //					容器
  					container: '#pullrefresh',
- 					up: {
- 						contentrefresh: '正在加载...',
- 						callback: pullupRefresh
- 					}
+ 					 down: {
+					    auto: false,//可选,默认false.自动下拉刷新一次
+						callback: function() {
+							pulldownRefresh(false);
+						}
+					},
+					up: {
+						auto: false,
+						callback: function() {
+							pullupRefresh(false);
+						}
  					
  				}
-			})
+				}
+			});			
+ 			
+			function pulldownRefresh(flag) { //下拉刷新函数
+				if(!flag){
+					return false;
+				}
+				table.innerHTML = '';
+			setTimeout(function() {
+				if(plus.networkinfo.getCurrentType()==plus.networkinfo.CONNECTION_NONE){		
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+					return mui.toast("连接网络失败，请稍后再试");					
+				}
+				console.log('dasdsadda',sort,tasktype)
+				$.ajax({
+					async : false,
+					type: "post",
+					url: ajaxUrl,
+					dataType: 'json',
+					data: {
+						sort: sort ,
+						tasktype: tasktype
+					},
+					success: function(text) {
+						console.log('dssasd',JSON.stringify(text))
+						taskList = text;
+						var cells = document.body.querySelectorAll('.mission_list_contant');
+   					for (var i = 0; i < taskList.length; i++) {
+   						var div = document.createElement('div');
+   						div.className = 'mission_list_contant';
+   						if(taskList[i].sendusersex ==0)
+   						{
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[i].time+"</p></div></div></div>";
+   						}
+   						else{
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[i].time+"</p></div></div></div>";
+   						}
+   						table.appendChild(div);
+   					}
+					/**
+					 * 下拉刷新结束
+					 * http://dev.dcloud.net.cn/mui/pulldown/
+					 */
+					mui("#pullrefresh").pullRefresh().endPulldownToRefresh();
+					// 重置上拉刷新，以及页数
+					mui('#pullrefresh').pullRefresh().refresh(true);
+					},
+					error: function(jqXHR) {
+						plus.nativeUI.toast("发生错误：" + jqXHR.status);
+					}
+				});
+			
+				}, 1500);
+		};
+			/**
+ 			 * 上拉加载具体业务实现
+ 			 */
+   			function pullupRefresh() {
+// 				if(plus.networkinfo.getCurrentType()==plus.networkinfo.CONNECTION_NONE){		
+//					mui("#pullrefresh").pullRefresh().endPullupToRefresh();
+//					return mui.toast("连接网络失败，请稍后再试");					
+//				}
+				if(!flag){
+					return false;
+				}
+   				console.log(tasktype);
+   				setTimeout(function() {
+   					$.ajax({
+					async : false,
+					type: "post",
+					url: ajaxUrl,
+					dataType: 'json',
+					data: {
+						sort: sort,
+						tasktype: tasktype
+					},
+					success: function(text) {
+						taskList = text;
+						if(!taskList.length) {
+							mui("#pullrefresh").pullRefresh().endPullupToRefresh(true);
+						}
+   					
+   					var cells = document.body.querySelectorAll('.mission_list_contant');
+   					for (var i = 0; i < taskList.length; i++) {
+   						var div = document.createElement('div');
+   						div.className = 'mission_list_contant';
+   						if(taskList[i].sendusersex ==0)
+   						{
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[i].time+"</p></div></div></div>";
+   						}
+   						else{
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[i].time+"</p></div></div></div>";
+   						}
+   						table.appendChild(div);
+   					}
+					},
+					error: function(jqXHR) {
+						console.log("发生错误：" + JSON.stringify(jqXHR));
+						plus.nativeUI.toast("发生错误：" + jqXHR.status);
+					}
+				});
+   					
+   				}, 1500);
+   			}
+   			function task_detail(that){
+ 				var num = parseInt(that.getAttribute('data-type'));
+ 				console.log(num);
+ 				$.ajax({
+					async : false,
+					type: "post",
+					url: ajaxUrl2,
+					dataType: 'json',
+					data: {
+						nickname: taskList[num].nickname,
+						tasktype: tasktype,
+						taskcontent: taskList[num].content,
+						time: taskList[num].time
+					},
+					success: function(text) {
+						taskaddress = text;
+					},
+					error: function(jqXHR) {
+						alert("发生错误：" + jqXHR.status);
+					}
+				});
+				openView.usuView('task_detail.html','task_detail.html',taskList[num],taskaddress,tasktype); 
+				
+			}	
 			if (mui.os.plus) {
  				mui.plusReady(function() {
  				setTimeout(function() {
@@ -52,50 +218,6 @@
  					mui('#pullrefresh').pullRefresh().pullupLoading();
 				});
  			}
- 			var ajaxUrl = 'http://www.mozotech.cn/bangbang/index/taskmanage/tasklist';
-			var taskList =null;
-			var count = 0;
-			/**
- 			 * 上拉加载具体业务实现
- 			 */
-   			function pullupRefresh() {
-   				
-   				setTimeout(function() {
-   					$.ajax({
-					async : false,
-					type: "post",
-					url: ajaxUrl,
-					dataType: 'json',
-					data: {
-					},
-					success: function(text) {
-						taskList = text;
-						console.log(taskList);
-					},
-					error: function(jqXHR) {
-						alert("发生错误：" + jqXHR.status);
-					}
-				});
-   					mui('#pullrefresh').pullRefresh().endPullupToRefresh(++count > 3); //参数为true代表没有更多数据了。
-   					var table = document.body.querySelector('.mission_list_contant_add');
-   					var cells = document.body.querySelectorAll('.mission_list_contant');
-   					for (var i = 0, len = 5; i < len; i++) {
-   						var div = document.createElement('div');
-   						div.className = 'mission_list_contant';
-   						if(taskList[i].sendusersex ==0)
-   						{
-   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[i].content+"</p></div><div class='right_contant_bottom'><div id='button1'onclick='task_detail()'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[i].time+"</p></div></div></div>";
-   						}
-   						else{
-   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[i].nickname +"</p><img class='top_left_img' src='img/male.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[i].content+"</p></div><div class='right_contant_bottom'><div id='button1' onclick='task_detail()'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[i].time+"</p></div></div></div>";
-   						}
-   						table.appendChild(div);
-   					}
-   				}, 1500);
-   			}
-   			function task_detail(){
-				openView.usuView('task_detail.html','task_detail.html'); 
-			}
 		</script>
 	</body>
 
