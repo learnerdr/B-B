@@ -65,7 +65,7 @@
 		</div>
 		<div class="buttom">
 			<button class="buttom1">与他联系</button>
-			<button class="buttom2">确认接单</button>
+			<button class="buttom2" id="accept">确认接单</button>
 		</div>
 		
 		<script type="text/javascript" src="js/mui.min.js" ></script>
@@ -94,6 +94,7 @@
 			var address =document.getElementById("address");
 			var money =document.getElementById("money");
 			cphonenumber = plus.storage.getItem("phonenumber");
+			console.log(cphonenumber);
 			name.innerText = data.nickname;
 			nickname2 = data.nickname;
 			console.log(data);
@@ -104,8 +105,9 @@
 			money.innerText = data.price;
 			time2 = data.time;
 			}) ;
-			mui(".buttom").on("tap",".buttom2",function()
+			document.getElementById("accept").addEventListener('tap',function()
 			{
+				console.log('sdsds');
 				$.ajax({
 					async : false,
 					type: "post",
@@ -120,13 +122,19 @@
 					},
 					success: function(text) {
 						message = text;
+						plus.nativeUI.alert( message );
 						console.log(message);
+						console.log(cphonenumber);
 					},
 					error: function(jqXHR) {
 						alert("发生错误：" + jqXHR.status);
 					}
 				});
 			})
+//			mui(".buttom").on("tap",".buttom2",function()
+//			{
+//				
+//			})
 			 
 			
 			 

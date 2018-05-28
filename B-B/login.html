@@ -10,12 +10,12 @@
 	</head>
 
 	<body>
-		
+
 		<div class="mui-content">
 			<div class="head_pic">
 				<div class="head_box"><img src="img/login/logo.png" /></div>
 			</div>
-		<form class="mui-input-group">
+			<form class="mui-input-group">
 				<div class="mui-input-row">
 					<label class="user"><img src="img/login/user.png" /> </label>
 					<input type="text" class="mui-input-clear" placeholder="请输入手机号" id="loginusername">
@@ -25,56 +25,80 @@
 					<input type="password" class="mui-input-password" placeholder="请输入密码" id="loginpassword">
 				</div>
 			</form>
-			
-			
+
 			<div class="mui-content-padded">
 				<button class="mui-btn mui-btn-block " id="login" onclick="loginEvent()">登录</button>
 			</div>
 			<div class="remember">
 				<div class="remember_number">
-					<!--<input type="checkbox" id="ck_rmbUser"/><p>记住一周</p>-->
+					<input type="checkbox" id="ck_rmbUser" />
+					<p>记住一周</p>
 				</div>
 			</div>
 			<div class="login">
-				<a  id="register">新用户注册</a>
+				<a id="register">新用户注册</a>
 			</div>
 			<div class="forget">
-				<a  id="forget_pw">忘记密码?</a>
+				<a id="forget_pw">忘记密码?</a>
 			</div>
-			
+
 		</div>
 
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<script src="js/immersed.js"></script>
 		<script type="text/javascript" src="js/config.js"></script>
-		<script src="js/jquery-1.11.1.js"></script>	
+		<script src="js/jquery-1.11.1.js"></script>
 		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
 		<script src="js/jquery.cookie.js"></script>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init({
-				preloadPages:[{
-    		id:'tab-webview-main.html',
-    		url:'tab-webview-main.html'           
-  			}
- 			 ]
+				preloadPages: [{
+					id: 'tab-webview-main.html',
+					url: 'tab-webview-main.html'
+				}]
 			})
 			var o_forget_pw = document.getElementById('forget_pw');
 			var o_register = document.getElementById('register');
-			var login =document.getElementById("login");
-			var phonenumber = document.getElementById('loginusername').value;
-			plus.storage.setItem("phonenumber",phonenumber);
+			var login = document.getElementById("login");
+			var phonenumber = null;
 			var ajaxUrl = 'http://www.mozotech.cn/bangbang/index/user/login';
 			var ajaxUrl2 = 'http://www.mozotech.cn/bangbang/index/user/myschool';
 			var database = null;
 			var detailPage = null;
-			var schoolid =null;
-			
+			var schoolid = null;
+			var cphonenumber = null;
+			 //自动添加用户名密码  
+			  function autoPwd(){  
+			       if ($.cookie("rmbUser") == "true") {  
+			           var username=$("#txt_username").val();  
+			           if(username==$.cookie("username")){  
+			               $("#ck_rmbUser").attr("checked", true);  
+			               $("#txt_password").val($.cookie("password"));  
+			           }  
+			       }  
+			  }  
+			mui.plusReady(function() {
 
+				autoPwd();
+
+			})
 			
+			 $(document).ready(function () {   
+			    if ($.cookie("rmbUser") == "true") {  
+			    $("#ck_rmbUser").attr("checked", true);  
+			    $("#loginusername").val($.cookie("username"));  
+			    $("#loginpassword").val($.cookie("password"));  
+			    }  
+			  });
 			function loginEvent() {
+				phonenumber = document.getElementById('loginusername').value;
+				plus.storage.setItem("phonenumber", phonenumber);
+				cphonenumber = plus.storage.getItem("phonenumber");
+				console.log(phonenumber, cphonenumber);
 				$.ajax({
-					async : false,
+					async: false,
 					type: "post",
 					url: ajaxUrl,
 					dataType: 'json',
@@ -84,66 +108,45 @@
 					},
 					success: function(text) {
 						database = text;
-						if(database == "success")
-						{
-						//请求学校
-						$.ajax({
-						async : false,
-						type: "post",
-						url: ajaxUrl2,
-						dataType: 'json',
-						data: {
-						phonenumber: $("#loginusername").val()
-						},
-						success: function(text) {
-						schoolid = text;
-//						console.log(schoolid);
-						//获得详情页面
-						detailPage = plus.webview.getWebviewById('tab-webview-main.html');
-						//触发详情页面的schoolId事件
-						console.log(schoolid);
-						mui.fire(detailPage,'schoolName',{
-							    id:schoolid
-						});
-						//打开详情页面          
-						  mui.openWindow({
-						    id:'tab-webview-main.html'
-						  });
-						if(schoolid == "fail") {
-						alert("未知错误");
-						}
-						},
-						error: function(jqXHR) {
-						alert("发生错误：" + jqXHR.status);
-						}
-						});
-						
-							 
-//						var a =	mui.openWindow({
-//							    url:'tab-webview-main.html',
-//							    id:'tab-webview-main.html', 
-//							    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显示
-//							    show:{
-//							      autoShow:true,//页面loaded事件发生后自动显示，默认为true
-//							    },
-//							    waiting:{
-//							      autoShow:true,//自动显示等待框，默认为true
-//							      title:'正在加载...',//等待对话框上显示的提示内容
-//							    }
-//						})
-						
-						
-							
-						}
-						else if(database == "nosuchuser") {
+						if(database == "success") {
+							//请求学校
+							$.ajax({
+								async: false,
+								type: "post",
+								url: ajaxUrl2,
+								dataType: 'json',
+								data: {
+									phonenumber: $("#loginusername").val()
+								},
+								success: function(text) {
+									schoolid = text;
+									//						console.log(schoolid);
+									//获得详情页面
+									detailPage = plus.webview.getWebviewById('tab-webview-main.html');
+									//触发详情页面的schoolId事件
+									console.log(schoolid);
+									mui.fire(detailPage, 'schoolName', {
+										id: schoolid
+									});
+									//打开详情页面          
+									mui.openWindow({
+										id: 'tab-webview-main.html'
+									});
+									if(schoolid == "fail") {
+										alert("未知错误");
+									}
+								},
+								error: function(jqXHR) {
+									alert("发生错误：" + jqXHR.status);
+								}
+							});
+						} else if(database == "nosuchuser") {
 
 							alert("该账号未注册");
-						}
-						else if(database == "wrongpwd") {
+						} else if(database == "wrongpwd") {
 
 							alert("密码错误");
-						}
-						else if(database == "fail") {
+						} else if(database == "fail") {
 
 							alert("未知错误");
 						}
@@ -152,36 +155,32 @@
 						alert("发生错误：" + jqXHR.status);
 					}
 				});
+				if($("#ck_rmbUser").attr("checked")) {
+					var str_username = $("#loginusername").val();
+					var str_password = $("#loginpassword").val();
+					$.cookie("rmbUser", "true", {
+						expires: 7
+					}); //存储一个带7天期限的cookie  
+					$.cookie("username", str_username, {
+						expires: 7
+					});
+					$.cookie("password", str_password, {
+						expires: 7
+					});
+				} else {
+					$.cookie("rmbUser", "false", {
+						expire: -1
+					});
+					$.cookie("username", "", {
+						expires: -1
+					});
+					$.cookie("password", "", {
+						expires: -1
+					});
+				}
 
 			}
-			
-//			$(document).ready(function () {
-//		    if ($.cookie("rmbUser") == "true") {
-//		    $("#ck_rmbUser").attr("checked", true);
-//		    $("#loginusername").val($.cookie("username"));
-//		    $("#loginpassword").val($.cookie("password"));
-//		    }
-//		    console.log("1");
-//		  });
-//		 
-//		  //记住用户名密码
-//		 login.addEventListener('tap', function Save() {
-//		    if ($("#ck_rmbUser").attr("checked")) {
-//		      var str_username = $("#loginusername").val();
-//		      var str_password = $("#loginpassword").val();
-//		      $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie
-//		      $.cookie("username", str_username, { expires: 7 });
-//		      $.cookie("password", str_password, { expires: 7 });
-//		      console.log("1");
-//		    }
-//		    else {
-//		      $.cookie("rmbUser", "false", { expire: -1 });
-//		      $.cookie("username", "", { expires: -1 });
-//		      $.cookie("password", "", { expires: -1 });
-//		      console.log("1");
-//		    }
-//		 });
-			
+
 			o_forget_pw.addEventListener('tap', function() {
 
 				openView.usuView('check.html', 'check.html');
@@ -189,7 +188,7 @@
 			o_register.addEventListener('tap', function() {
 
 				openView.usuView('register1.html', 'register1.html');
-				});
+			});
 		</script>
 	</body>
 
