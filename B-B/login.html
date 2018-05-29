@@ -72,10 +72,10 @@
 			 //自动添加用户名密码  
 			  function autoPwd(){  
 			       if ($.cookie("rmbUser") == "true") {  
-			           var username=$("#txt_username").val();  
+			           var username=$("#loginusername").val();  
 			           if(username==$.cookie("username")){  
 			               $("#ck_rmbUser").attr("checked", true);  
-			               $("#txt_password").val($.cookie("password"));  
+			               $("#loginpassword").val($.cookie("password"));  
 			           }  
 			       }  
 			  }  
