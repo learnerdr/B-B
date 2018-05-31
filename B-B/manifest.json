@@ -298,7 +298,8 @@
 				"refer": [
 					"set_pw.html",
 					"personal_data.html",
-					"index.html"
+					"index.html",
+					"login.html"
 				],
 				"priority": 0
 			},

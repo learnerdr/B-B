@@ -43,5 +43,16 @@
 		"refer": [
 			"task_detail.html"
 		]
+	},
+	"Set_up.html": {
+		"refer": [
+			"login.html"
+		]
+	},
+	"self-center.html": {
+		"refer": [
+			"Set_up.html",
+			"send_all_orders.html"
+		]
 	}
 }

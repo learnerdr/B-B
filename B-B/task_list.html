@@ -218,10 +218,7 @@
 						console.log(JSON.stringify(taskList[1])) ;
 						console.log(length);
    					var cells = document.body.querySelectorAll('.mission_list_contant');
-   					if(length == 0)
-						{
-							mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
-						}
+   					
    					for (var i = 0; i < length; i++) {
    						var div = document.createElement('div');
    						div.className = 'mission_list_contant';
@@ -233,10 +230,6 @@
    							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[1][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[1][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[1][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[1][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+1+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[1][i].time+"</p></div></div></div>";
    						}
    						table.appendChild(div);
-   						if(length <3)
-						{
-							mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
-						}
 						if(i ==length-1)
  						{
    							lastnickname = taskList[1][i].nickname;
@@ -244,6 +237,10 @@
  						}
 				
    					}
+   					if(length == 0||length <3)
+						{
+							mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
+						}
 					},
 					error: function(jqXHR) {
 						console.log("发生错误：" + JSON.stringify(jqXHR));
@@ -269,6 +266,7 @@
 					},
 					success: function(text) {
 						taskaddress = text;
+						console.log(taskaddress);
 					},
 					error: function(jqXHR) {
 						alert("发生错误：" + jqXHR.status);

@@ -121,8 +121,20 @@
 						picknumber:cphonenumber
 					},
 					success: function(text) {
+						
 						message = text;
-						plus.nativeUI.alert( message );
+						if(message== "success")
+						{
+							plus.nativeUI.alert( message );
+						}
+						if(message== "fail")
+						{
+							plus.nativeUI.alert( message );
+						}
+						if(message == "rcvd")
+						{
+							plus.nativeUI.alert( message );
+						}
 						console.log(message);
 						console.log(cphonenumber);
 					},

@@ -72,6 +72,7 @@
 			 //自动添加用户名密码  
 			  function autoPwd(){  
 			       if ($.cookie("rmbUser") == "true") {  
+			       	console.log("456");
 			           var username=$("#loginusername").val();  
 			           if(username==$.cookie("username")){  
 			               $("#ck_rmbUser").attr("checked", true);  
@@ -80,9 +81,7 @@
 			       }  
 			  }  
 			mui.plusReady(function() {
-
 				autoPwd();
-
 			})
 			
 			 $(document).ready(function () {   
@@ -156,6 +155,7 @@
 					}
 				});
 				if($("#ck_rmbUser").attr("checked")) {
+					console.log("123");
 					var str_username = $("#loginusername").val();
 					var str_password = $("#loginpassword").val();
 					$.cookie("rmbUser", "true", {

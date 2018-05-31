@@ -144,6 +144,7 @@
 //					容器
 					container: '#pullrefresh',
 					down: {
+						 auto: true,
 						callback: pulldownRefresh
 					},
 					up: {
@@ -152,20 +153,20 @@
 					}
 				}
 				});
-				
-				mui.plusReady(function() {
-					askbanners();
-				});
 			if(mui.os.plus) {
 					mui.plusReady(function() {
 						setTimeout(function() {
 							mui('#pullrefresh').pullRefresh().pulldownLoading();
+							console.log("123");
+							askbanners();
 						}, 1000);
 
 					});
 				} else {
 					mui.ready(function() {
 						mui('#pullrefresh').pullRefresh().pulldownLoading();
+						console.log("456");
+						askbanners();
 					});
 				}
 				function askbanners() {
@@ -269,10 +270,8 @@
 						}
 						});
 						var length = getJsonLength(moreTasks);
-						if(length == 0||length < 3) {
-										mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
-									}
-
+						console.log(length);
+						
  					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 3)); //参数为true代表没有更多数据了。
  					var table = document.body.querySelector('.mission_list_contant_add');
  					var cells = document.body.querySelectorAll('.mission_list_contant');
@@ -295,6 +294,9 @@
  						
  						
  					}
+ 					if(length == 0||length < 3) {
+										mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
+								}
  				}, 1500);
  			}
 
