@@ -159,7 +159,7 @@
 					},
 					success: function(text) {
 						taskList[0] = text;
-//						console.log(JSON.stringify(taskList[0])) ;
+						console.log(JSON.stringify(taskList[0])) ;
 					var length = getJsonLength(taskList[0]);
 //						console.log(length);
 						var cells = document.body.querySelectorAll('.mission_list_contant');
@@ -168,10 +168,10 @@
    						div.className = 'mission_list_contant';
    						if(taskList[0][i].sendusersex ==0)
    						{
-   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[0][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[0][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[0][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[0][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+0+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[0][i].time+"</p></div></div></div>";
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[0][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[0][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[0][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[0][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+0+"' data-tasktype='"+taskList[0][i].tasktype+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[0][i].time+"</p></div></div></div>";
    						}
    						else{
-   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[0][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[0][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[0][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[0][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+0+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[0][i].time+"</p></div></div></div>";
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[0][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[0][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[0][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[0][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+0+"' data-tasktype='"+taskList[0][i].tasktype+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[0][i].time+"</p></div></div></div>";
    						}
    						table.appendChild(div);
    						if(i == length-1)
@@ -224,10 +224,10 @@
    						div.className = 'mission_list_contant';
    						if(taskList[1][i].sendusersex ==0)
    						{
-   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[1][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[1][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[1][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[1][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+1+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[1][i].time+"</p></div></div></div>";
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[1][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[1][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[1][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[1][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+1+"' data-tasktype='"+taskList[1][i].tasktype+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[1][i].time+"</p></div></div></div>";
    						}
    						else{
-   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[1][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[1][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[1][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[1][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+1+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[1][i].time+"</p></div></div></div>";
+   							div.innerHTML = "<div class='left_head'><div class='left_head_img'><img src="+'taskList[1][i].headimg'+"/></div></div><div class='right_contant'><div class='right_contant_top'><div class='right_contant_top_left'><p>"+ taskList[1][i].nickname +"</p><img class='top_left_img' src='img/sex.png' align='center' /></div><div class='right_contant_top_right'><img class='top_right_img' src='img/task_money.png' /><p>"+taskList[1][i].price+"</p></div></div><div class='right_contant_middle'><p>"+taskList[1][i].content+"</p></div><div class='right_contant_bottom'><div id='button1' data-type='"+i+"' data-index='"+1+"' data-tasktype='"+taskList[1][i].tasktype+"' onclick='task_detail(this)'>接受此单</div><div id='button2'>马上联系</div><div class='time'><p>"+taskList[1][i].time+"</p></div></div></div>";
    						}
    						table.appendChild(div);
 						if(i ==length-1)
@@ -250,9 +250,16 @@
    				}, 1500);
    			}
    			function task_detail(that){
+   				
+   				
  				var num = parseInt(that.getAttribute('data-type'));
  				var index = parseInt(that.getAttribute('data-index'));
- 				console.log('daafa',index);
+ 				var type = parseInt(that.getAttribute('data-tasktype'));
+// 				console.log('daafa',index);
+// 				console.log(taskList[index][num].nickname);
+// 				console.log(tasktype);
+// 				console.log(taskList[index][num].content);
+// 				console.log(taskList[index][num].time);
  				$.ajax({
 					async : false,
 					type: "post",
@@ -260,7 +267,7 @@
 					dataType: 'json',
 					data: {
 						nickname: taskList[index][num].nickname,
-						tasktype: tasktype,
+						tasktype: type,
 						taskcontent: taskList[index][num].content,
 						time: taskList[index][num].time
 					},
@@ -272,7 +279,7 @@
 						alert("发生错误：" + jqXHR.status);
 					}
 				});
-				openView.usuView('task_detail.html','task_detail.html',taskList[index][num],taskaddress,tasktype); 
+				openView.usuView('task_detail.html','task_detail.html',taskList[index][num],taskaddress,type); 
 				
 			}
 			//勾选时间和全部任务

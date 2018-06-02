@@ -83,27 +83,26 @@
  			var time2 = null;
 			mui.init();
 			mui.plusReady(function () {
-				var self = plus.webview.currentWebview(); 
-				var data = self.value1;
-			   var taskaddress = self.value2;
-			   var tasktype = self.value3;
-			   var tasktype2 = self.value3;
-			   var name = document.getElementById("name");
+			var self = plus.webview.currentWebview(); 
+			var data = self.value1;
+			var taskaddress = self.value2;
+			var tasktype = self.value3;
+			 tasktype2 = self.value3;
+			var name = document.getElementById("name");
 			var type =document.getElementById("type");
 			var content =document.getElementById("content");
 			var address =document.getElementById("address");
 			var money =document.getElementById("money");
 			cphonenumber = plus.storage.getItem("phonenumber");
-			console.log(cphonenumber);
 			name.innerText = data.nickname;
 			nickname2 = data.nickname;
-			console.log(data);
 			type.innerText = tasktype;
 			content.innerText = data.content;
 			taskcontent2 = data.content;
 			address.innerText = taskaddress;
 			money.innerText = data.price;
 			time2 = data.time;
+			
 			}) ;
 			document.getElementById("accept").addEventListener('tap',function()
 			{
@@ -120,34 +119,35 @@
 						time:time2,
 						picknumber:cphonenumber
 					},
+					
 					success: function(text) {
-						
 						message = text;
 						if(message== "success")
 						{
-							plus.nativeUI.alert( message );
+							plus.nativeUI.alert( "接受成功",function ()
+			{
+				openView.usuView('task_list.html','task_list.html');
+			} );
+							
 						}
 						if(message== "fail")
 						{
-							plus.nativeUI.alert( message );
+							plus.nativeUI.alert( "未知异常");
 						}
 						if(message == "rcvd")
 						{
-							plus.nativeUI.alert( message );
+							plus.nativeUI.alert( "该任务已失效",function ()
+			{
+				openView.usuView('task_list.html','task_list.html');
+			} );
 						}
 						console.log(message);
-						console.log(cphonenumber);
 					},
 					error: function(jqXHR) {
 						alert("发生错误：" + jqXHR.status);
 					}
 				});
 			})
-//			mui(".buttom").on("tap",".buttom2",function()
-//			{
-//				
-//			})
-			 
 			
 			 
 		</script>
